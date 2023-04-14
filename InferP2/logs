@@ -1,27 +1,27 @@
-[30301][environment] CWD = /home/e0925519/cs5218/cs5218_asg3
-[30301][environment] No .inferconfig file found
-[30301][environment] Project root = /home/e0925519/cs5218/cs5218_asg3
-[30301][environment] INFER_ARGS =   @/tmp/args.tmp.6bed06  ++Contents of '/tmp/args.tmp.6bed06':
-[30301][environment]                                         run --enable-issue-type
-[30301][environment]                                         DIVIDE_BY_ZERO --disable-issue-type
-[30301][environment]                                         DEAD_STORE -o
-[30301][environment]                                         /home/e0925519/cs5218/cs5218_asg3/InferP2
-[30301][environment]                                       
-[30301][environment] command line arguments:   infer run --enable-issue-type DIVIDE_BY_ZERO
-[30301][environment]                           --disable-issue-type DEAD_STORE -o InferP2 -- clang
-[30301][environment]                           -c p2.cActive checkers: biabduction (C/C++/ObjC, Java), fragment retains view (Java), liveness (C/C++/ObjC), ownership (C/C++/ObjC), RacerD (C/C++/ObjC, Java), SIOF (C/C++/ObjC), uninitialized variables (C/C++/ObjC)
-[30301][environment] Infer log identifier is 
+[78351][environment] CWD = /home/e0925519/cs5218/cs5218_asg3
+[78351][environment] No .inferconfig file found
+[78351][environment] Project root = /home/e0925519/cs5218/cs5218_asg3
+[78351][environment] INFER_ARGS =   @/tmp/args.tmp.4e3da0  ++Contents of '/tmp/args.tmp.4e3da0':
+[78351][environment]                                         run --enable-issue-type
+[78351][environment]                                         DIVIDE_BY_ZERO --disable-issue-type
+[78351][environment]                                         DEAD_STORE -o
+[78351][environment]                                         /home/e0925519/cs5218/cs5218_asg3/InferP2
+[78351][environment]                                       
+[78351][environment] command line arguments:   infer run --enable-issue-type DIVIDE_BY_ZERO
+[78351][environment]                           --disable-issue-type DEAD_STORE -o InferP2 -- clang
+[78351][environment]                           -c p2.cActive checkers: biabduction (C/C++/ObjC, Java), fragment retains view (Java), liveness (C/C++/ObjC), ownership (C/C++/ObjC), RacerD (C/C++/ObjC, Java), SIOF (C/C++/ObjC), uninitialized variables (C/C++/ObjC)
+[78351][environment] Infer log identifier is 
 Infer version v0.16.0
-[30301][environment] Copyright 2009 - present Facebook. All Rights Reserved.
-[30301][environment] 
-[30301][   progress] Capturing in make/cc mode...
-[30301][      debug] 
-[30301][      debug] *** Beginning capture of file /home/e0925519/cs5218/cs5218_asg3/p2.c ***
-[30301][      debug] Clang frontend action is translating and linting
-[30301][      debug] Loading the following linters files: /opt/infer-linux64-v0.16.0/lib/infer/infer/bin/../lib/linter_rules/linters.al
-[30301][      debug] Elapsed: 25.895ms.
-[30301][      debug] 
-[30301][   progress] Found 1 source file to analyze in /home/e0925519/cs5218/cs5218_asg3/InferP2
-[30301][environment] Parallel jobs: 4
-[30308][   progress] p2.c starting
-[30308][   progress] p2.c DONE
+[78351][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[78351][environment] 
+[78351][   progress] Capturing in make/cc mode...
+[78351][      debug] 
+[78351][      debug] *** Beginning capture of file /home/e0925519/cs5218/cs5218_asg3/p2.c ***
+[78351][      debug] Clang frontend action is translating and linting
+[78351][      debug] Loading the following linters files: /opt/infer-linux64-v0.16.0/lib/infer/infer/bin/../lib/linter_rules/linters.al
+[78351][      debug] Elapsed: 25.326ms.
+[78351][      debug] 
+[78351][   progress] Found 1 source file to analyze in /home/e0925519/cs5218/cs5218_asg3/InferP2
+[78351][environment] Parallel jobs: 4
+[78364][   progress] p2.c starting
+[78364][   progress] p2.c DONE

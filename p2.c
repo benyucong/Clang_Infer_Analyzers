@@ -15,29 +15,7 @@ x <= TEAM_ID         returns ALARM; True Positive
 int error(int x)
 {
     // conditions here
-    bool flag = false;
-    if (x == TEAM_ID + 25)
-    {
-        flag = true;
-    }
-    if (x == TEAM_ID + 24)
-    {
-        flag = true;
-    }
-    if (x == TEAM_ID + 22)
-    {
-        flag = true;
-    }
-
-    if (x == TEAM_ID + 3)
-    {
-        flag = true;
-    }
-    if (x == TEAM_ID + 1)
-    {
-        flag = true;
-    }
-    return flag;
+    x >= TEAM_ID;
 }
 int main()
 {
