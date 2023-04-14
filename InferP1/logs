@@ -1,0 +1,27 @@
+[20799][environment] CWD = /home/e0925519/cs5218/cs5218_asg3
+[20799][environment] No .inferconfig file found
+[20799][environment] Project root = /home/e0925519/cs5218/cs5218_asg3
+[20799][environment] INFER_ARGS =   @/tmp/args.tmp.406eac  ++Contents of '/tmp/args.tmp.406eac':
+[20799][environment]                                         run --enable-issue-type
+[20799][environment]                                         DIVIDE_BY_ZERO --disable-issue-type
+[20799][environment]                                         DEAD_STORE -o
+[20799][environment]                                         /home/e0925519/cs5218/cs5218_asg3/InferP1
+[20799][environment]                                       
+[20799][environment] command line arguments:   infer run --enable-issue-type DIVIDE_BY_ZERO
+[20799][environment]                           --disable-issue-type DEAD_STORE -o InferP1 -- clang
+[20799][environment]                           -c p1.cActive checkers: biabduction (C/C++/ObjC, Java), fragment retains view (Java), liveness (C/C++/ObjC), ownership (C/C++/ObjC), RacerD (C/C++/ObjC, Java), SIOF (C/C++/ObjC), uninitialized variables (C/C++/ObjC)
+[20799][environment] Infer log identifier is 
+Infer version v0.16.0
+[20799][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[20799][environment] 
+[20799][   progress] Capturing in make/cc mode...
+[20799][      debug] 
+[20799][      debug] *** Beginning capture of file /home/e0925519/cs5218/cs5218_asg3/p1.c ***
+[20799][      debug] Clang frontend action is translating and linting
+[20799][      debug] Loading the following linters files: /opt/infer-linux64-v0.16.0/lib/infer/infer/bin/../lib/linter_rules/linters.al
+[20799][      debug] Elapsed: 14.148ms.
+[20799][      debug] 
+[20799][   progress] Found 1 source file to analyze in /home/e0925519/cs5218/cs5218_asg3/InferP1
+[20799][environment] Parallel jobs: 4
+[20806][   progress] p1.c starting
+[20806][   progress] p1.c DONE

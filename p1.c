@@ -1,5 +1,5 @@
 #define TEAM_ID 6 // (substitute your team ID here
-#define N 3       // (N is statically fixed)
+#define N 5       // (N is statically fixed)
 
 /* Example Conditions
 x < TEAM ID - 99        returns BUG-FREE; result is a True Negative
@@ -11,7 +11,7 @@ x == TEAM_ID + N        returns ALARM; True Positive
 int error(int x)
 {
     // condistions here
-    return x < TEAM_ID - 5;
+    return x<1;
 }
 
 int main()
