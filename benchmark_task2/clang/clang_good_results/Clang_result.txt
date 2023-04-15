@@ -1,0 +1,31 @@
+clang_good.c:41:13: warning: The result of the right shift is undefined because the right operand is negative [core.UndefinedBinaryOperatorResult]
+    ret = a >> -1; /*Clang can detect this line as error*/ /*ERROR:Bit shift error*/
+            ^  ~~
+clang_good.c:51:13: warning: The result of the left shift is undefined due to shifting by '32', which is greater or equal to the width of type 'int' [core.UndefinedBinaryOperatorResult]
+    ret = a << ((shift * shift) - 4); /*Clang can detect this line as error*/ /*ERROR:Bit shift error*/
+            ^  ~~~~~~~~~~~~~~~~~~~~~
+clang_good.c:61:13: warning: The result of the left shift is undefined due to shifting by '32', which is greater or equal to the width of type 'int' [core.UndefinedBinaryOperatorResult]
+    ret = a << shifts[4]; /*Clang can detect this line as error*/ /*ERROR:Bit shift error*/
+            ^  ~~~~~~~~~
+clang_good.c:79:13: warning: Use of memory after it is freed [unix.Malloc]
+        a = *(ptr + 1); /*Clang can detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+            ^~~~~~~~~~
+clang_good.c:89:9: warning: Assigned value is garbage or undefined [core.uninitialized.Assign]
+    ret = a; /*Clang can detect this line as error*/ /*ERROR:Uninitialized Variable*/
+        ^ ~
+clang_good.c:98:9: warning: Assigned value is garbage or undefined [core.uninitialized.Assign]
+    ret = buf[1][2]; /*Clang can detect this line as error*/ /*ERROR:Uninitialized Variable*/
+        ^ ~~~~~~~~~
+clang_good.c:108:11: warning: Dereference of undefined pointer value (loaded from variable 'p') [core.NullDereference]
+    ret = *p; /*Clang can detect this line as error*/ /*ERROR:Uninitialized pointer*/
+          ^~
+clang_good.c:117:8: warning: Dereference of undefined pointer value (loaded from variable 'p') [core.NullDereference]
+    *p = 1; /*Clang can detect this line as error*/ /*ERROR:Uninitialized pointer*/
+     ~ ^
+clang_good.c:127:20: warning: Division by zero [core.DivideZero]
+    ret = dividend / 0; /*Clang can detect this line as error*/ /* ERROR:division by zero */
+          ~~~~~~~~~^~~
+clang_good.c:137:20: warning: Division by zero [core.DivideZero]
+    ret = dividend / divisors[1]; /*Clang can detect this line as error*/ /* ERROR:division by zero */
+          ~~~~~~~~~^~~~~~~~~~~~~
+10 warnings generated.

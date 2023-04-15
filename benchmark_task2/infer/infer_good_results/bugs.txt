@@ -1,0 +1,95 @@
+Found 11 issues
+
+infer_good.c:48: error: BUFFER_OVERRUN_L2
+  Offset: [0, 10] Size: 10.
+  46.           for (i = 0; i <= 10; i++)
+  47.           {
+  48. >             buf[i] = 1; /*Infer should detect this line as error*/ /*ERROR:Buffer overrun*/
+  49.           }
+  50.           free(buf);
+
+infer_good.c:63: error: BUFFER_OVERRUN_L1
+  Offset: 10 Size: 10.
+  61.       if (buf != NULL)
+  62.       {
+  63. >         *(buf + 10) = 1; /*Infer should detect this line as error*/ /*ERROR:Buffer overrun*/
+  64.           free(buf);
+  65.       }
+
+infer_good.c:72: error: PURE_FUNCTION
+  Side-effect free function null_pointer_1.
+  70.    * Complexity: Assign a Constant value to NULL single pointer
+  71.    */
+  72. > void null_pointer_1()
+  73.   {
+  74.       int *p = NULL;
+
+infer_good.c:98: error: DIVIDE_BY_ZERO
+  Expression `0` could be zero at line 98, column 5.
+  96.       int dividend = 1000;
+  97.       int ret;
+  98. >     ret = dividend / 0; /*Infer should detect this line as error*/ /* ERROR:division by zero */
+  99.   }
+  100.   
+
+infer_good.c:94: error: PURE_FUNCTION
+  Side-effect free function zero_division_1.
+  92.    * Complexity: divide (/)	Basic type	int	Constant
+  93.    */
+  94. > void zero_division_1()
+  95.   {
+  96.       int dividend = 1000;
+
+infer_good.c:109: error: DIVIDE_BY_ZERO
+  Expression `0` could be zero at line 109, column 5.
+  107.       int dividend = 1000;
+  108.       int ret;
+  109. >     dividend /= 0; /*Infer should detect this line as error*/ /* ERROR:division by zero */
+  110.       ret = dividend;
+  111.   }
+
+infer_good.c:105: error: PURE_FUNCTION
+  Side-effect free function zero_division_2.
+  103.    * Complexity: divide (/ =)	Basic type	int	Constant
+  104.    */
+  105. > void zero_division_2()
+  106.   {
+  107.       int dividend = 1000;
+
+infer_good.c:121: error: INFERBO_ALLOC_IS_BIG
+  Length: 4294967295.
+  119.   {
+  120.       long long int i = 0;
+  121. >     long long int *ptr = (long long *)malloc(MAX_VAL * sizeof(long long)); /*Infer should detect this line as error*/ /*ERROR:Memory allocation failure */
+  122.       if (ptr != NULL)
+  123.       {
+
+infer_good.c:118: error: PURE_FUNCTION
+  Side-effect free function memory_allocation_failure.
+  116.    */
+  117.   #define MAX_VAL UINT_MAX
+  118. > void memory_allocation_failure()
+  119.   {
+  120.       long long int i = 0;
+
+infer_good.c:137: error: BUFFER_OVERRUN_L1
+  Offset: -1 Size: 5.
+  135.       int buf[5] = {1, 2, 3, 4, 5};
+  136.       int ret;
+  137. >     ret = buf[-1]; /*Infer should detect this line as error*/ /*ERROR:Data Underrun*/
+
+infer_good.c:133: error: PURE_FUNCTION
+  Side-effect free function underrun_st.
+  131.    * Complexity: 1-dimensional array	int	Constant	Loading
+  132.    */
+  133. > void underrun_st()
+  134.   {
+  135.       int buf[5] = {1, 2, 3, 4, 5};
+
+Summary of the reports
+
+         PURE_FUNCTION: 5
+     BUFFER_OVERRUN_L1: 2
+        DIVIDE_BY_ZERO: 2
+     BUFFER_OVERRUN_L2: 1
+  INFERBO_ALLOC_IS_BIG: 1
