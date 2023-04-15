@@ -1,0 +1,21 @@
+Found 2 issues
+
+data_lost.c:130: error: PURE_FUNCTION
+  Side-effect free function data_lost_010.
+  128.   } data_lost_010_s_001;
+  129.   
+  130. > void data_lost_010 ()
+  131.   {
+  132.   	data_lost_010_s_001 s;
+
+data_lost.c:189: error: PURE_FUNCTION
+  Side-effect free function data_lost_015_func_001.
+  187.    * Complexity: a short	int	The return value of the function
+  188.    */
+  189. > int data_lost_015_func_001 ()
+  190.   {
+  191.   	return 0x8000;
+
+Summary of the reports
+
+  PURE_FUNCTION: 2

@@ -1,0 +1,4 @@
+ptr_subtraction.c:35:2: warning: Value stored to 'buf' is never read [deadcode.DeadStores]
+        buf= (char *)(ptr+1); /*Tool should detect this line as error*/ /*ERROR:Incorrect pointer arithmetic*/
+        ^    ~~~~~~~~~~~~~~~
+1 warning generated.

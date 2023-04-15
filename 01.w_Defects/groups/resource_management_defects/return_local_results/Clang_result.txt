@@ -1,0 +1,7 @@
+return_local.c:19:2: warning: Address of stack memory associated with local variable 'buf' returned to caller [core.StackAddressEscape]
+        return buf;/*Tool should detect this line as error*/ /*ERROR: return - pointer to local variable */
+        ^~~~~~~~~~
+return_local.c:36:6: warning: Address of stack memory associated with local variable 'buf' is still referred to by the stack variable 'p' upon returning to the caller.  This will be a dangling reference [core.StackAddressEscape]
+        *pp = buf;/*Tool should detect this line as error*/ /*ERROR: return -pointer to local variable */
+            ^
+2 warnings generated.

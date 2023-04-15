@@ -1,0 +1,152 @@
+Found 18 issues
+
+wrong_arguments_func_pointer.c:40: error: PURE_FUNCTION
+  Side-effect free function wrong_arguments_func_pointer_001_func_001.
+  38.   * The type of return value is int .
+  39.   */
+  40. > int wrong_arguments_func_pointer_001_func_001(int a)
+  41.   {
+  42.       int i=10;
+
+wrong_arguments_func_pointer.c:61: error: PURE_FUNCTION
+  Side-effect free function wrong_arguments_func_pointer_002_func_001.
+  59.   * The type of return value is int
+  60.   */
+  61. > int wrong_arguments_func_pointer_002_func_001(int a)
+  62.   {
+  63.       int i=20;
+
+wrong_arguments_func_pointer.c:82: error: PURE_FUNCTION
+  Side-effect free function wrong_arguments_func_pointer_003_func_001.
+  80.   * The type of return value is int
+  81.   */
+  82. > int wrong_arguments_func_pointer_003_func_001 (int *p)
+  83.   {
+  84.   	return (*p);
+
+wrong_arguments_func_pointer.c:102: error: PURE_FUNCTION
+  Side-effect free function wrong_arguments_func_pointer_004_func_001.
+  100.   * The type of return value is char
+  101.   */
+  102. > char wrong_arguments_func_pointer_004_func_001 (char *p)
+  103.   {
+  104.   	return (*p);
+
+wrong_arguments_func_pointer.c:150: error: PURE_FUNCTION
+  Side-effect free function wrong_arguments_func_pointer_006_func_001.
+  148.   * The type of return value is int .
+  149.   */
+  150. > int wrong_arguments_func_pointer_006_func_001 (int a, int b)
+  151.   {
+  152.   	return a + b;
+
+wrong_arguments_func_pointer.c:170: error: PURE_FUNCTION
+  Side-effect free function wrong_arguments_func_pointer_007_func_001.
+  168.   * The type of return value is unsigned int
+  169.   */
+  170. > unsigned int wrong_arguments_func_pointer_007_func_001 (double a)
+  171.   {
+  172.   	a++;
+
+wrong_arguments_func_pointer.c:190: error: PURE_FUNCTION
+  Side-effect free function wrong_arguments_func_pointer_008_func_001.
+  188.   * The type of return value is float
+  189.   */
+  190. > float wrong_arguments_func_pointer_008_func_001(float a )
+  191.   {
+  192.   	a--;
+
+wrong_arguments_func_pointer.c:336: error: INTEGER_OVERFLOW_L5
+  ([-oo, +oo] + [-oo, +oo]):signed32.
+  334.       	st.arr[i] = i;
+  335.       	st1->arr[i] = st.arr[i]+i;
+  336. >     	temp += st.arr[i];
+  337.       }
+  338.   }
+
+wrong_arguments_func_pointer.c:356: error: MEMORY_LEAK
+  memory dynamically allocated by call to `malloc()` at line 348, column 50 is not reachable after line 356, column 2.
+  354.   	void (*fptr1)(wrong_arguments_func_pointer_012_s_001,wrong_arguments_func_pointer_012_s_001 *);
+  355.   	fptr1 = wrong_arguments_func_pointer_012_func_002;
+  356. > 	fptr1(st,st1);
+  357.   	void (*fptr2)(wrong_arguments_func_pointer_012_s_001 *,int);
+  358.   	fptr2 = wrong_arguments_func_pointer_012_func_003;
+
+wrong_arguments_func_pointer.c:368: error: PURE_FUNCTION
+  Side-effect free function wrong_arguments_func_pointer_013_func_001.
+  366.   * The type of return value is void .
+  367.   */
+  368. > void wrong_arguments_func_pointer_013_func_001 (int len,char **stringPtr)
+  369.   {
+  370.   	char * p = malloc(sizeof(char) * (len+1));
+
+wrong_arguments_func_pointer.c:393: error: PURE_FUNCTION
+  Side-effect free function wrong_arguments_func_pointer_014_func_001.
+  391.   * The type of return value is int
+  392.   */
+  393. > int wrong_arguments_func_pointer_014_func_001(int flag)
+  394.   {
+  395.      int ret =0;
+
+wrong_arguments_func_pointer.c:452: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 452, column 8.
+  450.       	wrong_arguments_func_pointer_015_dst1_gbl[i]=(char*) malloc(15*sizeof(char));
+  451.       }
+  452. > 	while(1)
+  453.   	{
+  454.   		void (*fptr)(char **);
+
+wrong_arguments_func_pointer.c:456: error: MEMORY_LEAK
+  memory dynamically allocated by call to `malloc()` at line 450, column 59 is not reachable after line 456, column 6.
+  454.   		void (*fptr)(char **);
+  455.   	    fptr = (void (*)(char**))wrong_arguments_func_pointer_015_func_002;
+  456. > 	    fptr(wrong_arguments_func_pointer_015_dst1_gbl);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
+  457.   	    break;
+  458.   	}
+
+wrong_arguments_func_pointer.c:498: error: PURE_FUNCTION
+  Side-effect free function wrong_arguments_func_pointer_017_func_001.
+  496.    * Global function pointer returns different type and takes different parameter
+  497.    */
+  498. > int wrong_arguments_func_pointer_017_func_001 (int flag,float flag2)
+  499.   {
+  500.   	float a=0.0;
+
+wrong_arguments_func_pointer.c:517: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==1)` is always false at line 517, column 9.
+  515.   
+  516.   my_label:
+  517. >     if (flag == 1)
+  518.   	{
+  519.       	wrong_arguments_func_pointer_017_func_gbl = (int (*)(float,int))wrong_arguments_func_pointer_017_func_001;
+
+wrong_arguments_func_pointer.c:525: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==1)` is always false at line 525, column 9.
+  523.   
+  524.   my_label2:
+  525. >     if (flag == 1)
+  526.    	{
+  527.             flag = wrong_arguments_func_pointer_017_func_gbl(1.9,0);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
+
+wrong_arguments_func_pointer.c:564: error: INTEGER_OVERFLOW_L5
+  ([-oo, +oo] + [-oo, +oo]):signed32.
+  562.       	st.arr[i] = i;
+  563.       	st1->arr[i] = st.arr[i]+i;
+  564. >     	temp += st.arr[i];
+  565.       }
+  566.   }
+
+wrong_arguments_func_pointer.c:599: error: MEMORY_LEAK
+  memory dynamically allocated by call to `malloc()` at line 591, column 50 is not reachable after line 599, column 2.
+  597.   	void (*fptr3)(wrong_arguments_func_pointer_018_s_001 st,wrong_arguments_func_pointer_018_s_001* st1);
+  598.   	fptr3 = wrong_arguments_func_pointer_018_func_004;
+  599. > 	fptr3(st,st1);
+  600.   }
+  601.   
+
+Summary of the reports
+
+          PURE_FUNCTION: 10
+  CONDITION_ALWAYS_TRUE: 3
+            MEMORY_LEAK: 3
+    INTEGER_OVERFLOW_L5: 2

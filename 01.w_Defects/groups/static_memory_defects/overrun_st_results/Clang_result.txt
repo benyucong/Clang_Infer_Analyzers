@@ -1,0 +1,13 @@
+overrun_st.c:44:2: warning: Value stored to 'ret' is never read [deadcode.DeadStores]
+        ret = buf[5];/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
+        ^     ~~~~~~
+overrun_st.c:44:6: warning: Assigned value is garbage or undefined [core.uninitialized.Assign]
+        ret = buf[5];/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
+            ^ ~~~~~~
+overrun_st.c:320:2: warning: Value stored to 'ret' is never read [deadcode.DeadStores]
+        ret = *(p + 5);/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
+        ^     ~~~~~~~~
+overrun_st.c:320:6: warning: Assigned value is garbage or undefined [core.uninitialized.Assign]
+        ret = *(p + 5);/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
+            ^ ~~~~~~~~
+4 warnings generated.

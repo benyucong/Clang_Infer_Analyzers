@@ -1,116 +1,116 @@
-[130548][environment] CWD = /home/e0925519/cs5218/cs5218_asg3/01.w_Defects/groups/concurrency_defects
-[130548][environment] No .inferconfig file found
-[130548][environment] Project root = /home/e0925519/cs5218/cs5218_asg3/01.w_Defects/groups/concurrency_defects
-[130548][environment] INFER_ARGS =   @/tmp/args.tmp.f445d6  ++Contents of '/tmp/args.tmp.f445d6':
-[130548][environment]                                         run --starvation --racerd
-[130548][environment]                                         --enable-issue-type
-[130548][environment]                                         ARBITRARY_CODE_EXECUTION_UNDER_LOCK
-[130548][environment]                                         --enable-issue-type DEADLOCK
-[130548][environment]                                         --enable-issue-type IPC_ON_UI_THREAD
-[130548][environment]                                         --enable-issue-type
-[130548][environment]                                         LOCKLESS_VIOLATION
-[130548][environment]                                         --enable-issue-type STARVATION
-[130548][environment]                                         --enable-issue-type
-[130548][environment]                                         STRICT_MODE_VIOLATION
-[130548][environment]                                         --enable-issue-type
-[130548][environment]                                         GUARDEDBY_VIOLATION
-[130548][environment]                                         --enable-issue-type
-[130548][environment]                                         GUARDEDBY_VIOLATION_NULLSAFE
-[130548][environment]                                         --enable-issue-type
-[130548][environment]                                         INTERFACE_NOT_THREAD_SAFE
-[130548][environment]                                         --enable-issue-type
-[130548][environment]                                         LOCK_CONSISTENCY_VIOLATION
-[130548][environment]                                         --enable-issue-type
-[130548][environment]                                         THREAD_SAFETY_VIOLATION
-[130548][environment]                                         --enable-issue-type
-[130548][environment]                                         THREAD_SAFETY_VIOLATION_NULLSAFE
-[130548][environment]                                         --disable-issue-type DEAD_STORE -o
-[130548][environment]                                         /home/e0925519/cs5218/cs5218_asg3/01.w_Defects/groups/concurrency_defects/race_condition_results/Infer_result
-[130548][environment]                                       
-[130548][environment] command line arguments:   infer run --starvation --racerd --enable-issue-type
-[130548][environment]                           ARBITRARY_CODE_EXECUTION_UNDER_LOCK
-[130548][environment]                           --enable-issue-type DEADLOCK --enable-issue-type
-[130548][environment]                           IPC_ON_UI_THREAD --enable-issue-type
-[130548][environment]                           LOCKLESS_VIOLATION --enable-issue-type STARVATION
-[130548][environment]                           --enable-issue-type STRICT_MODE_VIOLATION
-[130548][environment]                           --enable-issue-type GUARDEDBY_VIOLATION
-[130548][environment]                           --enable-issue-type GUARDEDBY_VIOLATION_NULLSAFE
-[130548][environment]                           --enable-issue-type INTERFACE_NOT_THREAD_SAFE
-[130548][environment]                           --enable-issue-type LOCK_CONSISTENCY_VIOLATION
-[130548][environment]                           --enable-issue-type THREAD_SAFETY_VIOLATION
-[130548][environment]                           --enable-issue-type
-[130548][environment]                           THREAD_SAFETY_VIOLATION_NULLSAFE
-[130548][environment]                           --disable-issue-type DEAD_STORE -o
-[130548][environment]                           race_condition_results/Infer_result -- clang -c
-[130548][environment]                           race_condition.cActive checkers: biabduction (C/C++/ObjC, Java), fragment retains view (Java), liveness (C/C++/ObjC), ownership (C/C++/ObjC), RacerD (C/C++/ObjC, Java), SIOF (C/C++/ObjC), uninitialized variables (C/C++/ObjC), Starvation analysis (C/C++/ObjC, Java)
-[130548][environment] Infer log identifier is 
+[42917][environment] CWD = /home/e0925519/cs5218/cs5218_asg3/01.w_Defects/groups/concurrency_defects
+[42917][environment] No .inferconfig file found
+[42917][environment] Project root = /home/e0925519/cs5218/cs5218_asg3/01.w_Defects/groups/concurrency_defects
+[42917][environment] INFER_ARGS =   @/tmp/args.tmp.171eda  ++Contents of '/tmp/args.tmp.171eda':
+[42917][environment]                                         run --starvation --racerd
+[42917][environment]                                         --enable-issue-type
+[42917][environment]                                         ARBITRARY_CODE_EXECUTION_UNDER_LOCK
+[42917][environment]                                         --enable-issue-type DEADLOCK
+[42917][environment]                                         --enable-issue-type IPC_ON_UI_THREAD
+[42917][environment]                                         --enable-issue-type
+[42917][environment]                                         LOCKLESS_VIOLATION
+[42917][environment]                                         --enable-issue-type STARVATION
+[42917][environment]                                         --enable-issue-type
+[42917][environment]                                         STRICT_MODE_VIOLATION
+[42917][environment]                                         --enable-issue-type
+[42917][environment]                                         GUARDEDBY_VIOLATION
+[42917][environment]                                         --enable-issue-type
+[42917][environment]                                         GUARDEDBY_VIOLATION_NULLSAFE
+[42917][environment]                                         --enable-issue-type
+[42917][environment]                                         INTERFACE_NOT_THREAD_SAFE
+[42917][environment]                                         --enable-issue-type
+[42917][environment]                                         LOCK_CONSISTENCY_VIOLATION
+[42917][environment]                                         --enable-issue-type
+[42917][environment]                                         THREAD_SAFETY_VIOLATION
+[42917][environment]                                         --enable-issue-type
+[42917][environment]                                         THREAD_SAFETY_VIOLATION_NULLSAFE
+[42917][environment]                                         --disable-issue-type DEAD_STORE -o
+[42917][environment]                                         /home/e0925519/cs5218/cs5218_asg3/01.w_Defects/groups/concurrency_defects/race_condition_results/Infer_result
+[42917][environment]                                       
+[42917][environment] command line arguments:   infer run --starvation --racerd --enable-issue-type
+[42917][environment]                           ARBITRARY_CODE_EXECUTION_UNDER_LOCK
+[42917][environment]                           --enable-issue-type DEADLOCK --enable-issue-type
+[42917][environment]                           IPC_ON_UI_THREAD --enable-issue-type
+[42917][environment]                           LOCKLESS_VIOLATION --enable-issue-type STARVATION
+[42917][environment]                           --enable-issue-type STRICT_MODE_VIOLATION
+[42917][environment]                           --enable-issue-type GUARDEDBY_VIOLATION
+[42917][environment]                           --enable-issue-type GUARDEDBY_VIOLATION_NULLSAFE
+[42917][environment]                           --enable-issue-type INTERFACE_NOT_THREAD_SAFE
+[42917][environment]                           --enable-issue-type LOCK_CONSISTENCY_VIOLATION
+[42917][environment]                           --enable-issue-type THREAD_SAFETY_VIOLATION
+[42917][environment]                           --enable-issue-type
+[42917][environment]                           THREAD_SAFETY_VIOLATION_NULLSAFE
+[42917][environment]                           --disable-issue-type DEAD_STORE -o
+[42917][environment]                           race_condition_results/Infer_result -- clang -c
+[42917][environment]                           race_condition.cActive checkers: biabduction (C/C++/ObjC, Java), fragment retains view (Java), liveness (C/C++/ObjC), ownership (C/C++/ObjC), RacerD (C/C++/ObjC, Java), SIOF (C/C++/ObjC), uninitialized variables (C/C++/ObjC), Starvation analysis (C/C++/ObjC, Java)
+[42917][environment] Infer log identifier is 
 Infer version v0.16.0
-[130548][environment] Copyright 2009 - present Facebook. All Rights Reserved.
-[130548][environment] 
-[130548][   progress] Capturing in make/cc mode...
-[130548][      debug] 
-[130548][      debug] *** Beginning capture of file /home/e0925519/cs5218/cs5218_asg3/01.w_Defects/groups/concurrency_defects/race_condition.c ***
-[130548][      debug] Clang frontend action is translating and linting
-[130548][      debug] Loading the following linters files: /opt/infer-linux64-v0.16.0/lib/infer/infer/bin/../lib/linter_rules/linters.al
-[130548][      debug] Elapsed: 106ms.
-[130548][      debug] 
-[130548][   progress] Found 1 source file to analyze in /home/e0925519/cs5218/cs5218_asg3/01.w_Defects/groups/concurrency_defects/race_condition_results/Infer_result
-[130548][environment] Parallel jobs: 4
-[130556][   progress] race_condition.c starting
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][      debug] 
-[130556][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
-[130556][   progress] race_condition.c DONE
+[42917][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[42917][environment] 
+[42917][   progress] Capturing in make/cc mode...
+[42917][      debug] 
+[42917][      debug] *** Beginning capture of file /home/e0925519/cs5218/cs5218_asg3/01.w_Defects/groups/concurrency_defects/race_condition.c ***
+[42917][      debug] Clang frontend action is translating and linting
+[42917][      debug] Loading the following linters files: /opt/infer-linux64-v0.16.0/lib/infer/infer/bin/../lib/linter_rules/linters.al
+[42917][      debug] Elapsed: 101ms.
+[42917][      debug] 
+[42917][   progress] Found 1 source file to analyze in /home/e0925519/cs5218/cs5218_asg3/01.w_Defects/groups/concurrency_defects/race_condition_results/Infer_result
+[42917][environment] Parallel jobs: 4
+[42930][   progress] race_condition.c starting
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][      debug] 
+[42930][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[42930][   progress] race_condition.c DONE

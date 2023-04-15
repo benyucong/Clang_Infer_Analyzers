@@ -1,0 +1,30 @@
+Found 3 issues
+
+unused_var.c:77: error: INTEGER_OVERFLOW_L5
+  ([-oo, +oo] + [-oo, +oo]):signed32.
+  75.   	u.s1.a = 1;
+  76.   	u.s1.b = 2;
+  77. > 	u.s3.a = u.s2.a + u.s2.b;
+  78.   	u.s3.unuse = u.s1.a;
+  79.   	printf("%d",u.s3.unuse); /*Tool should not detect this line as error*/ /*No ERROR:Unused variable*/
+
+unused_var.c:119: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(a==1)` is always false at line 119, column 5.
+  117.   	static int b = 2;
+  118.   	static int unuse;
+  119. > 	if(a==1)
+  120.   	{	
+  121.   	    unuse = a + b;
+
+unused_var.c:184: error: INTEGER_OVERFLOW_L5
+  ([-oo, +oo] + [-oo, +oo]):signed32 by call to `unused_var_004`.
+  182.   	if (vflag ==4 || vflag ==888)
+  183.   	{
+  184. > 		unused_var_004();
+  185.   	}
+  186.   
+
+Summary of the reports
+
+    INTEGER_OVERFLOW_L5: 2
+  CONDITION_ALWAYS_TRUE: 1

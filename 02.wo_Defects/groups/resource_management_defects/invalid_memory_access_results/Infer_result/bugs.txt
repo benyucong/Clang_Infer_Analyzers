@@ -1,0 +1,187 @@
+Found 22 issues
+
+invalid_memory_access.c:38: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==10)` is always false at line 38, column 12.
+  36.       {
+  37.       	(flag == 10)? (*(ptr+1) = 10):(a=100);
+  38. >         if(flag == 10)
+  39.           {
+  40.           	a = *(ptr+1); /*Tool should not detect this line as error*/ /*No ERROR:Invalid memory access to already freed area*/
+
+invalid_memory_access.c:43: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==10)` is always false at line 43, column 12.
+  41.           	printf("%d",a);
+  42.          }
+  43. >         if(flag == 10)
+  44.           {
+  45.           	free(ptr);
+
+invalid_memory_access.c:61: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(staticflag==10)` is always false at line 61, column 9.
+  59.   	double *ptr, *dptr = 0,a;
+  60.   	static int staticflag=10;
+  61. >     if (staticflag == 10)
+  62.       	  	(ptr= (double*) malloc(10*sizeof(double)));
+  63.       else
+
+invalid_memory_access.c:66: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(staticflag==10)` is always false at line 66, column 10.
+  64.       	  	(dptr = (double*) malloc(5*sizeof(double)));
+  65.   
+  66. >     if  (staticflag == 10 && ptr!=NULL)
+  67.       		(*(ptr+1) = 10.5);
+  68.       else
+
+invalid_memory_access.c:71: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(staticflag==10)` is always false at line 71, column 8.
+  69.       	    (*(dptr+1) = 5.5) ;
+  70.   
+  71. >     if(staticflag == 10 && ptr!=NULL)
+  72.       	a = *(ptr+1); /*Tool should not detect this line as error*/ /*No ERROR:Invalid memory access to already freed area*/
+  73.       else
+
+invalid_memory_access.c:78: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(staticflag==10)` is always false at line 78, column 8.
+  76.   	printf("%lf",a);
+  77.   
+  78. >     if(staticflag == 10 && ptr!=NULL)
+  79.       {
+  80.       	free(ptr);
+
+invalid_memory_access.c:99: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(i>0)` is always false at line 99, column 8.
+  97.   	int i=1;
+  98.   	char *buf,*c = 0;
+  99. > 	while(i>0)
+  100.   	{
+  101.   		buf = (char *) malloc (25 * sizeof(char));
+
+invalid_memory_access.c:159: error: INTEGER_OVERFLOW_U5
+  (`count` × [-oo, +oo]):signed32.
+  157.       	    ptr = NULL;
+  158.       	}
+  159. >     	return (count * invalid_memory_access_005(count-1));
+  160.       }
+  161.   }
+
+invalid_memory_access.c:262: error: PURE_FUNCTION
+  Side-effect free function invalid_memory_access_009.
+  260.   } invalid_memory_access_009_uni_001;
+  261.   
+  262. > void invalid_memory_access_009 ()
+  263.   {
+  264.   	invalid_memory_access_009_uni_001 *u = (invalid_memory_access_009_uni_001 * )malloc(5*sizeof( invalid_memory_access_009_uni_001 ));
+
+invalid_memory_access.c:286: error: PURE_FUNCTION
+  Side-effect free function invalid_memory_access_func_010.
+  284.   * Complexity Memory allocated in a function and Memory used in another function
+  285.   */
+  286. > void invalid_memory_access_func_010 (int len ,int **Ptr)
+  287.   {
+  288.   	int * p = malloc(sizeof(int) * len);
+
+invalid_memory_access.c:292: error: PURE_FUNCTION
+  Side-effect free function invalid_memory_access_010.
+  290.   }
+  291.   
+  292. > void invalid_memory_access_010 ()
+  293.   {
+  294.   	int ptr[5] = {4,6,9,10,0};
+
+invalid_memory_access.c:312: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 312, column 8.
+  310.   	int *ptr,i=0,j;
+  311.   	int index[4] = {3, 5, 4, 6};
+  312. > 	for(j=0;;j++)
+  313.   	{
+  314.   		ptr = (int *)malloc(sizeof(int) * 4);
+
+invalid_memory_access.c:308: error: PURE_FUNCTION
+  Side-effect free function invalid_memory_access_011.
+  306.   * Complexity: 1-dimensional array
+  307.   */
+  308. > void invalid_memory_access_011 ()
+  309.   {
+  310.   	int *ptr,i=0,j;
+
+invalid_memory_access.c:444: error: PURE_FUNCTION
+  Side-effect free function invalid_memory_access_013_func_003.
+  442.   }
+  443.   
+  444. > void invalid_memory_access_013_func_003 (int flag)
+  445.   {
+  446.   	invalid_memory_access_013_s_001 s;
+
+invalid_memory_access.c:472: error: PURE_FUNCTION
+  Side-effect free function invalid_memory_access_014.
+  470.   * Complexity: When using a pointer to int and  goto
+  471.   */
+  472. > int invalid_memory_access_014 (int flag)
+  473.   {
+  474.   	int ret = 0,i;
+
+invalid_memory_access.c:538: error: MEMORY_LEAK
+  memory dynamically allocated to `psink` by call to `invalid_memory_access_015_func_001()` at line 537, column 19 is not reachable after line 538, column 13.
+  536.               char * str;
+  537.               str = invalid_memory_access_015_func_001(buf[j]);
+  538. >             psink = str;
+  539.           }
+  540.       }
+
+invalid_memory_access.c:547: error: PURE_FUNCTION
+  Side-effect free function invalid_memory_access_016_func_001.
+  545.   * Complexity: global char double pointer  variable initialized in another function
+  546.    */
+  547. > int invalid_memory_access_016_func_001(int flag)
+  548.   {
+  549.      int ret;
+
+invalid_memory_access.c:607: error: PURE_FUNCTION
+  Side-effect free function invalid_memory_access_017_func_001.
+  605.   * Complexity: global char pointer  variable initialized in another function , freed in another function based in while loop
+  606.    */
+  607. > int invalid_memory_access_017_func_001(int flag)
+  608.   {
+  609.      int ret;
+
+invalid_memory_access.c:655: error: BUFFER_OVERRUN_L4
+  Offset: [0, +oo] Size: 10 by call to `invalid_memory_access_017_func_004`.
+  653.   	else
+  654.   	{
+  655. > 		invalid_memory_access_017_func_004();
+  656.   	}
+  657.   	if(invalid_memory_access_017_func_001(flag) == 0)
+
+invalid_memory_access.c:750: error: BUFFER_OVERRUN_L5
+  Offset: [-oo, +oo] (⇐ [0, 1] + [-oo, +oo]) Size: 2 by call to `invalid_memory_access_015`.
+  748.   	if (vflag == 15 || vflag ==888)
+  749.   	{
+  750. > 		invalid_memory_access_015();
+  751.   	}
+  752.   
+
+invalid_memory_access.c:750: error: INTEGER_OVERFLOW_L5
+  ([-oo, +oo] - 1):signed32 by call to `invalid_memory_access_015`.
+  748.   	if (vflag == 15 || vflag ==888)
+  749.   	{
+  750. > 		invalid_memory_access_015();
+  751.   	}
+  752.   
+
+invalid_memory_access.c:750: error: INTEGER_OVERFLOW_L5
+  ([0, +oo] + 1):signed32 by call to `invalid_memory_access_015`.
+  748.   	if (vflag == 15 || vflag ==888)
+  749.   	{
+  750. > 		invalid_memory_access_015();
+  751.   	}
+  752.   
+
+Summary of the reports
+
+  CONDITION_ALWAYS_TRUE: 8
+          PURE_FUNCTION: 8
+    INTEGER_OVERFLOW_L5: 2
+            MEMORY_LEAK: 1
+    INTEGER_OVERFLOW_U5: 1
+      BUFFER_OVERRUN_L4: 1
+      BUFFER_OVERRUN_L5: 1

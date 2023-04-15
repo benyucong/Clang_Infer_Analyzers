@@ -1,0 +1,86 @@
+Found 10 issues
+
+redundant_cond.c:158: error: INTEGER_OVERFLOW_L5
+  ([0, +oo] + [11, 20]):signed32.
+  156.   	for (a = 20; 10 < a; a --)  /*Tool should not detect this line as error*/ /*No ERROR:Redundant condition*/
+  157.   	{
+  158. > 		b += a;
+  159.   	}
+  160.   	ret = b;
+
+redundant_cond.c:177: error: INTEGER_OVERFLOW_U5
+  ([-oo, +oo] + [-oo, 9]):signed32.
+  175.   	while (a < 10)  /*Tool should not detect this line as error*/ /*No ERROR:Redundant condition*/
+  176.   	{
+  177. > 		b += a;
+  178.   		a --;
+  179.   	}
+
+redundant_cond.c:178: error: INTEGER_OVERFLOW_U5
+  ([-oo, 9] - 1):signed32.
+  176.   	{
+  177.   		b += a;
+  178. > 		a --;
+  179.   	}
+  180.   	ret = b;
+
+redundant_cond.c:197: error: INTEGER_OVERFLOW_U5
+  ([-oo, +oo] + [-oo, 4]):signed32.
+  195.   	while ((a < 5)) /*Tool should not detect this line as error*/ /*No ERROR:Redundant condition*/
+  196.   	{
+  197. > 		b += a;
+  198.   		a ++;
+  199.   	}
+
+redundant_cond.c:217: error: INTEGER_OVERFLOW_U5
+  ([-oo, +oo] + [-oo, 7]):signed32.
+  215.   	while ((a < 8))  /*Tool should not detect this line as error*/ /*No ERROR:Redundant condition*/
+  216.   	{
+  217. > 		b += a;
+  218.   		a ++;
+  219.   	}
+
+redundant_cond.c:237: error: INTEGER_OVERFLOW_U5
+  ([-oo, +oo] + [-oo, 9]):signed32.
+  235.   	while (a < 10)/*Tool should not detect this line as error*/ /*No ERROR:Redundant condition*/
+  236.   	{
+  237. > 		b += a;
+  238.   		a ++;
+  239.   	}
+
+redundant_cond.c:257: error: INTEGER_OVERFLOW_U5
+  ([-oo, +oo] + [-oo, 9]):signed32.
+  255.   	while ((a < 10))/*Tool should not detect this line as error*/ /*No ERROR:Redundant condition*/
+  256.   	{
+  257. > 		b += a;
+  258.   		a --;
+  259.   	}
+
+redundant_cond.c:258: error: INTEGER_OVERFLOW_U5
+  ([-oo, 9] - 1):signed32.
+  256.   	{
+  257.   		b += a;
+  258. > 		a --;
+  259.   	}
+  260.   	ret = b;
+
+redundant_cond.c:277: error: INTEGER_OVERFLOW_U5
+  ([-oo, +oo] + [-oo, +oo]):signed32.
+  275.     do {
+  276.       // JDR: cast to unsigned to avoid UB
+  277. >     b += (unsigned)a;
+  278.       a --;
+  279.     }
+
+redundant_cond.c:278: error: INTEGER_OVERFLOW_U5
+  ([-oo, +oo] - 1):signed32.
+  276.       // JDR: cast to unsigned to avoid UB
+  277.       b += (unsigned)a;
+  278. >     a --;
+  279.     }
+  280.     while (10 < a); /*Tool should not detect this line as error*/ /*No ERROR:Redundant condition*/
+
+Summary of the reports
+
+  INTEGER_OVERFLOW_U5: 9
+  INTEGER_OVERFLOW_L5: 1

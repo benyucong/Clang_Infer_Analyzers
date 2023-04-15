@@ -1,0 +1,192 @@
+Found 23 issues
+
+double_free.c:17: error: PURE_FUNCTION
+  Side-effect free function double_free_001.
+  15.   */
+  16.   
+  17. > void double_free_001()
+  18.   {
+  19.   	char* ptr= (char*) malloc(sizeof(char));
+
+double_free.c:22: error: USE_AFTER_FREE
+  pointer `ptr` last assigned on line 19 was freed by call to `free()` at line 20, column 2 and is dereferenced or freed at line 22, column 2.
+  20.   	free(ptr);
+  21.   
+  22. > 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+  23.   }
+  24.   
+
+double_free.c:30: error: PURE_FUNCTION
+  Side-effect free function double_free_002.
+  28.   */
+  29.   
+  30. > void double_free_002()
+  31.   {
+  32.   	char* ptr= (char*) malloc(10*sizeof(char));
+
+double_free.c:43: error: USE_AFTER_FREE
+  pointer `ptr` last assigned on line 32 was freed by call to `free()` at line 40, column 4 and is dereferenced or freed at line 43, column 2.
+  41.   		}
+  42.   	}
+  43. > 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+  44.   }
+  45.   
+
+double_free.c:51: error: PURE_FUNCTION
+  Side-effect free function double_free_003.
+  49.   */
+  50.   
+  51. > void double_free_003()
+  52.   {
+  53.   	char* ptr= (char*) malloc(10*sizeof(char));
+
+double_free.c:64: error: USE_AFTER_FREE
+  pointer `ptr` last assigned on line 53 was freed by call to `free()` at line 61, column 4 and is dereferenced or freed at line 64, column 2.
+  62.   		}
+  63.   	}
+  64. > 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+  65.   }
+  66.   
+
+double_free.c:86: error: MEMORY_LEAK
+  memory dynamically allocated by call to `malloc()` at line 74, column 21 is not reachable after line 86, column 5.
+  84.   	}
+  85.   
+  86. > 	if(rand() % 3==0)
+  87.   	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+  88.   }
+
+double_free.c:87: error: USE_AFTER_FREE
+  pointer `ptr` last assigned on line 74 was freed by call to `free()` at line 83, column 3 and is dereferenced or freed at line 87, column 2.
+  85.   
+  86.   	if(rand() % 3==0)
+  87. > 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+  88.   }
+  89.   
+
+double_free.c:95: error: PURE_FUNCTION
+  Side-effect free function double_free_005.
+  93.   */
+  94.   
+  95. > void double_free_005()
+  96.   {
+  97.   	char* ptr= (char*) malloc(sizeof(char));
+
+double_free.c:101: error: USE_AFTER_FREE
+  pointer `ptr` last assigned on line 97 was freed by call to `free()` at line 98, column 2 and is dereferenced or freed at line 101, column 2.
+  99.   
+  100.   	if(ptr)
+  101. > 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+  102.   }
+  103.   
+
+double_free.c:112: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 112, column 5.
+  110.   {
+  111.   	char* ptr= (char*) malloc(sizeof(char));
+  112. > 	if(1)
+  113.   	free(ptr);
+  114.   
+
+double_free.c:109: error: PURE_FUNCTION
+  Side-effect free function double_free_006.
+  107.   */
+  108.   
+  109. > void double_free_006()
+  110.   {
+  111.   	char* ptr= (char*) malloc(sizeof(char));
+
+double_free.c:115: error: USE_AFTER_FREE
+  pointer `ptr` last assigned on line 111 was freed by call to `free()` at line 113, column 2 and is dereferenced or freed at line 115, column 2.
+  113.   	free(ptr);
+  114.   
+  115. > 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+  116.   }
+  117.   
+
+double_free.c:128: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag>=0)` is always false at line 128, column 5.
+  126.   	int flag=0;
+  127.   	
+  128. > 	if(flag>=0)
+  129.   	free(ptr);
+  130.   
+
+double_free.c:123: error: PURE_FUNCTION
+  Side-effect free function double_free_007.
+  121.   */
+  122.   
+  123. > void double_free_007()
+  124.   {
+  125.   	char* ptr= (char*) malloc(sizeof(char));
+
+double_free.c:131: error: USE_AFTER_FREE
+  pointer `ptr` last assigned on line 125 was freed by call to `free()` at line 129, column 2 and is dereferenced or freed at line 131, column 2.
+  129.   	free(ptr);
+  130.   
+  131. > 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+  132.   }
+  133.   
+
+double_free.c:158: error: PURE_FUNCTION
+  Side-effect free function double_free_009.
+  156.   
+  157.   
+  158. > void double_free_009()
+  159.   {
+  160.   	char* ptr= (char*) malloc(sizeof(char));
+
+double_free.c:168: error: USE_AFTER_FREE
+  pointer `ptr` last assigned on line 160 was freed by call to `free()` at line 165, column 3 and is dereferenced or freed at line 168, column 2.
+  166.   		flag++;
+  167.   	}
+  168. > 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+  169.   }
+  170.   
+
+double_free.c:177: error: PURE_FUNCTION
+  Side-effect free function double_free_010.
+  175.   
+  176.   
+  177. > void double_free_010()
+  178.   {
+  179.   	char* ptr= (char*) malloc(sizeof(char));
+
+double_free.c:187: error: USE_AFTER_FREE
+  pointer `ptr` last assigned on line 179 was freed by call to `free()` at line 184, column 3 and is dereferenced or freed at line 187, column 2.
+  185.   		flag--;
+  186.   	}
+  187. > 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+  188.   }
+  189.   
+
+double_free.c:203: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==1)` is always false at line 203, column 6.
+  201.   	while(a<b)
+  202.   	{
+  203. > 		if(flag ==1)
+  204.   		free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+  205.   		a++;
+
+double_free.c:196: error: PURE_FUNCTION
+  Side-effect free function double_free_011.
+  194.   
+  195.   
+  196. > void double_free_011()
+  197.   {
+  198.   	char* ptr= (char*) malloc(sizeof(char));
+
+double_free.c:215: error: PURE_FUNCTION
+  Side-effect free function double_free_012.
+  213.   
+  214.   
+  215. > void double_free_012()
+  216.   {
+  217.   	char* ptr= (char*) malloc(sizeof(char));
+
+Summary of the reports
+
+          PURE_FUNCTION: 10
+         USE_AFTER_FREE: 9
+  CONDITION_ALWAYS_TRUE: 3
+            MEMORY_LEAK: 1

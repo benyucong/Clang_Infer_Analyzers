@@ -1,0 +1,13 @@
+Found 1 issue
+
+ptr_subtraction.c:30: error: PURE_FUNCTION
+  Side-effect free function ptr_subtraction_002.
+  28.    * Complexity: an incorrect pointer arithmetic
+  29.    */
+  30. > void ptr_subtraction_002 ()
+  31.   {
+  32.   	int x= 10;
+
+Summary of the reports
+
+  PURE_FUNCTION: 1

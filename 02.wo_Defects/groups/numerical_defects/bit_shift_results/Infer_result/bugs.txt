@@ -1,0 +1,13 @@
+Found 1 issue
+
+bit_shift.c:154: error: PURE_FUNCTION
+  Side-effect free function bit_shift_012_func_001.
+  152.    * Complexity: int	Beyond the size of the left shift	The return value of the function
+  153.    */
+  154. > int bit_shift_012_func_001 ()
+  155.   {
+  156.   	return 10;
+
+Summary of the reports
+
+  PURE_FUNCTION: 1

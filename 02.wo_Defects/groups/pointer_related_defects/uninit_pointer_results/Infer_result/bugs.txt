@@ -1,0 +1,154 @@
+Found 18 issues
+
+uninit_pointer.c:37: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_002.
+  35.   * Complexity: 1 single pointer	int	Variable	Write
+  36.   */
+  37. > void uninit_pointer_002 ()
+  38.   {
+  39.   	int a =30;
+
+uninit_pointer.c:108: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_006_func_001.
+  106.   * Complexity: double pointer int	Function arguments	Write
+  107.   */
+  108. > void uninit_pointer_006_func_001 (int **pp)
+  109.   {
+  110.   	**pp = 1; /*Tool should not detect this line as error*/ /*No ERROR:Uninitialized pointer*/
+
+uninit_pointer.c:113: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_006.
+  111.   }
+  112.   
+  113. > void uninit_pointer_006 ()
+  114.   {
+  115.   	int a =10;
+
+uninit_pointer.c:137: error: BUFFER_OVERRUN_U5
+  Offset: [-oo, +oo] (⇐ [-oo, +oo] + 4) Size: [0, +oo].
+  135.   	for(i=0;i<5;i++)
+  136.   	{
+  137. >           *((*pbuf[i])+j)='a'; /*Tool should not detect this line as error*/ /*No ERROR:Uninitialized pointer*/
+  138.   	    printf("uninit %c \n",*((*pbuf[i])+j));
+  139.   	}
+
+uninit_pointer.c:162: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_008.
+  160.   	p->uninit = ret;
+  161.   }
+  162. > void uninit_pointer_008 ()
+  163.   {
+  164.   	uninit_pointer_008_s_001 s;
+
+uninit_pointer.c:175: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_009_func_001.
+  173.   * Complexity: When using a pointer to char and initialized based on return value of function
+  174.   */
+  175. > int uninit_pointer_009_func_001(int flag)
+  176.   {
+  177.      int ret;
+
+uninit_pointer.c:230: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 230, column 9.
+  228.   	if (ptr!=NULL)
+  229.   	{
+  230. > 		while(1)
+  231.          {
+  232.              for(i=0; i<10; i++)
+
+uninit_pointer.c:238: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 238, column 14.
+  236.              break;
+  237.          }
+  238. >        while(1)
+  239.          {
+  240.             for(i=0; i<10; i++)
+
+uninit_pointer.c:242: error: INTEGER_OVERFLOW_L5
+  ([0, +oo] + [0, 9]):unsigned32.
+  240.             for(i=0; i<10; i++)
+  241.             {
+  242. >         	  a += ptr[i]; /*Tool should not detect this line as error*/ /*No ERROR:Uninitialized pointer*/
+  243.             }
+  244.             break;
+
+uninit_pointer.c:240: error: MEMORY_LEAK
+  memory dynamically allocated by call to `malloc()` at line 226, column 27 is not reachable after line 240, column 20.
+  238.          while(1)
+  239.          {
+  240. >           for(i=0; i<10; i++)
+  241.             {
+  242.           	  a += ptr[i]; /*Tool should not detect this line as error*/ /*No ERROR:Uninitialized pointer*/
+
+uninit_pointer.c:223: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_011.
+  221.   * Complexity: When using a unsigned int pointer and partially initialized in a infinite loop
+  222.   */
+  223. > void uninit_pointer_011 ()
+  224.   {
+  225.       unsigned int * ptr = NULL,a=0;
+
+uninit_pointer.c:253: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_012.
+  251.   * Complexity: When using a pointer to float , pointing to 1D array
+  252.   */
+  253. > void uninit_pointer_012 ()
+  254.   {
+  255.   	float * fptr =NULL;
+
+uninit_pointer.c:273: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_013.
+  271.   * Complexity: Double int pointer partially initialized with 2D array
+  272.   */
+  273. > void uninit_pointer_013 ()
+  274.   {
+  275.   	int **ptr = (int**) malloc(3*sizeof(int*));
+
+uninit_pointer.c:364: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_015_func_001.
+  362.   	         TWO } values;
+  363.   
+  364. > void uninit_pointer_015_func_001 (int *ptr )
+  365.   {
+  366.   	values val = ONE;
+
+uninit_pointer.c:370: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_015.
+  368.   }
+  369.   
+  370. > void uninit_pointer_015 ()
+  371.   {
+  372.       int  a=0, *ptr = &a;
+
+uninit_pointer.c:380: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_016_func_001.
+  378.   * Complexity: global char double pointer int variable initialized in another function
+  379.    */
+  380. > int uninit_pointer_016_func_001(int flag)
+  381.   {
+  382.      int ret;
+
+uninit_pointer.c:413: error: MEMORY_LEAK
+  memory dynamically allocated by call to `malloc()` at line 407, column 18 is not reachable after line 413, column 5.
+  411.   	}
+  412.   
+  413. > 	if(uninit_pointer_016_gbl_doubleptr!=NULL)
+  414.   	{
+  415.   		for(i=0;i<10;i++)
+
+uninit_pointer.c:481: error: BUFFER_OVERRUN_L4
+  Offset: [0, +oo] Size: 17 by call to `uninit_pointer_009`.
+  479.   	if (vflag == 9 || vflag ==888)
+  480.   	{
+  481. > 		uninit_pointer_009 ();
+  482.   	}
+  483.   
+
+Summary of the reports
+
+          PURE_FUNCTION: 11
+            MEMORY_LEAK: 2
+  CONDITION_ALWAYS_TRUE: 2
+      BUFFER_OVERRUN_U5: 1
+      BUFFER_OVERRUN_L4: 1
+    INTEGER_OVERFLOW_L5: 1

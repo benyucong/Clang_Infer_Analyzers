@@ -1,0 +1,30 @@
+Found 3 issues
+
+cmp_funcadr.c:17: error: PURE_FUNCTION
+  Side-effect free function cmp_funcadr_001_func_001.
+  15.    */
+  16.   int cmp_funcadr_001_glb_a;
+  17. > int* cmp_funcadr_001_func_001 ()
+  18.   {
+  19.   	return &cmp_funcadr_001_glb_a;
+
+cmp_funcadr.c:38: error: PURE_FUNCTION
+  Side-effect free function cmp_funcadr_002_func_001.
+  36.    *       (operands of == have incompatible types)
+  37.    */
+  38. > int cmp_funcadr_002_func_001 ()
+  39.   {
+  40.   	return 10;
+
+cmp_funcadr.c:46: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(returned by cmp_funcadr_002_func_001()==10)` is always false at line 46, column 6.
+  44.   {
+  45.   	int ret = 0;
+  46. > 	if (cmp_funcadr_002_func_001() == 10) /*Tool should Not detect this line as error*/ /*No ERROR:compare function address with NULL*/
+  47.   	{
+  48.   		ret = 1;
+
+Summary of the reports
+
+          PURE_FUNCTION: 2
+  CONDITION_ALWAYS_TRUE: 1

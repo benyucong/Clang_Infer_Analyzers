@@ -1,0 +1,71 @@
+Found 8 issues
+
+st_overflow.c:52: error: PURE_FUNCTION
+  Side-effect free function st_overflow_002.
+  50.   }
+  51.   
+  52. > void st_overflow_002 ()
+  53.   {
+  54.   	st_overflow_002_s_001 s;		/* 1 Mbytes */
+
+st_overflow.c:85: error: BUFFER_OVERRUN_L5
+  Offset: [-oo, +oo] Size: 524288 by call to `st_overflow_003_func_001`.
+  83.   {
+  84.   	st_overflow_003_s_001 s;		/* 5 Kbytes */
+  85. > 	st_overflow_003_func_001(s);	/* 5 Kbytes */
+  86.   }
+  87.   
+
+st_overflow.c:117: error: BUFFER_OVERRUN_L5
+  Offset: [-oo, +oo] Size: 131072 by call to `st_overflow_004_func_002`.
+  115.   	char buf[131072];                 /* 128 Kbytes *//*Tool should detect this line as error*/ /*ERROR:Stack overflow*/
+  116.   	buf[0] = 1;
+  117. > 	st_overflow_004_func_002(s);
+  118.           sink = buf[idx];
+  119.   }
+
+st_overflow.c:124: error: BUFFER_OVERRUN_L5
+  Offset: [-oo, +oo] Size: 131072 by call to `st_overflow_004_func_001`.
+  122.   {
+  123.   	st_overflow_004_s_001 s;
+  124. > 	st_overflow_004_func_001(s);
+  125.   }
+  126.   
+
+st_overflow.c:214: error: BUFFER_OVERRUN_L5
+  Offset: [-oo, +oo] Size: 262144 by call to `st_overflow_007_func_002`.
+  212.   	s.buf[0] = 1;
+  213.   	buf[0] = 1;
+  214. > 	st_overflow_007_func_002(s);
+  215.           sink = buf[idx];
+  216.   }
+
+st_overflow.c:230: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!flag` is always false at line 230, column 6.
+  228.   	st_overflow_007_s_001 s;			/* 6 Kbytes */
+  229.   	int flag = 10;
+  230. > 	if (flag)
+  231.   	{
+  232.   		st_overflow_007_func_001(s);	/* 6 Kbytes */
+
+st_overflow.c:232: error: BUFFER_OVERRUN_L5
+  Offset: [-oo, +oo] Size: 262144 by call to `st_overflow_007_func_001`.
+  230.   	if (flag)
+  231.   	{
+  232. > 		st_overflow_007_func_001(s);	/* 6 Kbytes */
+  233.   	}
+  234.   	else
+
+st_overflow.c:270: error: BUFFER_OVERRUN_L5
+  Offset: [-oo, +oo] Size: 4096 by call to `st_overflow_005`.
+  268.   	if (vflag == 5 || vflag ==888)
+  269.   	{
+  270. > 		st_overflow_005();
+  271.   	}
+  272.   
+
+Summary of the reports
+
+      BUFFER_OVERRUN_L5: 6
+  CONDITION_ALWAYS_TRUE: 1
+          PURE_FUNCTION: 1

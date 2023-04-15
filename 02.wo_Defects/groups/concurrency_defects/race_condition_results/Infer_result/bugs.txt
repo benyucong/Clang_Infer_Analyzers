@@ -1,0 +1,13 @@
+Found 1 issue
+
+race_condition.c:144: error: UNINITIALIZED_VALUE
+  The value read from pth[_] was never initialized.
+  142.   
+  143.   		for(i=0;i<10;i++)
+  144. > 			pthread_join(pth[i],NULL);
+  145.   
+  146.   }
+
+Summary of the reports
+
+  UNINITIALIZED_VALUE: 1

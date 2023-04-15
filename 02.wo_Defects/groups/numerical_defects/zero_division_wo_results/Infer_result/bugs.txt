@@ -1,0 +1,134 @@
+Found 16 issues
+
+zero_division_wo.c:18: error: PURE_FUNCTION
+  Side-effect free function zero_division_001.
+  16.    * Complexity: divide (/)	Basic type	int	Constant
+  17.    */
+  18. > void zero_division_001 ()
+  19.   {
+  20.   	int dividend = 1000;
+
+zero_division_wo.c:29: error: PURE_FUNCTION
+  Side-effect free function zero_division_002.
+  27.    * Complexity: divide (/ =)	Basic type	int	Constant
+  28.    */
+  29. > void zero_division_002 ()
+  30.   {
+  31.   	int dividend = 1000;
+
+zero_division_wo.c:41: error: PURE_FUNCTION
+  Side-effect free function zero_division_003.
+  39.    * Complexity: calculation of retained earnings (%)	Basic type	int	Constant
+  40.    */
+  41. > void zero_division_003 ()
+  42.   {
+  43.   	int dividend = 1000;
+
+zero_division_wo.c:70: error: PURE_FUNCTION
+  Side-effect free function zero_division_005.
+  68.    * Complexity: divide (/)	1-Dimensional array	int	An array of element values
+  69.    */
+  70. > void zero_division_005 ()
+  71.   {
+  72.   	int dividend = 1000;
+
+zero_division_wo.c:83: error: PURE_FUNCTION
+  Side-effect free function zero_division_006.
+  81.    */
+  82.   int zero_division_006_gbl_divisor = 1;
+  83. > void zero_division_006 ()
+  84.   {
+  85.   	int dividend = 1000;
+
+zero_division_wo.c:122: error: PURE_FUNCTION
+  Side-effect free function zero_division_008.
+  120.    * Complexity: divide (/)	Basic type	float	Constant
+  121.    */
+  122. > void zero_division_008 ()
+  123.   {
+  124.   	float dividend = 1000.0;
+
+zero_division_wo.c:133: error: PURE_FUNCTION
+  Side-effect free function zero_division_009.
+  131.    * Complexity: divide (/)	Basic type	int	Variable
+  132.    */
+  133. > void zero_division_009 ()
+  134.   {
+  135.   	int dividend = 1000;
+
+zero_division_wo.c:161: error: PURE_FUNCTION
+  Side-effect free function zero_division_011.
+  159.    * Complexity: divide (/)	Basic type	int	Linear equation
+  160.    */
+  161. > void zero_division_011 ()
+  162.   {
+  163.   	int dividend = 1000;
+
+zero_division_wo.c:173: error: PURE_FUNCTION
+  Side-effect free function zero_division_012.
+  171.    * Complexity: divide (/)	Basic type	int	Nonlinear equation
+  172.    */
+  173. > void zero_division_012 ()
+  174.   {
+  175.   	int dividend = 1000;
+
+zero_division_wo.c:186: error: PURE_FUNCTION
+  Side-effect free function zero_division_013_func_001.
+  184.    * Complexity: divide (/)	Basic type	int	The return value of the function
+  185.    */
+  186. > int zero_division_013_func_001 ()
+  187.   {
+  188.   	return 1;
+
+zero_division_wo.c:191: error: PURE_FUNCTION
+  Side-effect free function zero_division_013.
+  189.   }
+  190.   
+  191. > void zero_division_013 ()
+  192.   {
+  193.   	int dividend = 1000;
+
+zero_division_wo.c:202: error: PURE_FUNCTION
+  Side-effect free function zero_division_014_func_001.
+  200.    * Complexity: divide (/)	Basic type	int	Function arguments
+  201.    */
+  202. > void zero_division_014_func_001 (int divisor)
+  203.   {
+  204.   	int dividend = 1000;
+
+zero_division_wo.c:209: error: PURE_FUNCTION
+  Side-effect free function zero_division_014.
+  207.   }
+  208.   
+  209. > void zero_division_014 ()
+  210.   {
+  211.   	zero_division_014_func_001(1);
+
+zero_division_wo.c:218: error: PURE_FUNCTION
+  Side-effect free function zero_division_015.
+  216.    * Complexity: divide (/)	Basic type	int	Alias for 1 weight
+  217.    */
+  218. > void zero_division_015 ()
+  219.   {
+  220.   	int dividend = 1000;
+
+zero_division_wo.c:240: error: INTEGER_OVERFLOW_L5
+  ([-oo, +oo] + 1):signed32.
+  238.   void zero_division_016_func_002 ()
+  239.   {
+  240. > 	(*zero_division_016_gbl_divisor)++;
+  241.   }
+  242.   void zero_division_016 ()
+
+zero_division_wo.c:279: error: INTEGER_OVERFLOW_L5
+  ([-oo, +oo] - 1):signed32 by call to `zero_division_004`.
+  277.   	if (vflag == 4 || vflag ==888)
+  278.   	{
+  279. > 		zero_division_004();
+  280.   	}
+  281.   
+
+Summary of the reports
+
+        PURE_FUNCTION: 14
+  INTEGER_OVERFLOW_L5: 2

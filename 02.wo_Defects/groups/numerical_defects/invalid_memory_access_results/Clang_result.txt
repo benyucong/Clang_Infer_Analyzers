@@ -1,0 +1,13 @@
+invalid_memory_access.c:37:37: warning: Although the value stored to 'a' is used in the enclosing expression, the value is never actually read from 'a' [deadcode.DeadStores]
+        (flag == 10)? (*(ptr+1) = 10):(a=100);
+                                       ^ ~~~
+invalid_memory_access.c:69:21: warning: Dereference of null pointer [core.NullDereference]
+            (*(dptr+1) = 5.5) ;
+             ~~~~~~~~~~^~~~~
+invalid_memory_access.c:182:18: warning: Dereference of null pointer [core.NullDereference]
+                *((*pbuf[i])+j)=5.0;
+                ~~~~~~~~~~~~~~~^~~~
+invalid_memory_access.c:274:2: warning: Access to field 'a' results in a dereference of a null pointer (loaded from field 's1') [core.NullDereference]
+        p->s1->a[0] = 1; /*Tool should not detect this line as error*/ /*No ERROR:Invalid memory access to already freed area*/
+        ^~~~~~~~
+4 warnings generated.

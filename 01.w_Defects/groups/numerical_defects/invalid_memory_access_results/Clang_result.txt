@@ -1,0 +1,67 @@
+invalid_memory_access.c:33:60: warning: Although the value stored to 'a' is used in the enclosing expression, the value is never actually read from 'a' [deadcode.DeadStores]
+    (flag == 10)? (ptr= (int*) malloc(10*sizeof(int))) : ( a= 5);
+                                                           ^  ~
+invalid_memory_access.c:37:36: warning: Although the value stored to 'a' is used in the enclosing expression, the value is never actually read from 'a' [deadcode.DeadStores]
+    (flag == 10)? (*(ptr+1) = 10):(a=100);
+                                   ^ ~~~
+invalid_memory_access.c:45:6: warning: Value stored to 'a' is never read [deadcode.DeadStores]
+        a = *(ptr+1); /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+        ^   ~~~~~~~~
+invalid_memory_access.c:45:10: warning: Dereference of null pointer [core.NullDereference]
+        a = *(ptr+1); /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+            ^~~~~~~~
+invalid_memory_access.c:45:10: warning: Use of memory after it is freed [unix.Malloc]
+        a = *(ptr+1); /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+            ^~~~~~~~
+invalid_memory_access.c:84:10: warning: Use of memory after it is freed [unix.Malloc]
+        a = *(dptr+1);/*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+            ^~~~~~~~~
+invalid_memory_access.c:133:9: warning: Use of memory after it is freed [unix.Malloc]
+        printf("String= %s",buf); /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+        ^~~~~~~~~~~~~~~~~~~~~~~~
+invalid_memory_access.c:147:6: warning: Value stored to 'count' is never read [deadcode.DeadStores]
+        count = *ptr; /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+        ^       ~~~~
+invalid_memory_access.c:181:18: warning: Dereference of null pointer [core.NullDereference]
+                *((*pbuf[i])+j)=5.0;
+                ~~~~~~~~~~~~~~~^~~~
+invalid_memory_access.c:224:2: warning: Use of memory after it is freed [unix.Malloc]
+        memcpy(buf,buf1,11); /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+        ^~~~~~~~~~~~~~~~~~~
+invalid_memory_access.c:265:2: warning: Access to field 'a' results in a dereference of a null pointer (loaded from field 's1') [core.NullDereference]
+        p->s1->a[0] = 1;
+        ^~~~~~~~
+invalid_memory_access.c:270:2: warning: Use of memory after it is freed [unix.Malloc]
+        p->s1->a[0] = 1; /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+        ^~~~~
+invalid_memory_access.c:371:12: warning: Access to field 'a' results in a dereference of a null pointer (loaded from variable 's') [core.NullDereference]
+        return (i+s->a);/*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+                  ^~~~
+invalid_memory_access.c:371:12: warning: Use of memory after it is freed [unix.Malloc]
+        return (i+s->a);/*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+                  ^~~~
+invalid_memory_access.c:410:5: warning: Value stored to 'i' is never read [deadcode.DeadStores]
+                                i=invalid_memory_access_013_s_001_s_gbl->a;
+                                ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+invalid_memory_access.c:422:5: warning: Value stored to 'i' is never read [deadcode.DeadStores]
+                                i=invalid_memory_access_013_s_001_s_gbl->a;
+                                ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+invalid_memory_access.c:432:9: warning: Access to field 'a' results in a dereference of a null pointer (loaded from variable 'invalid_memory_access_013_s_001_s_gbl') [core.NullDereference]
+        return invalid_memory_access_013_s_001_s_gbl->a;/*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+invalid_memory_access.c:432:9: warning: Use of memory after it is freed [unix.Malloc]
+        return invalid_memory_access_013_s_001_s_gbl->a;/*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+invalid_memory_access.c:516:9: warning: Use of memory after it is freed [unix.Malloc]
+        return str_rev;/*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+        ^~~~~~~~~~~~~~
+invalid_memory_access.c:532:13: warning: Value stored to 'str' is never read [deadcode.DeadStores]
+            str = invalid_memory_access_015_func_001(buf[j]);
+            ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+invalid_memory_access.c:568:11: warning: Array access (from variable 'invalid_memory_access_016_doubleptr_gbl') results in a null pointer dereference [core.NullDereference]
+        strcpy(s,invalid_memory_access_016_doubleptr_gbl[0]);/*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+invalid_memory_access.c:622:2: warning: Use of memory after it is freed [unix.Malloc]
+        strcpy(s,invalid_memory_access_017_doubleptr_gbl);/*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+22 warnings generated.

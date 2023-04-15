@@ -1,0 +1,299 @@
+Found 36 issues
+
+uninit_pointer.c:29: error: DANGLING_POINTER_DEREFERENCE
+  uninitialized pointer `p` could be dangling and is dereferenced or freed at line 29, column 8.
+  27.   	int *p ;  
+  28.   	int ret;
+  29. > 	ret = *p; /*Tool should detect this line as error*/ /*ERROR:Uninitialized pointer*/
+  30.   }
+  31.   
+
+uninit_pointer.c:24: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_001.
+  22.   * Complexity: When using a single pointer int	Variable - Loading
+  23.   */
+  24. > void uninit_pointer_001 ()
+  25.   {
+  26.   	int a = 5;
+
+uninit_pointer.c:40: error: DANGLING_POINTER_DEREFERENCE
+  uninitialized pointer `p` could be dangling and is dereferenced or freed at line 40, column 2.
+  38.   	int a;
+  39.   	int *p ;
+  40. > 	*p = 1; /*Tool should detect this line as error*/ /*ERROR:Uninitialized pointer*/
+  41.   }
+  42.   
+
+uninit_pointer.c:36: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_002.
+  34.   * Complexity: 1 single pointer	int	Variable	Write
+  35.   */
+  36. > void uninit_pointer_002 ()
+  37.   {
+  38.   	int a;
+
+uninit_pointer.c:54: error: DANGLING_POINTER_DEREFERENCE
+  uninitialized pointer `*pp` could be dangling and is dereferenced or freed at line 54, column 8.
+  52.   	int ret;
+  53.   	pp = &p;
+  54. > 	ret = **pp; /*Tool should detect this line as error*/ /*ERROR:Uninitialized pointer*/
+  55.   }
+  56.   
+
+uninit_pointer.c:47: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_003.
+  45.   * Complexity: When using a double pointer	int	Variable	Write
+  46.   */
+  47. > void uninit_pointer_003 ()
+  48.   {
+  49.   	int **pp;
+
+uninit_pointer.c:61: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_004_func_001.
+  59.   * Complexity: 1 single pointer	int	Function arguments	Loading
+  60.   */
+  61. > void uninit_pointer_004_func_001 (int *p)
+  62.   {
+  63.   	int ret;
+
+uninit_pointer.c:66: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_004.
+  64.   	ret = 0;
+  65.   }
+  66. > void uninit_pointer_004 ()
+  67.   {
+  68.   	int a = 0;
+
+uninit_pointer.c:91: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_005.
+  89.   	ret = pbuf[1][1];
+  90.   }
+  91. > void uninit_pointer_005 ()
+  92.   {
+  93.   	int *pbuf[5];
+
+uninit_pointer.c:101: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_006_func_001.
+  99.   * Complexity: double pointer int	Function arguments	Write
+  100.   */
+  101. > void uninit_pointer_006_func_001 (int **pp)
+  102.   {
+  103.   	**pp = 1;/*Tool should detect this line as error*/ /*ERROR:Uninitialized pointer*/
+
+uninit_pointer.c:106: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_006.
+  104.   }
+  105.   
+  106. > void uninit_pointer_006 ()
+  107.   {
+  108.   	int a;
+
+uninit_pointer.c:130: error: BUFFER_OVERRUN_U5
+  Offset: [-oo, +oo] (⇐ [-oo, +oo] + 4) Size: [0, +oo].
+  128.   	for(i=0;i<5;i++)
+  129.   	{
+  130. > 		*((*pbuf[i])+j)='a';/*Tool should detect this line as error*/ /*ERROR:Uninitialized pointer*/
+  131.   	}
+  132.           free(buf1);
+
+uninit_pointer.c:124: error: MEMORY_LEAK
+  memory dynamically allocated by call to `strdup()` at line 119, column 20 is not reachable after line 124, column 23.
+  122.   	char *buf4=strdup("String4");
+  123.   	char *buf5=strdup("String5");
+  124. >         if (!buf1 || !buf3 || !buf4 || !buf5) return;
+  125.   	char **pbuf[5] = {&buf2, &buf3, &buf4, &buf5};
+  126.   	int i,j=4;
+
+uninit_pointer.c:124: error: MEMORY_LEAK
+  memory dynamically allocated by call to `strdup()` at line 119, column 20 is not reachable after line 124, column 32.
+  122.   	char *buf4=strdup("String4");
+  123.   	char *buf5=strdup("String5");
+  124. >         if (!buf1 || !buf3 || !buf4 || !buf5) return;
+  125.   	char **pbuf[5] = {&buf2, &buf3, &buf4, &buf5};
+  126.   	int i,j=4;
+
+uninit_pointer.c:124: error: MEMORY_LEAK
+  memory dynamically allocated by call to `strdup()` at line 119, column 20 is not reachable after line 124, column 41.
+  122.   	char *buf4=strdup("String4");
+  123.   	char *buf5=strdup("String5");
+  124. >         if (!buf1 || !buf3 || !buf4 || !buf5) return;
+  125.   	char **pbuf[5] = {&buf2, &buf3, &buf4, &buf5};
+  126.   	int i,j=4;
+
+uninit_pointer.c:136: error: MEMORY_LEAK
+  memory dynamically allocated by call to `strdup()` at line 121, column 13 is not reachable after line 136, column 1.
+  134.           free(buf4);
+  135.           free(buf5);
+  136. > }
+  137.   
+  138.   /*
+
+uninit_pointer.c:136: error: MEMORY_LEAK
+  memory dynamically allocated by call to `strdup()` at line 122, column 13 is not reachable after line 136, column 1.
+  134.           free(buf4);
+  135.           free(buf5);
+  136. > }
+  137.   
+  138.   /*
+
+uninit_pointer.c:136: error: MEMORY_LEAK
+  memory dynamically allocated by call to `strdup()` at line 123, column 13 is not reachable after line 136, column 1.
+  134.           free(buf4);
+  135.           free(buf5);
+  136. > }
+  137.   
+  138.   /*
+
+uninit_pointer.c:153: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_008.
+  151.   	p->uninit=ret;
+  152.   }
+  153. > void uninit_pointer_008 ()
+  154.   {
+  155.   	uninit_pointer_008_s_001 s;
+
+uninit_pointer.c:165: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_009_func_001.
+  163.   * Complexity: When using a pointer to char and initialized based on return value of function
+  164.   */
+  165. > int uninit_pointer_009_func_001(int flag)
+  166.   {
+  167.      int ret;
+
+uninit_pointer.c:186: error: DANGLING_POINTER_DEREFERENCE
+  uninitialized pointer `buf` could be dangling and is dereferenced or freed at line 186, column 6.
+  184.       if(uninit_pointer_009_func_001(flag)>0)
+  185.       {
+  186. >     	strcpy(buf1,buf);/*Tool should detect this line as error*/ /*ERROR:Uninitialized pointer*/
+  187.       }
+  188.   }
+
+uninit_pointer.c:194: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_010_func_001.
+  192.   * Complexity: void pointer to data passed from one function to another
+  193.   */
+  194. > void uninit_pointer_010_func_001 (void * vptr)
+  195.   {
+  196.       /* cast void pointer to a pointer of the appropriate type */
+
+uninit_pointer.c:201: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_010.
+  199.       buf = (*cptr);/*Tool should detect this line as error*/ /*ERROR:Uninitialized pointer*/
+  200.   }
+  201. > void uninit_pointer_010 ()
+  202.   {
+  203.       void *buf1;
+
+uninit_pointer.c:218: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 218, column 9.
+  216.   	if (ptr!=NULL)
+  217.   	{
+  218. > 		while(1)
+  219.          {
+  220.              for(i=0; i<10/2; i++)
+
+uninit_pointer.c:226: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 226, column 14.
+  224.              break;
+  225.          }
+  226. >        while(1)
+  227.          {
+  228.             for(i=0; i<10; i++)
+
+uninit_pointer.c:230: error: INTEGER_OVERFLOW_L5
+  ([0, +oo] + [0, 4]):unsigned32.
+  228.             for(i=0; i<10; i++)
+  229.             {
+  230. >         	  a += ptr[i];/*Tool should detect this line as error*/ /*ERROR:Uninitialized pointer*/
+  231.             }
+  232.             break;
+
+uninit_pointer.c:228: error: MEMORY_LEAK
+  memory dynamically allocated by call to `malloc()` at line 214, column 27 is not reachable after line 228, column 20.
+  226.          while(1)
+  227.          {
+  228. >           for(i=0; i<10; i++)
+  229.             {
+  230.           	  a += ptr[i];/*Tool should detect this line as error*/ /*ERROR:Uninitialized pointer*/
+
+uninit_pointer.c:211: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_011.
+  209.   * Complexity: When using a unsigned int pointer and partially initialized in a infinite loop
+  210.   */
+  211. > void uninit_pointer_011 ()
+  212.   {
+  213.       unsigned int * ptr,a=0;
+
+uninit_pointer.c:241: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_012.
+  239.   * Complexity: When using a pointer to float , pointing to 1D array
+  240.   */
+  241. > void uninit_pointer_012 ()
+  242.   {
+  243.   	float * fptr;
+
+uninit_pointer.c:261: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_013.
+  259.   * Complexity: Double int pointer partially initialized with 2D array
+  260.   */
+  261. > void uninit_pointer_013 ()
+  262.   {
+  263.   	int **ptr = (int**) malloc(5*sizeof(int*));
+
+uninit_pointer.c:348: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_015_func_001.
+  346.   	         TWO } values;
+  347.   
+  348. > void uninit_pointer_015_func_001 (int *ptr )
+  349.   {
+  350.   	values val = ONE;
+
+uninit_pointer.c:357: error: DANGLING_POINTER_DEREFERENCE
+  uninitialized pointer `ptr` could be dangling and is dereferenced or freed at line 357, column 5.
+  355.   {
+  356.       int  *ptr;
+  357. >     uninit_pointer_015_func_001(ptr);/*Tool should detect this line as error*/ /*ERROR:Uninitialized pointer*/
+  358.   }
+  359.   
+
+uninit_pointer.c:354: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_015.
+  352.   }
+  353.   
+  354. > void uninit_pointer_015 ()
+  355.   {
+  356.       int  *ptr;
+
+uninit_pointer.c:364: error: PURE_FUNCTION
+  Side-effect free function uninit_pointer_016_func_001.
+  362.   * Complexity: global char double pointer int variable initialized in another function
+  363.    */
+  364. > int uninit_pointer_016_func_001(int flag)
+  365.   {
+  366.      int ret =0;
+
+uninit_pointer.c:398: error: MEMORY_LEAK
+  memory dynamically allocated by call to `malloc()` at line 392, column 18 is not reachable after line 398, column 5.
+  396.   	}
+  397.   
+  398. > 	if(uninit_pointer_016_gbl_doubleptr!=NULL)
+  399.   	{
+  400.   		for(i=0;i<10;i++)
+
+uninit_pointer.c:462: error: BUFFER_OVERRUN_L4
+  Offset: [0, +oo] Size: 17 by call to `uninit_pointer_009`.
+  460.   	if (vflag == 9 || vflag ==888)
+  461.   	{
+  462. > 		uninit_pointer_009();
+  463.   	}
+  464.   
+
+Summary of the reports
+
+                 PURE_FUNCTION: 18
+                   MEMORY_LEAK: 8
+  DANGLING_POINTER_DEREFERENCE: 5
+         CONDITION_ALWAYS_TRUE: 2
+             BUFFER_OVERRUN_U5: 1
+             BUFFER_OVERRUN_L4: 1
+           INTEGER_OVERFLOW_L5: 1

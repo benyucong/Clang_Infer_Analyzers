@@ -1,0 +1,78 @@
+Found 9 issues
+
+sleep_lock.c:39: error: PURE_FUNCTION
+  Side-effect free function sleep_lock_001_glb_mutex_lock.
+  37.   
+  38.   /* #if defined(CHECKER_POLYSPACE) */
+  39. > void sleep_lock_001_glb_mutex_lock () {}
+  40.   void sleep_lock_001_glb_mutex_unlock () {}
+  41.   /* #endif  #if defined(CHECKER_POLYSPACE) */
+
+sleep_lock.c:40: error: PURE_FUNCTION
+  Side-effect free function sleep_lock_001_glb_mutex_unlock.
+  38.   /* #if defined(CHECKER_POLYSPACE) */
+  39.   void sleep_lock_001_glb_mutex_lock () {}
+  40. > void sleep_lock_001_glb_mutex_unlock () {}
+  41.   /* #endif  #if defined(CHECKER_POLYSPACE) */
+  42.   
+
+sleep_lock.c:68: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 68, column 9.
+  66.   void sleep_lock_001_tskentry_001 ()
+  67.   {
+  68. > 	while (1)
+  69.   	{
+  70.   		if (rand())
+
+sleep_lock.c:85: error: PURE_FUNCTION
+  Side-effect free function sleep_lock_002_glb_mutex_lock.
+  83.   pthread_mutex_t *sleep_lock_002_glb_mutex = &sleep_lock_002_glb_mutex_;
+  84.   /* #if defined(CHECKER_POLYSPACE) */
+  85. > void sleep_lock_002_glb_mutex_lock () {}
+  86.   void sleep_lock_002_glb_mutex_unlock () {}
+  87.   /* #endif  #if defined(CHECKER_POLYSPACE) */
+
+sleep_lock.c:86: error: PURE_FUNCTION
+  Side-effect free function sleep_lock_002_glb_mutex_unlock.
+  84.   /* #if defined(CHECKER_POLYSPACE) */
+  85.   void sleep_lock_002_glb_mutex_lock () {}
+  86. > void sleep_lock_002_glb_mutex_unlock () {}
+  87.   /* #endif  #if defined(CHECKER_POLYSPACE) */
+  88.   
+
+sleep_lock.c:146: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 146, column 9.
+  144.   void sleep_lock_002_tskentry_001 ()
+  145.   {
+  146. > 	while (1)
+  147.   	{
+  148.   		if (rand())
+
+sleep_lock.c:163: error: PURE_FUNCTION
+  Side-effect free function sleep_lock_003_glb_mutex_lock.
+  161.   pthread_mutex_t *sleep_lock_003_glb_mutex = &sleep_lock_003_glb_mutex_;
+  162.   /* #if defined(CHECKER_POLYSPACE) */
+  163. > void sleep_lock_003_glb_mutex_lock () {}
+  164.   void sleep_lock_003_glb_mutex_unlock () {}
+  165.   /* #endif  #if defined(CHECKER_POLYSPACE) */
+
+sleep_lock.c:164: error: PURE_FUNCTION
+  Side-effect free function sleep_lock_003_glb_mutex_unlock.
+  162.   /* #if defined(CHECKER_POLYSPACE) */
+  163.   void sleep_lock_003_glb_mutex_lock () {}
+  164. > void sleep_lock_003_glb_mutex_unlock () {}
+  165.   /* #endif  #if defined(CHECKER_POLYSPACE) */
+  166.   
+
+sleep_lock.c:200: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 200, column 9.
+  198.   void sleep_lock_003_tskentry_001 ()
+  199.   {
+  200. > 	while (1)
+  201.   	{
+  202.   		if (rand())
+
+Summary of the reports
+
+          PURE_FUNCTION: 6
+  CONDITION_ALWAYS_TRUE: 3

@@ -1,0 +1,141 @@
+[43553][environment] CWD = /home/e0925519/cs5218/cs5218_asg3/01.w_Defects/groups/dynamic_memory_defects
+[43553][environment] No .inferconfig file found
+[43553][environment] Project root = /home/e0925519/cs5218/cs5218_asg3/01.w_Defects/groups/dynamic_memory_defects
+[43553][environment] INFER_ARGS =   @/tmp/args.tmp.20e2e3  ++Contents of '/tmp/args.tmp.20e2e3':
+[43553][environment]                                         run --biabduction --bufferoverrun
+[43553][environment]                                         --linters --liveness --pulse --racerd
+[43553][environment]                                         --siof --starvation --loop-hoisting
+[43553][environment]                                         --uninit --enable-issue-type
+[43553][environment]                                         ARRAY_OUT_OF_BOUNDS_L1
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         ARRAY_OUT_OF_BOUNDS_L2
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         ARRAY_OUT_OF_BOUNDS_L3
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         AUTORELEASEPOOL_SIZE_UNREACHABLE_AT_EXIT
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         BIABDUCTION_ANALYSIS_STOPS
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         BIABDUCTION_MEMORY_LEAK
+[43553][environment]                                         --enable-issue-type BUFFER_OVERRUN_L4
+[43553][environment]                                         --enable-issue-type BUFFER_OVERRUN_L5
+[43553][environment]                                         --enable-issue-type BUFFER_OVERRUN_U5
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         CLASS_CAST_EXCEPTION
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         CONDITION_ALWAYS_FALSE
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         CONDITION_ALWAYS_TRUE
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         CONFIG_CHECKS_BETWEEN_MARKERS
+[43553][environment]                                         --enable-issue-type CONFIG_IMPACT
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         CONSTANT_ADDRESS_DEREFERENCE
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         DANGLING_POINTER_DEREFERENCE
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         DANGLING_POINTER_DEREFERENCE_MAYBE
+[43553][environment]                                         --enable-issue-type DIVIDE_BY_ZERO
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         ERADICATE_META_CLASS_CAN_BE_NULLSAFE
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         ERADICATE_META_CLASS_IS_NULLSAFE
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         ERADICATE_META_CLASS_NEEDS_IMPROVEMENT
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         EXECUTION_TIME_UNREACHABLE_AT_EXIT
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         EXPENSIVE_AUTORELEASEPOOL_SIZE
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         EXPENSIVE_EXECUTION_TIME
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         GLOBAL_VARIABLE_INITIALIZED_WITH_FUNCTION_OR_METHOD_CALL
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         INFINITE_AUTORELEASEPOOL_SIZE
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         INFINITE_EXECUTION_TIME
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         INTEGER_OVERFLOW_L5
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         INTEGER_OVERFLOW_U5
+[43553][environment]                                         --enable-issue-type INVARIANT_CALL
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         Leak_unknown_origin
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         NIL_MESSAGING_TO_NON_POD
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         PULSE_UNINITIALIZED_VALUE
+[43553][environment]                                         --enable-issue-type SKIP_FUNCTION
+[43553][environment]                                         --enable-issue-type
+[43553][environment]                                         UNTRUSTED_HEAP_ALLOCATION
+[43553][environment]                                         --disable-issue-type DEAD_STORE
+[43553][environment]                                         --disable-issue-type
+[43553][environment]                                         UNINITIALIZED_VALUE
+[43553][environment]                                         --disable-issue-type NULL_DEREFERENCE
+[43553][environment]                                         -o
+[43553][environment]                                         /home/e0925519/cs5218/cs5218_asg3/01.w_Defects/groups/dynamic_memory_defects/deletion_of_data_structure_sentinel_results/Infer_result
+[43553][environment]                                       
+[43553][environment] command line arguments:   infer run --biabduction --bufferoverrun --linters
+[43553][environment]                           --liveness --pulse --racerd --siof --starvation
+[43553][environment]                           --loop-hoisting --uninit --enable-issue-type
+[43553][environment]                           ARRAY_OUT_OF_BOUNDS_L1 --enable-issue-type
+[43553][environment]                           ARRAY_OUT_OF_BOUNDS_L2 --enable-issue-type
+[43553][environment]                           ARRAY_OUT_OF_BOUNDS_L3 --enable-issue-type
+[43553][environment]                           AUTORELEASEPOOL_SIZE_UNREACHABLE_AT_EXIT
+[43553][environment]                           --enable-issue-type BIABDUCTION_ANALYSIS_STOPS
+[43553][environment]                           --enable-issue-type BIABDUCTION_MEMORY_LEAK
+[43553][environment]                           --enable-issue-type BUFFER_OVERRUN_L4
+[43553][environment]                           --enable-issue-type BUFFER_OVERRUN_L5
+[43553][environment]                           --enable-issue-type BUFFER_OVERRUN_U5
+[43553][environment]                           --enable-issue-type CLASS_CAST_EXCEPTION
+[43553][environment]                           --enable-issue-type CONDITION_ALWAYS_FALSE
+[43553][environment]                           --enable-issue-type CONDITION_ALWAYS_TRUE
+[43553][environment]                           --enable-issue-type CONFIG_CHECKS_BETWEEN_MARKERS
+[43553][environment]                           --enable-issue-type CONFIG_IMPACT
+[43553][environment]                           --enable-issue-type CONSTANT_ADDRESS_DEREFERENCE
+[43553][environment]                           --enable-issue-type DANGLING_POINTER_DEREFERENCE
+[43553][environment]                           --enable-issue-type
+[43553][environment]                           DANGLING_POINTER_DEREFERENCE_MAYBE
+[43553][environment]                           --enable-issue-type DIVIDE_BY_ZERO
+[43553][environment]                           --enable-issue-type
+[43553][environment]                           ERADICATE_META_CLASS_CAN_BE_NULLSAFE
+[43553][environment]                           --enable-issue-type
+[43553][environment]                           ERADICATE_META_CLASS_IS_NULLSAFE
+[43553][environment]                           --enable-issue-type
+[43553][environment]                           ERADICATE_META_CLASS_NEEDS_IMPROVEMENT
+[43553][environment]                           --enable-issue-type
+[43553][environment]                           EXECUTION_TIME_UNREACHABLE_AT_EXIT
+[43553][environment]                           --enable-issue-type EXPENSIVE_AUTORELEASEPOOL_SIZE
+[43553][environment]                           --enable-issue-type EXPENSIVE_EXECUTION_TIME
+[43553][environment]                           --enable-issue-type
+[43553][environment]                           GLOBAL_VARIABLE_INITIALIZED_WITH_FUNCTION_OR_METHOD_CALL
+[43553][environment]                           --enable-issue-type INFINITE_AUTORELEASEPOOL_SIZE
+[43553][environment]                           --enable-issue-type INFINITE_EXECUTION_TIME
+[43553][environment]                           --enable-issue-type INTEGER_OVERFLOW_L5
+[43553][environment]                           --enable-issue-type INTEGER_OVERFLOW_U5
+[43553][environment]                           --enable-issue-type INVARIANT_CALL
+[43553][environment]                           --enable-issue-type Leak_unknown_origin
+[43553][environment]                           --enable-issue-type NIL_MESSAGING_TO_NON_POD
+[43553][environment]                           --enable-issue-type PULSE_UNINITIALIZED_VALUE
+[43553][environment]                           --enable-issue-type SKIP_FUNCTION
+[43553][environment]                           --enable-issue-type UNTRUSTED_HEAP_ALLOCATION
+[43553][environment]                           --disable-issue-type DEAD_STORE
+[43553][environment]                           --disable-issue-type UNINITIALIZED_VALUE
+[43553][environment]                           --disable-issue-type NULL_DEREFERENCE -o
+[43553][environment]                           deletion_of_data_structure_sentinel_results/Infer_result
+[43553][environment]                           -- clang -c deletion_of_data_structure_sentinel.cActive checkers: biabduction (C/C++/ObjC, Java), buffer overrun analysis (C/C++/ObjC, Java), buffer overrun checker (C/C++/ObjC, Java), fragment retains view (Java), liveness (C/C++/ObjC), ownership (C/C++/ObjC), pulse (C/C++/ObjC), RacerD (C/C++/ObjC, Java), SIOF (C/C++/ObjC), uninitialized variables (C/C++/ObjC), cost analysis (C/C++/ObjC, Java), loop hoisting (C/C++/ObjC, Java), Starvation analysis (C/C++/ObjC, Java), purity (C/C++/ObjC, Java)
+[43553][environment] Infer log identifier is 
+Infer version v0.16.0
+[43553][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[43553][environment] 
+[43553][   progress] Capturing in make/cc mode...
+[43553][      debug] 
+[43553][      debug] *** Beginning capture of file /home/e0925519/cs5218/cs5218_asg3/01.w_Defects/groups/dynamic_memory_defects/deletion_of_data_structure_sentinel.c ***
+[43553][      debug] Clang frontend action is translating and linting
+[43553][      debug] Loading the following linters files: /opt/infer-linux64-v0.16.0/lib/infer/infer/bin/../lib/linter_rules/linters.al
+[43553][      debug] Elapsed: 89.796ms.
+[43553][      debug] 
+[43553][   progress] Found 1 source file to analyze in /home/e0925519/cs5218/cs5218_asg3/01.w_Defects/groups/dynamic_memory_defects/deletion_of_data_structure_sentinel_results/Infer_result
+[43553][environment] Parallel jobs: 4
+[43562][   progress] deletion_of_data_structure_sentinel.c starting
+[43562][   progress] deletion_of_data_structure_sentinel.c DONE

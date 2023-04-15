@@ -1,0 +1,13 @@
+buffer_underrun_dynamic.c:177:5: warning: Dereference of undefined pointer value [core.NullDereference]
+                *((*pbuf[i-3])+j)=5; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+                  ^~~~~~~~~~~~
+buffer_underrun_dynamic.c:647:20: warning: The left operand of '==' is a garbage value due to array index out of bounds [core.UndefinedBinaryOperatorResult]
+                     if(srcbuf[i]==ch) /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+                        ~~~~~~~~~^
+buffer_underrun_dynamic.c:700:7: warning: Value stored to 'c' is never read [deadcode.DeadStores]
+             c = newTest[-10]; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+             ^   ~~~~~~~~~~~~
+buffer_underrun_dynamic.c:721:22: warning: The left operand of '!=' is a garbage value [core.UndefinedBinaryOperatorResult]
+                if(doubleptr[i]!=NULL)
+                   ~~~~~~~~~~~~^
+4 warnings generated.

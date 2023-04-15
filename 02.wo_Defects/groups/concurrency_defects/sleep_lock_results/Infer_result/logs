@@ -1,0 +1,1056 @@
+[53185][environment] CWD = /home/e0925519/cs5218/cs5218_asg3/02.wo_Defects/groups/concurrency_defects
+[53185][environment] No .inferconfig file found
+[53185][environment] Project root = /home/e0925519/cs5218/cs5218_asg3/02.wo_Defects/groups/concurrency_defects
+[53185][environment] INFER_ARGS =   @/tmp/args.tmp.ee9f6d  ++Contents of '/tmp/args.tmp.ee9f6d':
+[53185][environment]                                         run --starvation --racerd
+[53185][environment]                                         --enable-issue-type
+[53185][environment]                                         ARBITRARY_CODE_EXECUTION_UNDER_LOCK
+[53185][environment]                                         --enable-issue-type DEADLOCK
+[53185][environment]                                         --enable-issue-type IPC_ON_UI_THREAD
+[53185][environment]                                         --enable-issue-type
+[53185][environment]                                         LOCKLESS_VIOLATION
+[53185][environment]                                         --enable-issue-type STARVATION
+[53185][environment]                                         --enable-issue-type
+[53185][environment]                                         STRICT_MODE_VIOLATION
+[53185][environment]                                         --enable-issue-type
+[53185][environment]                                         GUARDEDBY_VIOLATION
+[53185][environment]                                         --enable-issue-type
+[53185][environment]                                         GUARDEDBY_VIOLATION_NULLSAFE
+[53185][environment]                                         --enable-issue-type
+[53185][environment]                                         INTERFACE_NOT_THREAD_SAFE
+[53185][environment]                                         --enable-issue-type
+[53185][environment]                                         LOCK_CONSISTENCY_VIOLATION
+[53185][environment]                                         --enable-issue-type
+[53185][environment]                                         THREAD_SAFETY_VIOLATION
+[53185][environment]                                         --enable-issue-type
+[53185][environment]                                         THREAD_SAFETY_VIOLATION_NULLSAFE
+[53185][environment]                                         --disable-issue-type DEAD_STORE -o
+[53185][environment]                                         /home/e0925519/cs5218/cs5218_asg3/02.wo_Defects/groups/concurrency_defects/sleep_lock_results/Infer_result
+[53185][environment]                                       
+[53185][environment] command line arguments:   infer run --starvation --racerd --enable-issue-type
+[53185][environment]                           ARBITRARY_CODE_EXECUTION_UNDER_LOCK
+[53185][environment]                           --enable-issue-type DEADLOCK --enable-issue-type
+[53185][environment]                           IPC_ON_UI_THREAD --enable-issue-type
+[53185][environment]                           LOCKLESS_VIOLATION --enable-issue-type STARVATION
+[53185][environment]                           --enable-issue-type STRICT_MODE_VIOLATION
+[53185][environment]                           --enable-issue-type GUARDEDBY_VIOLATION
+[53185][environment]                           --enable-issue-type GUARDEDBY_VIOLATION_NULLSAFE
+[53185][environment]                           --enable-issue-type INTERFACE_NOT_THREAD_SAFE
+[53185][environment]                           --enable-issue-type LOCK_CONSISTENCY_VIOLATION
+[53185][environment]                           --enable-issue-type THREAD_SAFETY_VIOLATION
+[53185][environment]                           --enable-issue-type
+[53185][environment]                           THREAD_SAFETY_VIOLATION_NULLSAFE
+[53185][environment]                           --disable-issue-type DEAD_STORE -o
+[53185][environment]                           sleep_lock_results/Infer_result -- clang -c
+[53185][environment]                           sleep_lock.cActive checkers: biabduction (C/C++/ObjC, Java), fragment retains view (Java), liveness (C/C++/ObjC), ownership (C/C++/ObjC), RacerD (C/C++/ObjC, Java), SIOF (C/C++/ObjC), uninitialized variables (C/C++/ObjC), Starvation analysis (C/C++/ObjC, Java)
+[53185][environment] Infer log identifier is 
+Infer version v0.16.0
+[53185][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[53185][environment] 
+[53185][   progress] Capturing in make/cc mode...
+[53185][      debug] 
+[53185][      debug] *** Beginning capture of file /home/e0925519/cs5218/cs5218_asg3/02.wo_Defects/groups/concurrency_defects/sleep_lock.c ***
+[53185][      debug] Clang frontend action is translating and linting
+[53185][      debug] Loading the following linters files: /opt/infer-linux64-v0.16.0/lib/infer/infer/bin/../lib/linter_rules/linters.al
+[53185][      debug] Elapsed: 94.124ms.
+[53185][      debug] 
+[53185][   progress] Found 1 source file to analyze in /home/e0925519/cs5218/cs5218_asg3/02.wo_Defects/groups/concurrency_defects/sleep_lock_results/Infer_result
+[53185][environment] Parallel jobs: 4
+[53200][   progress] sleep_lock.c starting
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][      debug] 
+[53200][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[53200][   progress] sleep_lock.c DONE

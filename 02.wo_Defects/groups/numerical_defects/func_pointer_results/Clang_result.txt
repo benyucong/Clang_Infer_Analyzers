@@ -1,0 +1,13 @@
+func_pointer.c:340:6: warning: Value stored to 'flag' during its initialization is never read [deadcode.DeadStores]
+        int flag = rand();
+            ^~~~   ~~~~~~
+func_pointer.c:512:9: warning: Value stored to 'flag' is never read [deadcode.DeadStores]
+        flag = func_gbl();/*Tool should not detect this line as error*/ /*No ERROR:Bad function pointer casting*/
+        ^      ~~~~~~~~~~
+func_pointer.c:564:11: warning: Value stored to 'flag' is never read [deadcode.DeadStores]
+          flag = func_gbl();/*Tool should not detect this line as error*/ /*No ERROR:Bad function pointer casting*/
+          ^      ~~~~~~~~~~
+func_pointer.c:634:1: warning: Potential leak of memory pointed to by 'st1' [unix.Malloc]
+}
+^
+4 warnings generated.

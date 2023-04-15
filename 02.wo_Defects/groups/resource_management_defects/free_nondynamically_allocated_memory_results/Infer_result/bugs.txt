@@ -1,0 +1,150 @@
+Found 18 issues
+
+free_nondynamically_allocated_memory.c:21: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `0` is always false at line 21, column 5.
+  19.   {
+  20.   	char* ptr="a";
+  21. > 	if(0)
+  22.   	free(ptr); /*Tool should Not detect this line as error*/ /*No ERROR:Free memory not allocated dynamically*/
+  23.   }
+
+free_nondynamically_allocated_memory.c:18: error: PURE_FUNCTION
+  Side-effect free function free_nondynamic_allocated_memory_001.
+  16.   */
+  17.   
+  18. > void free_nondynamic_allocated_memory_001()
+  19.   {
+  20.   	char* ptr="a";
+
+free_nondynamically_allocated_memory.c:34: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(flag>1)` is always false at line 34, column 5.
+  32.   	char* ptr="a";;
+  33.   	int flag=1;
+  34. > 	if(flag>1)
+  35.   	free(ptr);  /*Tool should Not detect this line as error*/ /*No ERROR:Free memory not allocated dynamically*/
+  36.   }
+
+free_nondynamically_allocated_memory.c:30: error: PURE_FUNCTION
+  Side-effect free function free_nondynamic_allocated_memory_002.
+  28.   */
+  29.   
+  30. > void free_nondynamic_allocated_memory_002()
+  31.   {
+  32.   	char* ptr="a";;
+
+free_nondynamically_allocated_memory.c:60: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `0` is always false at line 60, column 8.
+  58.   	char* ptr1="a";
+  59.   	char** ptr=&ptr1;
+  60. > 	while(0)
+  61.   	free(ptr);  /*Tool should Not detect this line as error*/ /*No ERROR:Free memory not allocated dynamically*/
+  62.   }
+
+free_nondynamically_allocated_memory.c:56: error: PURE_FUNCTION
+  Side-effect free function free_nondynamic_allocated_memory_004.
+  54.   */
+  55.   
+  56. > void free_nondynamic_allocated_memory_004()
+  57.   {
+  58.   	char* ptr1="a";
+
+free_nondynamically_allocated_memory.c:92: error: PURE_FUNCTION
+  Side-effect free function free_nondynamic_allocated_memory_006.
+  90.   */
+  91.   
+  92. > void free_nondynamic_allocated_memory_006()
+  93.   {
+  94.   	char* ptr1=malloc(sizeof(char));
+
+free_nondynamically_allocated_memory.c:113: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `0` is always false at line 113, column 8.
+  111.   {
+  112.   	char* ptr="a";
+  113. > 	while(0)
+  114.   	free(ptr); /*Tool should Not detect this line as error*/ /*No ERROR:Free memory not allocated dynamically*/
+  115.   }
+
+free_nondynamically_allocated_memory.c:110: error: PURE_FUNCTION
+  Side-effect free function free_nondynamic_allocated_memory_007.
+  108.   */
+  109.   
+  110. > void free_nondynamic_allocated_memory_007()
+  111.   {
+  112.   	char* ptr="a";
+
+free_nondynamically_allocated_memory.c:126: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(a<b)` is always false at line 126, column 8.
+  124.   	char* ptr="b";
+  125.   	int a=2,b=0;
+  126. > 	while(a<b)
+  127.   	free(ptr); /*Tool should Not detect this line as error*/ /*No ERROR:Free memory not allocated dynamically*/
+  128.   }
+
+free_nondynamically_allocated_memory.c:122: error: PURE_FUNCTION
+  Side-effect free function free_nondynamic_allocated_memory_008.
+  120.   */
+  121.   
+  122. > void free_nondynamic_allocated_memory_008()
+  123.   {
+  124.   	char* ptr="b";
+
+free_nondynamically_allocated_memory.c:139: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(a>b)` is always false at line 139, column 8.
+  137.   	char* ptr="c";
+  138.   	int a=0,b=2;
+  139. > 	while(a>b)
+  140.   	free(ptr); /*Tool should Not detect this line as error*/ /*No ERROR:Free memory not allocated dynamically*/
+  141.   }
+
+free_nondynamically_allocated_memory.c:135: error: PURE_FUNCTION
+  Side-effect free function free_nondynamic_allocated_memory_009.
+  133.   */
+  134.   
+  135. > void free_nondynamic_allocated_memory_009()
+  136.   {
+  137.   	char* ptr="c";
+
+free_nondynamically_allocated_memory.c:167: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(i<0)` is always false at line 167, column 10.
+  165.   {
+  166.   	int i;
+  167. > 	for(i=0;i<0;i++)
+  168.   	{
+  169.   		char* ptr="z";
+
+free_nondynamically_allocated_memory.c:164: error: PURE_FUNCTION
+  Side-effect free function free_nondynamic_allocated_memory_011.
+  162.   */
+  163.   
+  164. > void free_nondynamic_allocated_memory_011()
+  165.   {
+  166.   	int i;
+
+free_nondynamically_allocated_memory.c:186: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(a==5)` is always false at line 186, column 6.
+  184.   	{
+  185.   		a++;
+  186. > 		if(a==5)
+  187.   		free(ptr); /*Tool should Not detect this line as error*/ /*No ERROR:Free memory not allocated dynamically*/
+  188.   	}
+
+free_nondynamically_allocated_memory.c:179: error: PURE_FUNCTION
+  Side-effect free function free_nondynamic_allocated_memory_012.
+  177.   */
+  178.   
+  179. > void free_nondynamic_allocated_memory_012()
+  180.   {
+  181.   	char* ptr="a";
+
+free_nondynamically_allocated_memory.c:204: error: PURE_FUNCTION
+  Side-effect free function free_nondynamic_allocated_memory_013.
+  202.   }free_nondynamic_allocated_memory_struct_013;
+  203.   
+  204. > void free_nondynamic_allocated_memory_013()
+  205.   {
+  206.   	free_nondynamic_allocated_memory_struct_013* new_struct=malloc(sizeof(free_nondynamic_allocated_memory_struct_013));
+
+Summary of the reports
+
+           PURE_FUNCTION: 10
+  CONDITION_ALWAYS_FALSE: 8

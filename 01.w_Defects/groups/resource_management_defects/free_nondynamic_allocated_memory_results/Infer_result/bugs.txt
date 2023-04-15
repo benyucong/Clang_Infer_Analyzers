@@ -1,0 +1,264 @@
+Found 32 issues
+
+free_nondynamic_allocated_memory.c:21: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 21, column 5.
+  19.   {
+  20.   	char* ptr="a";
+  21. > 	if(1)
+  22.   	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+  23.   
+
+free_nondynamic_allocated_memory.c:22: error: DEALLOCATE_STATIC_MEMORY
+  Constant string `"a"` is freed by a call to `free()` at line 22, column 2.
+  20.   	char* ptr="a";
+  21.   	if(1)
+  22. > 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+  23.   
+  24.   }
+
+free_nondynamic_allocated_memory.c:18: error: PURE_FUNCTION
+  Side-effect free function free_nondynamic_allocated_memory_001.
+  16.   */
+  17.   
+  18. > void free_nondynamic_allocated_memory_001()
+  19.   {
+  20.   	char* ptr="a";
+
+free_nondynamic_allocated_memory.c:35: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag>0)` is always false at line 35, column 5.
+  33.   	char* ptr="a";
+  34.   	int flag=1;
+  35. > 	if(flag>0)
+  36.   	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+  37.   }
+
+free_nondynamic_allocated_memory.c:36: error: DEALLOCATE_STATIC_MEMORY
+  Constant string `"a"` is freed by a call to `free()` at line 36, column 2.
+  34.   	int flag=1;
+  35.   	if(flag>0)
+  36. > 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+  37.   }
+  38.   
+
+free_nondynamic_allocated_memory.c:31: error: PURE_FUNCTION
+  Side-effect free function free_nondynamic_allocated_memory_002.
+  29.   */
+  30.   
+  31. > void free_nondynamic_allocated_memory_002()
+  32.   {
+  33.   	char* ptr="a";
+
+free_nondynamic_allocated_memory.c:48: error: DEALLOCATE_STATIC_MEMORY
+  Constant string `"STRING"` is freed by a call to `free()` at line 48, column 2.
+  46.   {
+  47.   	free_nondynamic_allocated_memory_003_gbl_ptr = "STRING"; /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+  48. > 	free(free_nondynamic_allocated_memory_003_gbl_ptr);
+  49.   }
+  50.   
+
+free_nondynamic_allocated_memory.c:62: error: DEALLOCATE_STACK_VARIABLE
+  Stack variable `ptr1` is freed by a call to `free()` at line 62, column 2.
+  60.   	char *ptr1 = "STRING";
+  61.   	ptr = &ptr1;
+  62. > 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+  63.   }
+  64.   
+
+free_nondynamic_allocated_memory.c:57: error: PURE_FUNCTION
+  Side-effect free function free_nondynamic_allocated_memory_004.
+  55.   */
+  56.    
+  57. > void free_nondynamic_allocated_memory_004()
+  58.   {
+  59.   	char** ptr;
+
+free_nondynamic_allocated_memory.c:86: error: DEALLOCATE_STACK_VARIABLE
+  Stack variable `pbuf` is freed by a call to `free()` at line 86, column 2.
+  84.   	free(buf1);
+  85.   	free(buf2);
+  86. > 	free(pbuf); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+  87.   }
+  88.   
+
+free_nondynamic_allocated_memory.c:103: error: DEALLOCATE_STACK_VARIABLE
+  Stack variable `d` is freed by a call to `free()` at line 103, column 2.
+  101.   
+  102.   
+  103. > 	free(ptr4); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+  104.   }
+  105.   
+
+free_nondynamic_allocated_memory.c:94: error: PURE_FUNCTION
+  Side-effect free function free_nondynamic_allocated_memory_006.
+  92.   */
+  93.   
+  94. > void free_nondynamic_allocated_memory_006()
+  95.   {
+  96.   	int b=2;float c=3.5; double d=4.5;
+
+free_nondynamic_allocated_memory.c:114: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 114, column 8.
+  112.   {
+  113.   	char* ptr="a";
+  114. > 	while(1)
+  115.   	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+  116.   }
+
+free_nondynamic_allocated_memory.c:115: error: DEALLOCATE_STATIC_MEMORY
+  Constant string `"a"` is freed by a call to `free()` at line 115, column 2.
+  113.   	char* ptr="a";
+  114.   	while(1)
+  115. > 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+  116.   }
+  117.   
+
+free_nondynamic_allocated_memory.c:111: error: PURE_FUNCTION
+  Side-effect free function free_nondynamic_allocated_memory_007.
+  109.   */
+  110.   
+  111. > void free_nondynamic_allocated_memory_007()
+  112.   {
+  113.   	char* ptr="a";
+
+free_nondynamic_allocated_memory.c:127: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(a>b)` is always false at line 127, column 8.
+  125.   	char* ptr="a";
+  126.   	int a=2,b=0;
+  127. > 	while(a>b)
+  128.   	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+  129.   }
+
+free_nondynamic_allocated_memory.c:128: error: DEALLOCATE_STATIC_MEMORY
+  Constant string `"a"` is freed by a call to `free()` at line 128, column 2.
+  126.   	int a=2,b=0;
+  127.   	while(a>b)
+  128. > 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+  129.   }
+  130.   
+
+free_nondynamic_allocated_memory.c:123: error: PURE_FUNCTION
+  Side-effect free function free_nondynamic_allocated_memory_008.
+  121.   */
+  122.   
+  123. > void free_nondynamic_allocated_memory_008()
+  124.   {
+  125.   	char* ptr="a";
+
+free_nondynamic_allocated_memory.c:140: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(a<b)` is always false at line 140, column 8.
+  138.   	char* ptr="s";
+  139.   	int a=0,b=2;
+  140. > 	while(a<b)
+  141.   	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+  142.   }
+
+free_nondynamic_allocated_memory.c:141: error: DEALLOCATE_STATIC_MEMORY
+  Constant string `"s"` is freed by a call to `free()` at line 141, column 2.
+  139.   	int a=0,b=2;
+  140.   	while(a<b)
+  141. > 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+  142.   }
+  143.   
+
+free_nondynamic_allocated_memory.c:136: error: PURE_FUNCTION
+  Side-effect free function free_nondynamic_allocated_memory_009.
+  134.   */
+  135.   
+  136. > void free_nondynamic_allocated_memory_009()
+  137.   {
+  138.   	char* ptr="s";
+
+free_nondynamic_allocated_memory.c:155: error: DEALLOCATE_STATIC_MEMORY
+  Constant string `"k"` is freed by a call to `free()` at line 155, column 3.
+  153.   	{
+  154.   		char* ptr="k";
+  155. > 		free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+  156.   	}
+  157.   }
+
+free_nondynamic_allocated_memory.c:149: error: PURE_FUNCTION
+  Side-effect free function free_nondynamic_allocated_memory_010.
+  147.   */
+  148.   
+  149. > void free_nondynamic_allocated_memory_010()
+  150.   {
+  151.   	int i;
+
+free_nondynamic_allocated_memory.c:170: error: DEALLOCATE_STATIC_MEMORY
+  Constant string `"l"` is freed by a call to `free()` at line 170, column 3.
+  168.   	{
+  169.   		char* ptr="l";
+  170. > 		free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+  171.   	}
+  172.   }
+
+free_nondynamic_allocated_memory.c:164: error: PURE_FUNCTION
+  Side-effect free function free_nondynamic_allocated_memory_011.
+  162.   */
+  163.   
+  164. > void free_nondynamic_allocated_memory_011()
+  165.   {
+  166.   	int i;
+
+free_nondynamic_allocated_memory.c:187: error: DEALLOCATE_STATIC_MEMORY
+  Constant string `"a"` is freed by a call to `free()` at line 187, column 3.
+  185.   		a++;
+  186.   		if(a==1)
+  187. > 		free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+  188.   	}
+  189.   }
+
+free_nondynamic_allocated_memory.c:179: error: PURE_FUNCTION
+  Side-effect free function free_nondynamic_allocated_memory_012.
+  177.   */
+  178.   
+  179. > void free_nondynamic_allocated_memory_012()
+  180.   {
+  181.   	char* ptr="a";
+
+free_nondynamic_allocated_memory.c:209: error: DEALLOCATE_STACK_VARIABLE
+  Stack variable `str` is freed by a call to `free()` at line 209, column 2.
+  207.   	free_nondynamic_allocated_memory_struct_013 str;
+  208.   	new_struct->next = &str;
+  209. > 	free(new_struct->next);
+  210.   	free(new_struct);
+  211.   }
+
+free_nondynamic_allocated_memory.c:204: error: PURE_FUNCTION
+  Side-effect free function free_nondynamic_allocated_memory_013.
+  202.   }free_nondynamic_allocated_memory_struct_013;
+  203.   
+  204. > void free_nondynamic_allocated_memory_013()
+  205.   {
+  206.   	free_nondynamic_allocated_memory_struct_013* new_struct=malloc(sizeof(free_nondynamic_allocated_memory_struct_013));
+
+free_nondynamic_allocated_memory.c:229: error: DEALLOCATE_STACK_VARIABLE
+  Stack variable `free_nondynamic_allocated_memory_st` is freed by a call to `free()` at line 229, column 2.
+  227.   	free_nondynamic_allocated_memory_struct_014 free_nondynamic_allocated_memory_st ;
+  228.   	free_nondynamic_allocated_memory_str = &free_nondynamic_allocated_memory_st;
+  229. > 	free(free_nondynamic_allocated_memory_str);/*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+  230.   }
+  231.   
+
+free_nondynamic_allocated_memory.c:245: error: DEALLOCATE_STATIC_MEMORY
+  Constant string `"STRING"` is freed by a call to `free_nondynamic_allocated_memory_015_func_001()` at line 245, column 2.
+  243.   {
+  244.   	free_nondynamic_allocated_memory_015_gbl_ptr = "STRING";
+  245. > 	free_nondynamic_allocated_memory_015_func_001();
+  246.   }
+  247.   
+
+free_nondynamic_allocated_memory.c:269: error: DEALLOCATE_STATIC_MEMORY
+  Constant string `"STRING"` is freed by a call to `free_nondynamic_allocated_memory_016_func_002()` at line 269, column 2.
+  267.   	free_nondynamic_allocated_memory_016_gbl_var = 'A';
+  268.   	free_nondynamic_allocated_memory_016_func_001();
+  269. > 	free_nondynamic_allocated_memory_016_func_002();
+  270.   }
+  271.   
+
+Summary of the reports
+
+              PURE_FUNCTION: 11
+   DEALLOCATE_STATIC_MEMORY: 11
+      CONDITION_ALWAYS_TRUE: 5
+  DEALLOCATE_STACK_VARIABLE: 5

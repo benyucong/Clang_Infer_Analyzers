@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+ <key>clang_version</key>
+<string>Ubuntu clang version 14.0.0-1ubuntu1</string>
+ <key>diagnostics</key>
+ <array>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>22</integer>
+      <key>col</key><integer>2</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>22</integer>
+         <key>col</key><integer>8</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>22</integer>
+         <key>col</key><integer>19</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;ret&apos; is never read</string>
+   <key>category</key><string>Unused code</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>77400463100d4e0733a1cead22372f7f</string>
+  <key>issue_context_kind</key><string>function</string>
+  <key>issue_context</key><string>zero_division_001</string>
+  <key>issue_hash_function_offset</key><string>3</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>22</integer>
+   <key>col</key><integer>2</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>22</integer>
+   </array>
+  </dict>
+  </dict>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>34</integer>
+      <key>col</key><integer>2</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>34</integer>
+         <key>col</key><integer>8</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>34</integer>
+         <key>col</key><integer>15</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;ret&apos; is never read</string>
+   <key>category</key><string>Unused code</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>68fdcb3f65ce2fb4920fc323e9600d9d</string>
+  <key>issue_context_kind</key><string>function</string>
+  <key>issue_context</key><string>zero_division_002</string>
+  <key>issue_hash_function_offset</key><string>4</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>34</integer>
+   <key>col</key><integer>2</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>34</integer>
+   </array>
+  </dict>
+  </dict>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>45</integer>
+      <key>col</key><integer>2</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>45</integer>
+         <key>col</key><integer>8</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>45</integer>
+         <key>col</key><integer>19</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;ret&apos; is never read</string>
+   <key>category</key><string>Unused code</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>02d788fa55938544c6d33d433e7c9d5b</string>
+  <key>issue_context_kind</key><string>function</string>
+  <key>issue_context</key><string>zero_division_003</string>
+  <key>issue_hash_function_offset</key><string>3</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>45</integer>
+   <key>col</key><integer>2</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>45</integer>
+   </array>
+  </dict>
+  </dict>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>75</integer>
+      <key>col</key><integer>2</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>75</integer>
+         <key>col</key><integer>8</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>75</integer>
+         <key>col</key><integer>29</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;ret&apos; is never read</string>
+   <key>category</key><string>Unused code</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>0527943f28547de9b5dacf9c771e750b</string>
+  <key>issue_context_kind</key><string>function</string>
+  <key>issue_context</key><string>zero_division_005</string>
+  <key>issue_hash_function_offset</key><string>4</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>75</integer>
+   <key>col</key><integer>2</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>75</integer>
+   </array>
+  </dict>
+  </dict>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>90</integer>
+      <key>col</key><integer>2</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>90</integer>
+         <key>col</key><integer>8</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>90</integer>
+         <key>col</key><integer>20</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;ret&apos; is never read</string>
+   <key>category</key><string>Unused code</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>c8452c1acea6b83b4dba48052bce8362</string>
+  <key>issue_context_kind</key><string>function</string>
+  <key>issue_context</key><string>zero_division_006</string>
+  <key>issue_hash_function_offset</key><string>6</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>90</integer>
+   <key>col</key><integer>2</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>90</integer>
+   </array>
+  </dict>
+  </dict>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>115</integer>
+      <key>col</key><integer>2</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>115</integer>
+         <key>col</key><integer>8</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>115</integer>
+         <key>col</key><integer>49</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;ret&apos; is never read</string>
+   <key>category</key><string>Unused code</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>f1ea8e4ad9b776b3256b642ee7395de0</string>
+  <key>issue_context_kind</key><string>function</string>
+  <key>issue_context</key><string>zero_division_007</string>
+  <key>issue_hash_function_offset</key><string>4</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>115</integer>
+   <key>col</key><integer>2</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>115</integer>
+   </array>
+  </dict>
+  </dict>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>126</integer>
+      <key>col</key><integer>2</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>126</integer>
+         <key>col</key><integer>8</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>126</integer>
+         <key>col</key><integer>21</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;ret&apos; is never read</string>
+   <key>category</key><string>Unused code</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>f0673c0e69b39d4b9f12f1187d0aa36f</string>
+  <key>issue_context_kind</key><string>function</string>
+  <key>issue_context</key><string>zero_division_008</string>
+  <key>issue_hash_function_offset</key><string>3</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>126</integer>
+   <key>col</key><integer>2</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>126</integer>
+   </array>
+  </dict>
+  </dict>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>138</integer>
+      <key>col</key><integer>2</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>138</integer>
+         <key>col</key><integer>8</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>138</integer>
+         <key>col</key><integer>25</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;ret&apos; is never read</string>
+   <key>category</key><string>Unused code</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>50d66198d371ecc34a96abc653684aec</string>
+  <key>issue_context_kind</key><string>function</string>
+  <key>issue_context</key><string>zero_division_009</string>
+  <key>issue_hash_function_offset</key><string>4</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>138</integer>
+   <key>col</key><integer>2</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>138</integer>
+   </array>
+  </dict>
+  </dict>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>153</integer>
+      <key>col</key><integer>3</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>153</integer>
+         <key>col</key><integer>9</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>153</integer>
+         <key>col</key><integer>26</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;ret&apos; is never read</string>
+   <key>category</key><string>Unused code</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>135c15770d678c300f5bf21d71f0e917</string>
+  <key>issue_context_kind</key><string>function</string>
+  <key>issue_context</key><string>zero_division_010</string>
+  <key>issue_hash_function_offset</key><string>7</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>153</integer>
+   <key>col</key><integer>3</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>153</integer>
+   </array>
+  </dict>
+  </dict>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>166</integer>
+      <key>col</key><integer>2</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>166</integer>
+         <key>col</key><integer>8</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>166</integer>
+         <key>col</key><integer>35</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;ret&apos; is never read</string>
+   <key>category</key><string>Unused code</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>970d0822a87cb66c432af16d0e92622c</string>
+  <key>issue_context_kind</key><string>function</string>
+  <key>issue_context</key><string>zero_division_011</string>
+  <key>issue_hash_function_offset</key><string>4</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>166</integer>
+   <key>col</key><integer>2</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>166</integer>
+   </array>
+  </dict>
+  </dict>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>178</integer>
+      <key>col</key><integer>2</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>178</integer>
+         <key>col</key><integer>8</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>178</integer>
+         <key>col</key><integer>41</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;ret&apos; is never read</string>
+   <key>category</key><string>Unused code</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>1f92e55d54011fdd26ca81602f66b844</string>
+  <key>issue_context_kind</key><string>function</string>
+  <key>issue_context</key><string>zero_division_012</string>
+  <key>issue_hash_function_offset</key><string>4</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>178</integer>
+   <key>col</key><integer>2</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>178</integer>
+   </array>
+  </dict>
+  </dict>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>195</integer>
+      <key>col</key><integer>2</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>195</integer>
+         <key>col</key><integer>8</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>195</integer>
+         <key>col</key><integer>46</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;ret&apos; is never read</string>
+   <key>category</key><string>Unused code</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>5feaad04b1893a29347012f02d0351d6</string>
+  <key>issue_context_kind</key><string>function</string>
+  <key>issue_context</key><string>zero_division_013</string>
+  <key>issue_hash_function_offset</key><string>3</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>195</integer>
+   <key>col</key><integer>2</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>195</integer>
+   </array>
+  </dict>
+  </dict>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>206</integer>
+      <key>col</key><integer>2</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>206</integer>
+         <key>col</key><integer>8</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>206</integer>
+         <key>col</key><integer>25</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;ret&apos; is never read</string>
+   <key>category</key><string>Unused code</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>efd1dea897296228cb742f14a520ccbd</string>
+  <key>issue_context_kind</key><string>function</string>
+  <key>issue_context</key><string>zero_division_014_func_001</string>
+  <key>issue_hash_function_offset</key><string>3</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>206</integer>
+   <key>col</key><integer>2</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>206</integer>
+   </array>
+  </dict>
+  </dict>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>225</integer>
+      <key>col</key><integer>2</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>225</integer>
+         <key>col</key><integer>8</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>225</integer>
+         <key>col</key><integer>26</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;ret&apos; is never read</string>
+   <key>category</key><string>Unused code</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>008881fa7f163e0f7cefb33a844023da</string>
+  <key>issue_context_kind</key><string>function</string>
+  <key>issue_context</key><string>zero_division_015</string>
+  <key>issue_hash_function_offset</key><string>6</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>225</integer>
+   <key>col</key><integer>2</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>225</integer>
+   </array>
+  </dict>
+  </dict>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>252</integer>
+      <key>col</key><integer>2</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>252</integer>
+         <key>col</key><integer>8</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>252</integer>
+         <key>col</key><integer>26</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;ret&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;ret&apos; is never read</string>
+   <key>category</key><string>Unused code</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>3a966f37015e49991de3ab777d7a4d81</string>
+  <key>issue_context_kind</key><string>function</string>
+  <key>issue_context</key><string>zero_division_016</string>
+  <key>issue_hash_function_offset</key><string>9</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>252</integer>
+   <key>col</key><integer>2</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>252</integer>
+   </array>
+  </dict>
+  </dict>
+ </array>
+ <key>files</key>
+ <array>
+  <string>zero_division_wo.c</string>
+ </array>
+</dict>
+</plist>

@@ -1,0 +1,152 @@
+Found 18 issues
+
+data_overflow.c:48: error: INTEGER_OVERFLOW_L1
+  (2147483647 + 1):signed32.
+  46.   	int max = 0x7fffffff;
+  47.   	int ret;
+  48. > 	ret = max + 1;/*Tool should detect this line as error*/ /*ERROR:Data Overflow*/
+  49.           sink = ret;
+  50.   }
+
+data_overflow.c:96: error: INTEGER_OVERFLOW_L1
+  (4294967295 + 1):unsigned32.
+  94.   	unsigned int max = 0xffffffff;
+  95.   	unsigned int ret;
+  96. > 	ret = max + 1;/*Tool should detect this line as error*/ /*ERROR:Data Overflow*/
+  97.           sink = ret;
+  98.   }
+
+data_overflow.c:121: error: PURE_FUNCTION
+  Side-effect free function data_overflow_009.
+  119.   } data_overflow_009_s_001;
+  120.   
+  121. > void data_overflow_009 ()
+  122.   {
+  123.   	data_overflow_009_s_001 s;
+
+data_overflow.c:137: error: PURE_FUNCTION
+  Side-effect free function data_overflow_010.
+  135.   } data_overflow_010_s_001;
+  136.   
+  137. > void data_overflow_010 ()
+  138.   {
+  139.   	data_overflow_010_s_001 s;
+
+data_overflow.c:152: error: INTEGER_OVERFLOW_L1
+  (2147483647 + 1):signed32.
+  150.   	int max = 0x7fffffff;
+  151.   	int ret;
+  152. > 	max ++;
+  153.   	ret = max;/*Tool should detect this line as error*/ /*ERROR:Data Overflow*/
+  154.           sink = ret;
+
+data_overflow.c:165: error: INTEGER_OVERFLOW_L1
+  (2147483520 + 128):signed32.
+  163.   	int max = 0x7fffff80;
+  164.   	int ret;
+  165. > 	ret = max + 128;/*Tool should detect this line as error*/ /*ERROR:Data Overflow*/
+  166.           sink = ret;
+  167.   }
+
+data_overflow.c:177: error: INTEGER_OVERFLOW_L1
+  (1073741824 × 2):signed32.
+  175.   	int max = 0x40000000;
+  176.   	int ret;
+  177. > 	ret = max * 2;/*Tool should detect this line as error*/ /*ERROR:Data Overflow*/
+  178.           sink = ret;
+  179.   }
+
+data_overflow.c:190: error: INTEGER_OVERFLOW_L1
+  (2147483647 + 1):signed32.
+  188.   	int d = 1;
+  189.   	int ret;
+  190. > 	ret = max + d;/*Tool should detect this line as error*/ /*ERROR:Data Overflow*/
+  191.           sink = ret;
+  192.   }
+
+data_overflow.c:204: error: INTEGER_OVERFLOW_U5
+  (2147483647 + [-oo, +oo]):signed32.
+  202.   	int ret;
+  203.   	d = rand();
+  204. > 	ret = max + d; /*Tool should detect this line as error*/ /*ERROR:Data Overflow*/
+  205.           sink = ret;
+  206.   }
+
+data_overflow.c:216: error: INTEGER_OVERFLOW_L1
+  (2147483645 + 3):signed32.
+  214.   	int max = 429496729;
+  215.   	int ret;
+  216. > 	ret = (5 * max) + 3; /*Tool should detect this line as error*/ /*ERROR:Data Overflow*/
+  217.           sink = ret;
+  218.   }
+
+data_overflow.c:228: error: INTEGER_OVERFLOW_L1
+  (2147395600 + 88048):signed32.
+  226.   	int max = 46340;
+  227.   	int ret;
+  228. > 	ret = (max * max) + 88048; /*Tool should detect this line as error*/ /*ERROR:Data Overflow*/
+  229.           sink = ret;
+  230.   }
+
+data_overflow.c:236: error: PURE_FUNCTION
+  Side-effect free function data_overflow_018_func_001.
+  234.    * Complexity: int	Overflow at The return value of the function
+  235.    */
+  236. > int data_overflow_018_func_001 ()
+  237.   {
+  238.   	return 1;
+
+data_overflow.c:245: error: INTEGER_OVERFLOW_L1
+  (2147483647 + 1):signed32.
+  243.   	int max = 0x7fffffff;
+  244.   	int ret;
+  245. > 	ret = max + data_overflow_018_func_001(); /*Tool should detect this line as error*/ /*ERROR:Data Overflow*/
+  246.           sink = ret;
+  247.   }
+
+data_overflow.c:263: error: INTEGER_OVERFLOW_L1
+  (2147483647 + 1):signed32 by call to `data_overflow_019_func_001`.
+  261.   void data_overflow_019 ()
+  262.   {
+  263. > 	data_overflow_019_func_001(1);
+  264.   }
+  265.   
+
+data_overflow.c:275: error: INTEGER_OVERFLOW_L2
+  (2147483647 + [-2, 1]):signed32.
+  273.   	int dlist[4] = {0, 1, -2, -1};
+  274.   	int ret;
+  275. > 	ret = max + dlist[1]; /*Tool should detect this line as error*/ /*ERROR:Data Overflow*/
+  276.           sink = ret;
+  277.   }
+
+data_overflow.c:290: error: INTEGER_OVERFLOW_L1
+  (2147483647 + 1):signed32.
+  288.   	int ret;
+  289.   	d1 = d;
+  290. > 	ret = max + d1; /*Tool should detect this line as error*/ /*ERROR:Data Overflow*/
+  291.           sink = ret;
+  292.   }
+
+data_overflow.c:307: error: INTEGER_OVERFLOW_L1
+  (2147483647 + 1):signed32.
+  305.   	d1 = d;
+  306.   	d2 = d1;
+  307. > 	ret = max + d2; /*Tool should detect this line as error*/ /*ERROR:Data Overflow*/
+  308.           sink = ret;
+  309.   }
+
+data_overflow.c:318: error: INTEGER_OVERFLOW_L1
+  (2147483647 + 1):signed32.
+  316.   {
+  317.   	int ret;
+  318. > 	ret = 0x7fffffff + 1; /*Tool should detect this line as error*/ /*ERROR:Data Overflow*/
+  319.           sink = ret;
+  320.   }
+
+Summary of the reports
+
+  INTEGER_OVERFLOW_L1: 13
+        PURE_FUNCTION: 3
+  INTEGER_OVERFLOW_L2: 1
+  INTEGER_OVERFLOW_U5: 1

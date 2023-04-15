@@ -1,0 +1,233 @@
+Found 28 issues
+
+memory_leak.c:23: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 23, column 9.
+  21.   	int i;
+  22.   	char *buf;
+  23. > 	for (i=0;;i++)
+  24.   	{
+  25.   		buf=(char*) calloc(5,sizeof(char)); /*Tool should detect this line as error*/ /*ERROR:Memory Leakage */
+
+memory_leak.c:23: error: INTEGER_OVERFLOW_L5
+  ([0, +oo] + 1):signed32.
+  21.   	int i;
+  22.   	char *buf;
+  23. > 	for (i=0;;i++)
+  24.   	{
+  25.   		buf=(char*) calloc(5,sizeof(char)); /*Tool should detect this line as error*/ /*ERROR:Memory Leakage */
+
+memory_leak.c:28: error: MEMORY_LEAK
+  memory dynamically allocated by call to `calloc()` at line 25, column 15 is not reachable after line 28, column 3.
+  26.   		if(buf!=NULL)
+  27.   		{
+  28. > 		buf[0]=1;
+  29.   		/*if(i>=10) */
+  30.   		}
+
+memory_leak.c:40: error: PURE_FUNCTION
+  Side-effect free function memory_leak_002.
+  38.    */
+  39.   
+  40. > void memory_leak_002 ()
+  41.   {
+  42.   	int **ptr = (int**) malloc(5*sizeof(int*));
+
+memory_leak.c:62: error: PURE_FUNCTION
+  Side-effect free function memory_leak_003_func_001.
+  60.    *  Memory allocated in a function and Memory used in another function
+  61.    */
+  62. > void memory_leak_003_func_001 (int len,char **stringPtr)
+  63.   {
+  64.   	char * p = malloc(sizeof(char) * (len+1));
+
+memory_leak.c:74: error: MEMORY_LEAK
+  memory dynamically allocated to `str1` by call to `memory_leak_003_func_001()` at line 72, column 2 is not reachable after line 74, column 1.
+  72.   	memory_leak_003_func_001(strlen(str),&str1);/*Tool should detect this line as error*/ /*ERROR:Memory Leakage */
+  73.   	strcpy(str1,str);
+  74. > }
+  75.   
+  76.   /*
+
+memory_leak.c:118: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(flag<0)` is always false at line 118, column 8.
+  116.   		}
+  117.   	}
+  118. >     if(flag < 0)
+  119.   	free(ptr);
+  120.   }
+
+memory_leak.c:110: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag>0)` is always false at line 110, column 5.
+  108.   	int flag=10;
+  109.   
+  110. > 	if(flag > 0)
+  111.   	{
+  112.   		ptr= (float*) malloc(5*sizeof(float));/*Tool should detect this line as error*/ /*ERROR:Memory Leakage */
+
+memory_leak.c:118: error: MEMORY_LEAK
+  memory dynamically allocated by call to `malloc()` at line 112, column 17 is not reachable after line 118, column 8.
+  116.   		}
+  117.   	}
+  118. >     if(flag < 0)
+  119.   	free(ptr);
+  120.   }
+
+memory_leak.c:105: error: PURE_FUNCTION
+  Side-effect free function memory_leak_005.
+  103.    *  When using pointer to float Memory is allocated and freed in conditional statement(if)
+  104.    */
+  105. > void memory_leak_005()
+  106.   {
+  107.   	float *ptr;
+
+memory_leak.c:126: error: PURE_FUNCTION
+  Side-effect free function memory_leak_006_func_001.
+  124.    *  When using pointer to double Memory is allocated and freed based on return value of function
+  125.    */
+  126. > int memory_leak_006_func_001(int flag)
+  127.   {
+  128.      int ret;
+
+memory_leak.c:149: error: MEMORY_LEAK
+  memory dynamically allocated by call to `malloc()` at line 143, column 19 is not reachable after line 149, column 8.
+  147.   		}
+  148.   	}
+  149. >     if(memory_leak_006_func_001(flag) !=0)
+  150.   	free(dptr);
+  151.   }
+
+memory_leak.c:136: error: PURE_FUNCTION
+  Side-effect free function memory_leak_006.
+  134.   }
+  135.   
+  136. > void memory_leak_006()
+  137.   {
+  138.   	double *dptr;
+
+memory_leak.c:212: error: MEMORY_LEAK
+  memory dynamically allocated by call to `malloc()` at line 212, column 17 is not reachable after line 212, column 2.
+  210.   {
+  211.   	int *ptr=(int*) malloc(5 * sizeof(int));
+  212. > 	int *p = (int*)malloc(5 * sizeof(int));/*Tool should detect this line as error*/ /*ERROR:Memory Leakage */
+  213.   	if(ptr !=NULL)
+  214.   	{
+
+memory_leak.c:209: error: PURE_FUNCTION
+  Side-effect free function memory_leak_008.
+  207.   *  When using 1 single pointer alias
+  208.   */
+  209. > void memory_leak_008 ()
+  210.   {
+  211.   	int *ptr=(int*) malloc(5 * sizeof(int));
+
+memory_leak.c:228: error: MEMORY_LEAK
+  memory dynamically allocated by call to `malloc()` at line 228, column 18 is not reachable after line 228, column 2.
+  226.   {
+  227.   	float *ptr=(float*) malloc(5 * sizeof(float));
+  228. > 	int *p = (int*) malloc(5 * sizeof(int)); /*Tool should detect this line as error*/ /*ERROR:Memory Leakage */
+  229.   	if(ptr !=NULL)
+  230.   	{
+
+memory_leak.c:225: error: PURE_FUNCTION
+  Side-effect free function memory_leak_009.
+  223.   *  When using 1 single pointer alias - dangling pointer
+  224.   */
+  225. > void memory_leak_009 ()
+  226.   {
+  227.   	float *ptr=(float*) malloc(5 * sizeof(float));
+
+memory_leak.c:245: error: MEMORY_LEAK
+  memory dynamically allocated by call to `calloc()` at line 245, column 19 is not reachable after line 245, column 2.
+  243.   {
+  244.   	int *ptr = (int*) calloc(5,sizeof(int));
+  245. > 	int *p1 = (int*) calloc(5,sizeof(int));/*Tool should detect this line as error*/ /*ERROR:Memory Leakage */
+  246.   	int *p2 = NULL;
+  247.   	p1 = ptr;
+
+memory_leak.c:276: error: MEMORY_LEAK
+  memory dynamically allocated by call to `calloc()` at line 267, column 19 is not reachable after line 276, column 6.
+  274.       	char * buf ;
+  275.   
+  276. >     	buf = un.u2;
+  277.       }
+  278.   }
+
+memory_leak.c:308: error: MEMORY_LEAK
+  memory dynamically allocated by call to `malloc()` at line 308, column 62 is not reachable after line 308, column 2.
+  306.   {
+  307.   	memory_leak_0012_uni_001 *u = (memory_leak_0012_uni_001 * )malloc(5*sizeof( memory_leak_0012_uni_001 ));
+  308. > 	memory_leak_0012_uni_001 *p  = (memory_leak_0012_uni_001 * )malloc(5*sizeof( memory_leak_0012_uni_001 ));/*Tool should detect this line as error*/ /*ERROR:Memory Leakage */
+  309.   	p = u;
+  310.   
+
+memory_leak.c:305: error: PURE_FUNCTION
+  Side-effect free function memory_leak_0012.
+  303.   } memory_leak_0012_uni_001;
+  304.   
+  305. > void memory_leak_0012 ()
+  306.   {
+  307.   	memory_leak_0012_uni_001 *u = (memory_leak_0012_uni_001 * )malloc(5*sizeof( memory_leak_0012_uni_001 ));
+
+memory_leak.c:341: error: PURE_FUNCTION
+  Side-effect free function memory_leak_0013.
+  339.   } memory_leak_0013_uni_001;
+  340.   
+  341. > void memory_leak_0013 ()
+  342.   {
+  343.   	memory_leak_0013_uni_001 *u = (memory_leak_0013_uni_001 * )malloc(5*sizeof( memory_leak_0013_uni_001 ));
+
+memory_leak.c:384: error: MEMORY_LEAK
+  memory dynamically allocated by call to `calloc()` at line 373, column 25 is not reachable after line 384, column 1.
+  382.           fptr1 = *fp2;
+  383.       }
+  384. > }
+  385.   
+  386.   /*
+
+memory_leak.c:390: error: PURE_FUNCTION
+  Side-effect free function memory_leak_0015_func_001.
+  388.    *  Memory allocated and returned from one function and Memory used in another function
+  389.    */
+  390. > char * memory_leak_0015_func_001 (int len)
+  391.   {
+  392.   	char *stringPtr = malloc(sizeof(char) * (len+1));
+
+memory_leak.c:402: error: MEMORY_LEAK
+  memory dynamically allocated by call to `memory_leak_0015_func_001()` at line 399, column 15 is not reachable after line 402, column 6.
+  400.   	if(str1!=NULL)
+  401.   	{
+  402. > 	    strcpy(str1,str);
+  403.   	}
+  404.   }
+
+memory_leak.c:432: error: PURE_FUNCTION
+  Side-effect free function memory_leak_0017_func_001.
+  430.   */
+  431.   long ** memory_leak_0017_gbl_doubleptr;
+  432. > int memory_leak_0017_func_001(int flag)
+  433.   {
+  434.      int ret ;
+
+memory_leak.c:499: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 499, column 9.
+  497.   	int i;
+  498.       {
+  499. > 		while(1)
+  500.   		{
+  501.   			memory_leak_0018dst = (char**) malloc(5*sizeof(char*));
+
+memory_leak.c:519: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 519, column 8.
+  517.       	strcpy (memory_leak_0018dst[i],"STRING");
+  518.       }
+  519. > 	while(1)
+  520.   	{
+  521.   		for(i=0;i<5;i++)
+
+Summary of the reports
+
+             MEMORY_LEAK: 11
+           PURE_FUNCTION: 11
+   CONDITION_ALWAYS_TRUE: 4
+     INTEGER_OVERFLOW_L5: 1
+  CONDITION_ALWAYS_FALSE: 1

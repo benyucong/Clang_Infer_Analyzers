@@ -1,0 +1,54 @@
+Found 6 issues
+
+double_lock.c:26: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_double_lock_001_glb_mutex.
+  24.    */
+  25.   
+  26. > pthread_mutex_t double_lock_001_glb_mutex = PTHREAD_MUTEX_INITIALIZER;
+  27.   
+  28.   #if defined(CHECKER_POLYSPACE)
+
+double_lock.c:80: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_double_lock_002_glb_mutex.
+  78.    * Complexity: Locking twice and unlocking only once in same function using one thread
+  79.    */
+  80. > pthread_mutex_t double_lock_002_glb_mutex = PTHREAD_MUTEX_INITIALIZER;
+  81.   
+  82.   #if defined(CHECKER_POLYSPACE)
+
+double_lock.c:130: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_double_lock_003_glb_mutex.
+  128.    * Complexity: double-lock over multiple functions
+  129.    */
+  130. > pthread_mutex_t double_lock_003_glb_mutex = PTHREAD_MUTEX_INITIALIZER;
+  131.   
+  132.   #if defined(CHECKER_POLYSPACE)
+
+double_lock.c:189: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_double_lock_004_glb_mutex1.
+  187.    * Complexity: double-lock over multiple functions using 2 threads
+  188.    */
+  189. > pthread_mutex_t double_lock_004_glb_mutex1 = PTHREAD_MUTEX_INITIALIZER;
+  190.   
+  191.   void *Thread3(void *input)
+
+double_lock.c:228: error: INTEGER_OVERFLOW_U5
+  ([-oo, +oo] + [-oo, +oo]):signed32.
+  226.   	   long int t2 = 20;
+  227.   	   sink += pthread_create(&th1, NULL, Thread3, (void *)t1);
+  228. > 	   sink += pthread_create(&th2, NULL, Thread4, (void *)t2);
+  229.   #endif /* defined(CHECKER_POLYSPACE) */
+  230.   }
+
+double_lock.c:227: error: INTEGER_OVERFLOW_U5
+  (`#GB<>$sink` + [-oo, +oo]):signed32.
+  225.   	   long int t1 = 10;
+  226.   	   long int t2 = 20;
+  227. > 	   sink += pthread_create(&th1, NULL, Thread3, (void *)t1);
+  228.   	   sink += pthread_create(&th2, NULL, Thread4, (void *)t2);
+  229.   #endif /* defined(CHECKER_POLYSPACE) */
+
+Summary of the reports
+
+        PURE_FUNCTION: 4
+  INTEGER_OVERFLOW_U5: 2

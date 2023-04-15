@@ -1,0 +1,71 @@
+Found 8 issues
+
+buffer_overrun_dynamic.c:286: error: PURE_FUNCTION
+  Side-effect free function dynamic_buffer_overrun_016_func_001.
+  284.    */
+  285.   
+  286. > int dynamic_buffer_overrun_016_func_001 ()
+  287.   {
+  288.   	return 4;
+
+buffer_overrun_dynamic.c:331: error: BUFFER_OVERRUN_L2
+  Offset: [3, 6] Size: 5.
+  329.   	if(buf!=NULL)
+  330.   	{
+  331. > 	    *(buf+indexes[index]) = 1;/*Tool should Not detect this line as error*/ /*No ERROR:Buffer overrun*/
+  332.   	    free(buf);
+  333.   	}
+
+buffer_overrun_dynamic.c:420: error: BUFFER_OVERRUN_L4
+  Offset: [0, +oo] Size: 5.
+  418.   	    for (i = 0; i < 5; i ++)
+  419.   	    {
+  420. > 		    *p = 1;/*Tool should Not detect this line as error*/ /*No ERROR:Buffer overrun*/
+  421.   		     p ++;
+  422.   	    }
+
+buffer_overrun_dynamic.c:431: error: PURE_FUNCTION
+  Side-effect free function dynamic_buffer_overrun_024_func_001.
+  429.    * overrun when passing the base pointer to a function
+  430.    */
+  431. > void dynamic_buffer_overrun_024_func_001 (int *buf)
+  432.   {
+  433.   	*(buf+4) = 1;/*Tool should Not detect this line as error*/ /*No ERROR:Buffer overrun*/
+
+buffer_overrun_dynamic.c:512: error: BUFFER_OVERRUN_L2
+  Offset: [0, 4] Size: 3.
+  510.   	    	*(buf1+i)=i;
+  511.   		}
+  512. >     	*(buf2+*(buf1+2))=1;/*Tool should Not detect this line as error*/ /*No ERROR:Buffer overrun*/
+  513.   	    free(buf1);
+  514.   	    free(buf2);
+
+buffer_overrun_dynamic.c:521: error: PURE_FUNCTION
+  Side-effect free function dynamic_buffer_overrun_029.
+  519.    * overrun in while loop
+  520.    */
+  521. > void dynamic_buffer_overrun_029()
+  522.   {
+  523.   
+
+buffer_overrun_dynamic.c:542: error: PURE_FUNCTION
+  Side-effect free function dynamic_buffer_overrun_030.
+  540.   */
+  541.   
+  542. > void dynamic_buffer_overrun_030()
+  543.   {
+  544.   	int i,j;
+
+buffer_overrun_dynamic.c:597: error: PURE_FUNCTION
+  Side-effect free function dynamic_buffer_overrun_032.
+  595.   }dynamic_buffer_overrun_s_005;
+  596.   
+  597. > void dynamic_buffer_overrun_032()
+  598.   {	
+  599.   	dynamic_buffer_overrun_s_005* ptr_s= malloc(10*sizeof(dynamic_buffer_overrun_s_005));
+
+Summary of the reports
+
+      PURE_FUNCTION: 5
+  BUFFER_OVERRUN_L2: 2
+  BUFFER_OVERRUN_L4: 1

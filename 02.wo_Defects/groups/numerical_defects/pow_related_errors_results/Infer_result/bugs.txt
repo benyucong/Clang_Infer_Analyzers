@@ -1,0 +1,13 @@
+Found 1 issue
+
+pow_related_errors.c:117: error: PURE_FUNCTION
+  Side-effect free function pow_related_errors_006_func_001.
+  115.   */
+  116.   
+  117. > double pow_related_errors_006_func_001()
+  118.   {
+  119.   	return 10^3;
+
+Summary of the reports
+
+  PURE_FUNCTION: 1

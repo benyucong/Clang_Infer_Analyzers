@@ -1,0 +1,7 @@
+function_return_value_unchecked.c:393:10: warning: Value stored to 'i' is never read [deadcode.DeadStores]
+                i=20;
+                ^ ~~
+function_return_value_unchecked.c:398:10: warning: Value stored to 'i' is never read [deadcode.DeadStores]
+                i=10;
+                ^ ~~
+2 warnings generated.

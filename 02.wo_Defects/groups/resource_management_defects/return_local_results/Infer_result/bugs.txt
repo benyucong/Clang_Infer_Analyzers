@@ -1,0 +1,45 @@
+Found 5 issues
+
+return_local.c:16: error: PURE_FUNCTION
+  Side-effect free function return_local_001_func_001.
+  14.    * Complexity: return local variable as a function return value
+  15.    */
+  16. > int* return_local_001_func_001 ()
+  17.   {
+  18.   	static int buf[5];
+
+return_local.c:22: error: PURE_FUNCTION
+  Side-effect free function return_local_001.
+  20.   }
+  21.   
+  22. > void return_local_001 ()
+  23.   {
+  24.   	int *p;
+
+return_local.c:33: error: PURE_FUNCTION
+  Side-effect free function return_local_002_func_001.
+  31.    * Complexity: return local variable as function arguments
+  32.    */
+  33. > void return_local_002_func_001 (int **pp)
+  34.   {
+  35.   	static int buf[5];
+
+return_local.c:39: error: PURE_FUNCTION
+  Side-effect free function return_local_002.
+  37.   }
+  38.   
+  39. > void return_local_002 ()
+  40.   {
+  41.   	int *p;
+
+return_local.c:51: error: PURE_FUNCTION
+  Side-effect free function return_local_main.
+  49.    */
+  50.   extern volatile int vflag;
+  51. > void return_local_main ()
+  52.   {
+  53.   	if (vflag == 1 || vflag ==888)
+
+Summary of the reports
+
+  PURE_FUNCTION: 5

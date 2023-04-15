@@ -1,0 +1,161 @@
+Found 19 issues
+
+underrun_st.c:21: error: BUFFER_OVERRUN_L1
+  Offset: -1 Size: 5.
+  19.   	int buf[5] = {1, 2, 3, 4, 5};
+  20.   	int ret;
+  21. > 	ret = buf[-1];/*Tool should detect this line as error*/ /*ERROR:Data Underrun*/
+  22.   }
+  23.   
+
+underrun_st.c:17: error: PURE_FUNCTION
+  Side-effect free function underrun_st_001.
+  15.    * Complexity: 1-dimensional array	int	Constant	Loading
+  16.    */
+  17. > void underrun_st_001 ()
+  18.   {
+  19.   	int buf[5] = {1, 2, 3, 4, 5};
+
+underrun_st.c:31: error: BUFFER_OVERRUN_L1
+  Offset: -1 Size: 5.
+  29.   {
+  30.   	int buf[5];
+  31. > 	buf[-1] = 1;/*Tool should detect this line as error*/ /*ERROR:Data Underrun*/
+  32.   }
+  33.   
+
+underrun_st.c:28: error: PURE_FUNCTION
+  Side-effect free function underrun_st_002.
+  26.    * Complexity: 1-dimensional array	int	Constant	Write
+  27.    */
+  28. > void underrun_st_002 ()
+  29.   {
+  30.   	int buf[5];
+
+underrun_st.c:42: error: BUFFER_OVERRUN_L1
+  Offset: -1 Size: 5.
+  40.   	int buf[5];
+  41.   	int index = -1;
+  42. > 	buf[index] = 1;/*Tool should detect this line as error*/ /*ERROR:Data Underrun*/
+  43.   }
+  44.   
+
+underrun_st.c:38: error: PURE_FUNCTION
+  Side-effect free function underrun_st_003.
+  36.    * Complexity: 1-dimensional array	int	Variable	Write
+  37.    */
+  38. > void underrun_st_003 ()
+  39.   {
+  40.   	int buf[5];
+
+underrun_st.c:55: error: BUFFER_OVERRUN_L1
+  Offset: -1 Size: 5.
+  53.   	int ret;
+  54.   	p = buf;
+  55. > 	ret = *(p - 1);/*Tool should detect this line as error*/ /*ERROR:Data Underrun*/
+  56.   }
+  57.   
+
+underrun_st.c:49: error: PURE_FUNCTION
+  Side-effect free function underrun_st_004.
+  47.    * Complexity: single pointer	int	Alias for 1 weight	Subtraction	Constant	Loading
+  48.    */
+  49. > void underrun_st_004 ()
+  50.   {
+  51.   	int buf[5] = {1, 2, 3, 4, 5};
+
+underrun_st.c:67: error: BUFFER_OVERRUN_L1
+  Offset: -1 Size: 5.
+  65.   	int *p;
+  66.   	p = buf;
+  67. > 	*(p - 1) = 1;/*Tool should detect this line as error*/ /*ERROR:Data Underrun*/
+  68.   }
+  69.   
+
+underrun_st.c:62: error: PURE_FUNCTION
+  Side-effect free function underrun_st_005.
+  60.    * Complexity: single pointer	int	Alias for 1 weight	Subtraction	Constant	Write
+  61.    */
+  62. > void underrun_st_005 ()
+  63.   {
+  64.   	int buf[5];
+
+underrun_st.c:80: error: BUFFER_OVERRUN_L1
+  Offset: -1 Size: 5.
+  78.   	int index = 1;
+  79.   	p = buf;
+  80. > 	*(p - index) = 1;/*Tool should detect this line as error*/ /*ERROR:Data Underrun*/
+  81.   }
+  82.   
+
+underrun_st.c:74: error: PURE_FUNCTION
+  Side-effect free function underrun_st_006.
+  72.    * Complexity: single pointer	int	Alias for 1 weight	Subtraction	Variable	Write
+  73.    */
+  74. > void underrun_st_006 ()
+  75.   {
+  76.   	int buf[5];
+
+underrun_st.c:93: error: BUFFER_OVERRUN_L3
+  Offset: [-1, 4] Size: 5.
+  91.   	for (i = 4; i >= -1; i --)
+  92.   	{
+  93. > 		buf[i] = 1;/*Tool should detect this line as error*/ /*ERROR:Data Underrun*/
+  94.   	}
+  95.   }
+
+underrun_st.c:87: error: PURE_FUNCTION
+  Side-effect free function underrun_st_007.
+  85.    * Complexity: 1 loop	1-Dimensional array
+  86.    */
+  87. > void underrun_st_007 ()
+  88.   {
+  89.   	int buf[5];
+
+underrun_st.c:109: error: BUFFER_OVERRUN_L5
+  Offset: [-oo, 4] Size: 5.
+  107.   	for (i = 0; i <= 5; i ++)
+  108.   	{
+  109. > 		*p = 1;/*Tool should detect this line as error*/ /*ERROR:Data Underrun*/
+  110.   		p --;
+  111.   	}
+
+underrun_st.c:101: error: PURE_FUNCTION
+  Side-effect free function underrun_st_008.
+  99.    * Complexity: a decrement in a loop pointer value
+  100.    */
+  101. > void underrun_st_008 ()
+  102.   {
+  103.   	int buf[5];
+
+underrun_st.c:133: error: PURE_FUNCTION
+  Side-effect free function underrun_st_010.
+  131.    */
+  132.   int underrun_st_010_gbl_buf[5];
+  133. > void underrun_st_010 ()
+  134.   {
+  135.   	int *p;
+
+underrun_st.c:165: error: PURE_FUNCTION
+  Side-effect free function underrun_st_012.
+  163.    */
+  164.   int underrun_st_012_gbl_buf[5];
+  165. > void underrun_st_012 ()
+  166.   {
+  167.   	int *p;
+
+underrun_st.c:189: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(var==0)` is always false at line 189, column 6.
+  187.   	while(i >= -1)
+  188.   	{
+  189. > 		if(var==0)
+  190.   		underrun_st_013_gbl_buf[i] = 1;/*Tool should detect this line as error*/ /*ERROR:Data Underrun*/
+  191.   	    i--;
+
+Summary of the reports
+
+          PURE_FUNCTION: 10
+      BUFFER_OVERRUN_L1: 6
+      BUFFER_OVERRUN_L3: 1
+      BUFFER_OVERRUN_L5: 1
+  CONDITION_ALWAYS_TRUE: 1

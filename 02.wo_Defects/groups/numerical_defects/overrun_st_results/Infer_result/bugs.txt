@@ -1,0 +1,266 @@
+Found 32 issues
+
+overrun_st.c:110: error: BUFFER_OVERRUN_L1
+  Offset: 6 Size: 6.
+  108.   {
+  109.   	int buf[5][6][7];
+  110. > 	buf[4][5][6] = 1; /*Tool not should detect this line as error*/ /*No ERROR: buffer overrun */
+  111.           sink = buf[idx][idx][idx];
+  112.   }
+
+overrun_st.c:126: error: BUFFER_OVERRUN_L1
+  Offset: 5 Size: 5.
+  124.   	int buf5[6];
+  125.   	int *pbuf[5] = {buf1, buf2, buf3, buf4, buf5};
+  126. > 	pbuf[4][5] = 1; /*Tool not should detect this line as error*/ /*No ERROR: buffer overrun */
+  127.   }
+  128.   
+
+overrun_st.c:118: error: PURE_FUNCTION
+  Side-effect free function overrun_st_010.
+  116.    * Complexity: pointer arrays	int	Constant	Write
+  117.    */
+  118. > void overrun_st_010 ()
+  119.   {
+  120.   	int buf1[5];
+
+overrun_st.c:183: error: BUFFER_OVERRUN_L3
+  Offset: [-4, 4] Size: 5.
+  181.   	int index;
+  182.   	index = rand() % 5;
+  183. > 	buf[index] = 1; /*Tool not should detect this line as error*/ /*No ERROR: buffer overrun */
+  184.           sink = buf[idx];
+  185.   }
+
+overrun_st.c:215: error: PURE_FUNCTION
+  Side-effect free function overrun_st_017_func_001.
+  213.    * Complexity: 1-dimensional array	int	The return value of the function	Write
+  214.    */
+  215. > int overrun_st_017_func_001 ()
+  216.   {
+  217.   	return 4;
+
+overrun_st.c:251: error: BUFFER_OVERRUN_L2
+  Offset: [3, 6] Size: 5.
+  249.   	int indexes[4] = {3, 5, 4, 6};
+  250.   	int index = 2;
+  251. > 	buf[indexes[index]] = 1; /*Tool not should detect this line as error*/ /*No ERROR: buffer overrun */
+  252.           sink = buf[idx];
+  253.   }
+
+overrun_st.c:412: error: PURE_FUNCTION
+  Side-effect free function overrun_st_031.
+  410.    */
+  411.   int overrun_st_031_buf_gbl[5];
+  412. > void overrun_st_031 ()
+  413.   {
+  414.   	int *p;
+
+overrun_st.c:423: error: PURE_FUNCTION
+  Side-effect free function overrun_st_032.
+  421.    * Complexity: 1 single pointer	int	Alias for 1 weight	Address	Variable	Write
+  422.    */
+  423. > void overrun_st_032 ()
+  424.   {
+  425.   	int buf[5];
+
+overrun_st.c:443: error: BUFFER_OVERRUN_L3
+  Offset: [-4, 4] Size: 5.
+  441.   	p = buf;
+  442.   	index = rand() % 5;
+  443. > 	*(p + index) = 1; /*Tool not should detect this line as error*/ /*No ERROR: buffer overrun */
+  444.   }
+  445.   
+
+overrun_st.c:450: error: PURE_FUNCTION
+  Side-effect free function overrun_st_034.
+  448.    * Complexity: 1 single pointer	int	Alias for 1 weight	Address	Linear equation	Write
+  449.    */
+  450. > void overrun_st_034 ()
+  451.   {
+  452.   	int buf[6];
+
+overrun_st.c:463: error: PURE_FUNCTION
+  Side-effect free function overrun_st_035.
+  461.    * Complexity: 1 single pointer	int	Alias for 1 weight	Address	Nonlinear equation	Write
+  462.    */
+  463. > void overrun_st_035 ()
+  464.   {
+  465.   	int buf[6];
+
+overrun_st.c:476: error: PURE_FUNCTION
+  Side-effect free function overrun_st_036_func_001.
+  474.    * Complexity: 1 single pointer	int	Alias for 1 weight	Address	The return value of the function	Write
+  475.    */
+  476. > int overrun_st_036_func_001 ()
+  477.   {
+  478.   	return 4;
+
+overrun_st.c:481: error: PURE_FUNCTION
+  Side-effect free function overrun_st_036.
+  479.   }
+  480.   
+  481. > void overrun_st_036 ()
+  482.   {
+  483.   	int buf[5];
+
+overrun_st.c:493: error: PURE_FUNCTION
+  Side-effect free function overrun_st_037_func_001.
+  491.    * Complexity: 1 single pointer	int	Alias for 1 weight	Address	Function arguments	Write
+  492.    */
+  493. > void overrun_st_037_func_001 (int index)
+  494.   {
+  495.   	int buf[5];
+
+overrun_st.c:501: error: PURE_FUNCTION
+  Side-effect free function overrun_st_037.
+  499.   }
+  500.   
+  501. > void overrun_st_037 ()
+  502.   {
+  503.   	overrun_st_037_func_001(4);
+
+overrun_st.c:517: error: BUFFER_OVERRUN_L2
+  Offset: [3, 6] Size: 5.
+  515.   	int index = 2;
+  516.   	p = buf;
+  517. > 	*(p + indexes[index]) = 1; /*Tool not should detect this line as error*/ /*No ERROR: buffer overrun */
+  518.   }
+  519.   
+
+overrun_st.c:510: error: PURE_FUNCTION
+  Side-effect free function overrun_st_038.
+  508.    * Complexity: 1 single pointer	int	Alias for 1 weight	Address	An array of element values	Write
+  509.    */
+  510. > void overrun_st_038 ()
+  511.   {
+  512.   	int buf[5];
+
+overrun_st.c:524: error: PURE_FUNCTION
+  Side-effect free function overrun_st_039.
+  522.    * Complexity: 1 single pointer	int	Alias for 1 weight	Address	Alias for 1 weight	Write
+  523.    */
+  524. > void overrun_st_039 ()
+  525.   {
+  526.   	int buf[5];
+
+overrun_st.c:539: error: PURE_FUNCTION
+  Side-effect free function overrun_st_040.
+  537.    * Complexity: 1 single pointer	int	Alias for 1 weight	Address	Also known as double Alias	Write
+  538.    */
+  539. > void overrun_st_040 ()
+  540.   {
+  541.   	int buf[5];
+
+overrun_st.c:590: error: PURE_FUNCTION
+  Side-effect free function overrun_st_043.
+  588.    * Complexity: for double-loop	Pointer arrays
+  589.    */
+  590. > void overrun_st_043 ()
+  591.   {
+  592.   	int buf1[6];
+
+overrun_st.c:622: error: BUFFER_OVERRUN_L4
+  Offset: [0, +oo] Size: 5.
+  620.   	for (i = 0; i < 5; i ++)
+  621.   	{
+  622. > 		*p = 1;
+  623.   		p ++; /*Tool not should detect this line as error*/ /*No ERROR: buffer overrun */
+  624.   	}
+
+overrun_st.c:614: error: PURE_FUNCTION
+  Side-effect free function overrun_st_044.
+  612.    * Complexity: increment the pointer value in the loop
+  613.    */
+  614. > void overrun_st_044 ()
+  615.   {
+  616.   	int buf[5];
+
+overrun_st.c:636: error: PURE_FUNCTION
+  Side-effect free function overrun_st_045.
+  634.   }
+  635.   
+  636. > void overrun_st_045 ()
+  637.   {
+  638.   	int buf[5];
+
+overrun_st.c:646: error: PURE_FUNCTION
+  Side-effect free function overrun_st_046_func_001.
+  644.    * Complexity: pointer	Pointer
+  645.    */
+  646. > void overrun_st_046_func_001 (int *p)
+  647.   {
+  648.   	*(p + 4) = 1; /*Tool not should detect this line as error*/ /*No ERROR: buffer overrun */
+
+overrun_st.c:651: error: PURE_FUNCTION
+  Side-effect free function overrun_st_046.
+  649.   }
+  650.   
+  651. > void overrun_st_046 ()
+  652.   {
+  653.   	int buf[5];
+
+overrun_st.c:666: error: PURE_FUNCTION
+  Side-effect free function overrun_st_047.
+  664.   }
+  665.   
+  666. > void overrun_st_047 ()
+  667.   {
+  668.   	int buf[5];
+
+overrun_st.c:676: error: PURE_FUNCTION
+  Side-effect free function overrun_st_048_func_001.
+  674.    * Complexities: an array	Pointer
+  675.    */
+  676. > void overrun_st_048_func_001 (int buf[])
+  677.   {
+  678.   	*(buf + 4) = 1; /*Tool not should detect this line as error*/ /*No ERROR: buffer overrun */
+
+overrun_st.c:681: error: PURE_FUNCTION
+  Side-effect free function overrun_st_048.
+  679.   }
+  680.   
+  681. > void overrun_st_048 ()
+  682.   {
+  683.   	int buf[5];
+
+overrun_st.c:728: error: BUFFER_OVERRUN_L1
+  Offset: 5 Size: 5.
+  726.   	int buf5[] = {1, 2, 3, 4, 5, 6};
+  727.   	int *pbuf[] = {buf1, buf2, buf3, buf4, buf5};
+  728. > 	pbuf[4][5] = 1; /*Tool not should detect this line as error*/ /*No ERROR: buffer overrun */
+  729.   }
+  730.   
+
+overrun_st.c:720: error: PURE_FUNCTION
+  Side-effect free function overrun_st_051.
+  718.    * Complexity: omission of the pointer array array size
+  719.    */
+  720. > void overrun_st_051 ()
+  721.   {
+  722.   	int buf1[] = {1, 2, 3, 4, 5};
+
+overrun_st.c:760: error: PURE_FUNCTION
+  Side-effect free function overrun_st_054.
+  758.    */
+  759.   int overrun_st_054_buf_gbl[5];
+  760. > void overrun_st_054 ()
+  761.   {
+  762.   	char *p;
+
+overrun_st.c:777: error: BUFFER_OVERRUN_L5
+  Offset: [-oo, +oo] Size: 5 by call to `overrun_st_001`.
+  775.   	if (vflag == 1 || vflag ==888)
+  776.   	{
+  777. > 		overrun_st_001();
+  778.   	}
+  779.   
+
+Summary of the reports
+
+      PURE_FUNCTION: 23
+  BUFFER_OVERRUN_L1: 3
+  BUFFER_OVERRUN_L2: 2
+  BUFFER_OVERRUN_L3: 2
+  BUFFER_OVERRUN_L4: 1
+  BUFFER_OVERRUN_L5: 1

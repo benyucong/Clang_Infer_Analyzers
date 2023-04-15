@@ -1,0 +1,38 @@
+Found 4 issues
+
+conflicting_cond.c:121: error: INTEGER_OVERFLOW_L5
+  ([0, +oo] + [0, 1]):signed32.
+  119.   	for (a = 0; (a == 0) || (a == 1); a ++)/*Tool should Not detect this line as error*/ /*No ERROR:contradict condition*/
+  120.   	{
+  121. > 		b += a;
+  122.   	}
+  123.   	ret = b;
+
+conflicting_cond.c:140: error: INTEGER_OVERFLOW_U5
+  ([0, +oo] + [0, 1]):signed32.
+  138.   	while ((a == 0) || (a == 1))/*Tool should Not detect this line as error*/ /*No ERROR:contradict condition*/
+  139.   	{
+  140. > 		b += a;
+  141.   		a ++;
+  142.   	}
+
+conflicting_cond.c:160: error: INTEGER_OVERFLOW_U5
+  ([0, +oo] + [5, 10]):signed32.
+  158.   	while (! ((a < 5) || (10 < a)))/*Tool should Not detect this line as error*/ /*No ERROR:contradict condition*/
+  159.   	{
+  160. > 		b += a;
+  161.   		a ++;
+  162.   	}
+
+conflicting_cond.c:180: error: INTEGER_OVERFLOW_U5
+  ([0, +oo] + [1, 9]):signed32.
+  178.   	while (((0 < a) && (a < 2)) || ((8 < a) && (a < 10)))/*Tool should Not detect this line as error*/ /*No ERROR:contradict condition*/
+  179.   	{
+  180. > 		b += a;
+  181.   		a ++;
+  182.   	}
+
+Summary of the reports
+
+  INTEGER_OVERFLOW_U5: 3
+  INTEGER_OVERFLOW_L5: 1

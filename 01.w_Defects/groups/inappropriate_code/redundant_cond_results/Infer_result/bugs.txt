@@ -1,0 +1,79 @@
+Found 9 issues
+
+redundant_cond.c:158: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(5<a)` is always false at line 158, column 16.
+  156.   	int ret;
+  157.   
+  158. > 	for (a = 20; (5 < a) && (10 < a); a --)/*Tool should detect this line as error*/ /*ERROR:Redundant condition*/
+  159.   	{
+  160.   		b += a;
+
+redundant_cond.c:160: error: INTEGER_OVERFLOW_L5
+  ([0, +oo] + [11, 20]):signed32.
+  158.   	for (a = 20; (5 < a) && (10 < a); a --)/*Tool should detect this line as error*/ /*ERROR:Redundant condition*/
+  159.   	{
+  160. > 		b += a;
+  161.   	}
+  162.   	ret = b;
+
+redundant_cond.c:179: error: INTEGER_OVERFLOW_U5
+  ([0, +oo] + [11, +oo]):signed32.
+  177.   	while ((5 < a) && (10 < a))/*Tool should detect this line as error*/ /*ERROR:Redundant condition*/
+  178.   	{
+  179. > 		b += a;
+  180.   		a --;
+  181.   	}
+
+redundant_cond.c:199: error: INTEGER_OVERFLOW_U5
+  ([-oo, +oo] + [-oo, 4]):signed32.
+  197.   	while ((a < 5) && (a < 10))/*Tool should detect this line as error*/ /*ERROR:Redundant condition*/
+  198.   	{
+  199. > 		b += a;
+  200.   		a ++;
+  201.   	}
+
+redundant_cond.c:219: error: INTEGER_OVERFLOW_U5
+  ([0, +oo] + [3, 7]):signed32.
+  217.   	while (((0 < a) && (a < 10)) && ((2 < a) && (a < 8)))/*Tool should detect this line as error*/ /*ERROR:Redundant condition*/
+  218.   	{
+  219. > 		b += a;
+  220.   		a ++;
+  221.   	}
+
+redundant_cond.c:239: error: INTEGER_OVERFLOW_U5
+  ([0, +oo] + [6, 7]):signed32.
+  237.   	while (((0 < a) && (a < 8)) && ((5 < a) && (a < 10)))/*Tool should detect this line as error*/ /*ERROR:Redundant condition*/
+  238.   	{
+  239. > 		b += a;
+  240.   		a ++;
+  241.   	}
+
+redundant_cond.c:259: error: INTEGER_OVERFLOW_U5
+  ([0, +oo] + [6, +oo]):signed32.
+  257.   	while ((5 < a) || (10 < a))/*Tool should detect this line as error*/ /*ERROR:Redundant condition*/
+  258.   	{
+  259. > 		b += a;
+  260.   		a --;
+  261.   	}
+
+redundant_cond.c:279: error: INTEGER_OVERFLOW_U5
+  ([-oo, +oo] + [-oo, +oo]):signed32.
+  277.   	do
+  278.   	{
+  279. > 		b += a;
+  280.   		a --;
+  281.   	}
+
+redundant_cond.c:280: error: INTEGER_OVERFLOW_U5
+  ([-oo, +oo] - 1):signed32.
+  278.   	{
+  279.   		b += a;
+  280. > 		a --;
+  281.   	}
+  282.   	while ((5 < a) && (10 < a));/*Tool should detect this line as error*/ /*ERROR:Redundant condition*/
+
+Summary of the reports
+
+    INTEGER_OVERFLOW_U5: 7
+    INTEGER_OVERFLOW_L5: 1
+  CONDITION_ALWAYS_TRUE: 1

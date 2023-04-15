@@ -1,0 +1,287 @@
+Found 35 issues
+
+unlock_without_lock.c:27: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_unlock_without_lock_001_glb_mutex.
+  25.    */
+  26.   
+  27. > pthread_mutex_t unlock_without_lock_001_glb_mutex = PTHREAD_MUTEX_INITIALIZER;
+  28.   
+  29.   #if defined(CHECKER_POLYSPACE)
+
+unlock_without_lock.c:83: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_unlock_without_lock_002_glb_mutex.
+  81.    * Complexity: unLocking without locking in same function using two thread inside a if condition
+  82.    */
+  83. > pthread_mutex_t unlock_without_lock_002_glb_mutex = PTHREAD_MUTEX_INITIALIZER;
+  84.   
+  85.   #if defined(CHECKER_POLYSPACE)
+
+unlock_without_lock.c:146: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_unlock_without_lock_003_glb_mutex.
+  144.    * Complexity: Unlock without Lock over multiple functions , 2 threads,based on return value of function
+  145.    */
+  146. > pthread_mutex_t unlock_without_lock_003_glb_mutex = PTHREAD_MUTEX_INITIALIZER;
+  147.   
+  148.   #if defined(CHECKER_POLYSPACE)
+
+unlock_without_lock.c:175: error: PURE_FUNCTION
+  Side-effect free function unlock_without_lock_003_func_002.
+  173.   }
+  174.   
+  175. > int unlock_without_lock_003_func_002 (int a )
+  176.   {
+  177.     int ret = 0;
+
+unlock_without_lock.c:234: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_unlock_without_lock_004_glb_mutex_1.
+  232.    * Complexity: Unlock without Lock over multiple functions using 2 threads inside while loop and if condition
+  233.    */
+  234. > pthread_mutex_t unlock_without_lock_004_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  235.   pthread_mutex_t unlock_without_lock_004_glb_mutex_2 = PTHREAD_MUTEX_INITIALIZER;
+  236.   int unlock_without_lock_004_glb_var = 0;
+
+unlock_without_lock.c:235: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_unlock_without_lock_004_glb_mutex_2.
+  233.    */
+  234.   pthread_mutex_t unlock_without_lock_004_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  235. > pthread_mutex_t unlock_without_lock_004_glb_mutex_2 = PTHREAD_MUTEX_INITIALIZER;
+  236.   int unlock_without_lock_004_glb_var = 0;
+  237.   void *unlock_without_lock_004_tsk_001(void *input)
+
+unlock_without_lock.c:246: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(ip>=0)` is always false at line 246, column 10.
+  244.   	while (i>0)
+  245.   	{
+  246. > 		   if (ip >= 0)
+  247.   		   {
+  248.   			   pthread_mutex_lock( &unlock_without_lock_004_glb_mutex_1 );
+
+unlock_without_lock.c:244: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(i>0)` is always false at line 244, column 9.
+  242.   	ip = (long)input;
+  243.   	ip = ip *10;
+  244. > 	while (i>0)
+  245.   	{
+  246.   		   if (ip >= 0)
+
+unlock_without_lock.c:246: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(ip>=0)` is always false at line 246, column 10.
+  244.   	while (i>0)
+  245.   	{
+  246. > 		   if (ip >= 0)
+  247.   		   {
+  248.   			   pthread_mutex_lock( &unlock_without_lock_004_glb_mutex_1 );
+
+unlock_without_lock.c:271: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(ip>=0)` is always false at line 271, column 10.
+  269.   	while (i>0)
+  270.   	{
+  271. > 		   if (ip >= 0)
+  272.   		   {
+  273.   			   pthread_mutex_lock( &unlock_without_lock_004_glb_mutex_2 );	/*Tool should not detect this line as error*/ /* No ERROR:UnLock without lock */
+
+unlock_without_lock.c:269: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(i>0)` is always false at line 269, column 9.
+  267.       ip = (long)input;
+  268.       ip = ip *20;
+  269. > 	while (i>0)
+  270.   	{
+  271.   		   if (ip >= 0)
+
+unlock_without_lock.c:271: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(ip>=0)` is always false at line 271, column 10.
+  269.   	while (i>0)
+  270.   	{
+  271. > 		   if (ip >= 0)
+  272.   		   {
+  273.   			   pthread_mutex_lock( &unlock_without_lock_004_glb_mutex_2 );	/*Tool should not detect this line as error*/ /* No ERROR:UnLock without lock */
+
+unlock_without_lock.c:302: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_unlock_without_lock_005_glb_mutex.
+  300.    * Complexity: Thread created in else condition , no lock but there is a unlock
+  301.    */
+  302. > pthread_mutex_t unlock_without_lock_005_glb_mutex = PTHREAD_MUTEX_INITIALIZER;
+  303.   int unlock_without_lock_005_glb_data = 0;
+  304.   
+
+unlock_without_lock.c:350: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_unlock_without_lock_006_glb_mutex_1.
+  348.    * Complexity: Unlock without Lock over multiple functions using 2 threads created in else condition
+  349.   */
+  350. > pthread_mutex_t unlock_without_lock_006_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  351.   pthread_mutex_t unlock_without_lock_006_glb_mutex_2 = PTHREAD_MUTEX_INITIALIZER;
+  352.   # define CREATE_THREAD 1
+
+unlock_without_lock.c:351: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_unlock_without_lock_006_glb_mutex_2.
+  349.   */
+  350.   pthread_mutex_t unlock_without_lock_006_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  351. > pthread_mutex_t unlock_without_lock_006_glb_mutex_2 = PTHREAD_MUTEX_INITIALIZER;
+  352.   # define CREATE_THREAD 1
+  353.   char unlock_without_lock_006_glb_buf[5]="BBBBB";
+
+unlock_without_lock.c:363: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(ip>=0)` is always false at line 363, column 7.
+  361.   	for (i=0;i<5;i++)
+  362.   	{
+  363. > 		if (ip >= 0)
+  364.   		{
+  365.   			pthread_mutex_lock( &unlock_without_lock_006_glb_mutex_1 );	/*Tool should not detect this line as error*/ /* No ERROR:UnLock without lock */
+
+unlock_without_lock.c:361: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(i<5)` is always false at line 361, column 11.
+  359.   	ip = (long)input;
+  360.   	ip = ip *10;
+  361. > 	for (i=0;i<5;i++)
+  362.   	{
+  363.   		if (ip >= 0)
+
+unlock_without_lock.c:363: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(ip>=0)` is always false at line 363, column 7.
+  361.   	for (i=0;i<5;i++)
+  362.   	{
+  363. > 		if (ip >= 0)
+  364.   		{
+  365.   			pthread_mutex_lock( &unlock_without_lock_006_glb_mutex_1 );	/*Tool should not detect this line as error*/ /* No ERROR:UnLock without lock */
+
+unlock_without_lock.c:384: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(ip>=0)` is always false at line 384, column 6.
+  382.   	ip = (long)input;
+  383.   	ip = ip *20;
+  384. > 	if (ip >= 0)
+  385.   	{
+  386.   		pthread_mutex_lock( &unlock_without_lock_006_glb_mutex_2 );
+
+unlock_without_lock.c:384: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(ip>=0)` is always false at line 384, column 6.
+  382.   	ip = (long)input;
+  383.   	ip = ip *20;
+  384. > 	if (ip >= 0)
+  385.   	{
+  386.   		pthread_mutex_lock( &unlock_without_lock_006_glb_mutex_2 );
+
+unlock_without_lock.c:404: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(thread_set==1)` is always false at line 404, column 7.
+  402.           intptr_t t1 = 10;
+  403.   	intptr_t t2 = 20;
+  404. > 	if ( thread_set == CREATE_THREAD)
+  405.   	{
+  406.   	   ;
+
+unlock_without_lock.c:422: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_unlock_without_lock_007_glb_mutex_1.
+  420.    * Complexity: Unlock without Lock over multiple functions using 2 threads inside while loop and if condition
+  421.    */
+  422. > pthread_mutex_t unlock_without_lock_007_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  423.   pthread_mutex_t unlock_without_lock_007_glb_mutex_2 = PTHREAD_MUTEX_INITIALIZER;
+  424.   int unlock_without_lock_007_glb_var = 0;
+
+unlock_without_lock.c:423: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_unlock_without_lock_007_glb_mutex_2.
+  421.    */
+  422.   pthread_mutex_t unlock_without_lock_007_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  423. > pthread_mutex_t unlock_without_lock_007_glb_mutex_2 = PTHREAD_MUTEX_INITIALIZER;
+  424.   int unlock_without_lock_007_glb_var = 0;
+  425.   void *unlock_without_lock_007_tsk_001(void *input)
+
+unlock_without_lock.c:434: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(ip>=0)` is always false at line 434, column 10.
+  432.   	while (i>0)
+  433.   	{
+  434. > 		   if (ip >= 0)
+  435.   		   {
+  436.   			   pthread_mutex_lock( &unlock_without_lock_007_glb_mutex_1 );
+
+unlock_without_lock.c:432: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(i>0)` is always false at line 432, column 9.
+  430.   	ip = (long)input;
+  431.   	ip = ip *10;
+  432. > 	while (i>0)
+  433.   	{
+  434.   		   if (ip >= 0)
+
+unlock_without_lock.c:434: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(ip>=0)` is always false at line 434, column 10.
+  432.   	while (i>0)
+  433.   	{
+  434. > 		   if (ip >= 0)
+  435.   		   {
+  436.   			   pthread_mutex_lock( &unlock_without_lock_007_glb_mutex_1 );
+
+unlock_without_lock.c:458: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(ip>=0)` is always false at line 458, column 10.
+  456.   	while (i>0)
+  457.   	{
+  458. > 		   if (ip >= 0)
+  459.   		   {
+  460.   			   pthread_mutex_lock( &unlock_without_lock_007_glb_mutex_2 );
+
+unlock_without_lock.c:456: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(i>0)` is always false at line 456, column 9.
+  454.       ip = (long)input;
+  455.       ip = ip *20;
+  456. > 	while (i>0)
+  457.   	{
+  458.   		   if (ip >= 0)
+
+unlock_without_lock.c:458: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(ip>=0)` is always false at line 458, column 10.
+  456.   	while (i>0)
+  457.   	{
+  458. > 		   if (ip >= 0)
+  459.   		   {
+  460.   			   pthread_mutex_lock( &unlock_without_lock_007_glb_mutex_2 );
+
+unlock_without_lock.c:494: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_unlock_without_lock_008_glb_mutex_1.
+  492.    * Complexity: Unlock without Lockk over multiple functions using 2 threads inside do-while loop and if condition
+  493.    */
+  494. > pthread_mutex_t unlock_without_lock_008_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  495.   pthread_mutex_t unlock_without_lock_008_glb_mutex_2 = PTHREAD_MUTEX_INITIALIZER;
+  496.   int unlock_without_lock_008_glb_var = 0;
+
+unlock_without_lock.c:495: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_unlock_without_lock_008_glb_mutex_2.
+  493.    */
+  494.   pthread_mutex_t unlock_without_lock_008_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  495. > pthread_mutex_t unlock_without_lock_008_glb_mutex_2 = PTHREAD_MUTEX_INITIALIZER;
+  496.   int unlock_without_lock_008_glb_var = 0;
+  497.   void *unlock_without_lock_008_tsk_001(void *input)
+
+unlock_without_lock.c:506: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(ip>=0)` is always false at line 506, column 10.
+  504.   	do
+  505.   	{
+  506. > 		   if (ip >= 0)
+  507.   		   {
+  508.   			   pthread_mutex_lock( &unlock_without_lock_008_glb_mutex_1 );
+
+unlock_without_lock.c:506: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(ip>=0)` is always false at line 506, column 10.
+  504.   	do
+  505.   	{
+  506. > 		   if (ip >= 0)
+  507.   		   {
+  508.   			   pthread_mutex_lock( &unlock_without_lock_008_glb_mutex_1 );
+
+unlock_without_lock.c:530: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(ip>=0)` is always false at line 530, column 10.
+  528.        do
+  529.   	{
+  530. > 		   if (ip >= 0)
+  531.   		   {
+  532.   			   pthread_mutex_lock( &unlock_without_lock_008_glb_mutex_2 );
+
+unlock_without_lock.c:530: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(ip>=0)` is always false at line 530, column 10.
+  528.        do
+  529.   	{
+  530. > 		   if (ip >= 0)
+  531.   		   {
+  532.   			   pthread_mutex_lock( &unlock_without_lock_008_glb_mutex_2 );
+
+Summary of the reports
+
+   CONDITION_ALWAYS_TRUE: 13
+           PURE_FUNCTION: 13
+  CONDITION_ALWAYS_FALSE: 9

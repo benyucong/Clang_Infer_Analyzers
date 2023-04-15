@@ -1,0 +1,13 @@
+Found 1 issue
+
+insign_code.c:23: error: INTEGER_OVERFLOW_U5
+  ([-oo, +oo] - 1):signed32.
+  21.   
+  22.   	i = rand();
+  23. > 	j = i - 1;
+  24.   	i = j - 1; /*Tool should not detect this line as error*/ /*No ERROR:Useless Assignment */
+  25.   	printf("%d",i);
+
+Summary of the reports
+
+  INTEGER_OVERFLOW_U5: 1

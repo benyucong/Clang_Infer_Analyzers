@@ -1,0 +1,216 @@
+Found 26 issues
+
+uninit_var.c:18: error: PURE_FUNCTION
+  Side-effect free function uninit_var_001.
+  16.    * Complexity: basic types	int	Variable	Loading
+  17.    */
+  18. > void uninit_var_001 ()
+  19.   {
+  20.   	int a ;
+
+uninit_var.c:29: error: PURE_FUNCTION
+  Side-effect free function uninit_var_002.
+  27.    * Complexity: 1-dimensional array	int	Variable	Loading
+  28.    */
+  29. > void uninit_var_002 ()
+  30.   {
+  31.   	int buf[5];
+
+uninit_var.c:40: error: PURE_FUNCTION
+  Side-effect free function uninit_var_003.
+  38.    * Complexity: 2-dimensional array	int	Variable	Loading
+  39.    */
+  40. > void uninit_var_003 ()
+  41.   {
+  42.   	int buf[5][6];
+
+uninit_var.c:58: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(UNINIT_VAR_004_FALSE!=0)` is always false at line 58, column 14.
+  56.       if(UNINIT_VAR_004_TRUE ==0)
+  57.       	dvar = 10.0;
+  58. >     else if (UNINIT_VAR_004_FALSE !=0 )
+  59.       	dvar1 = 25.8;
+  60.       else
+
+uninit_var.c:56: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(UNINIT_VAR_004_TRUE==0)` is always false at line 56, column 8.
+  54.   {
+  55.   	float dvar,dvar1,ret;
+  56. >     if(UNINIT_VAR_004_TRUE ==0)
+  57.       	dvar = 10.0;
+  58.       else if (UNINIT_VAR_004_FALSE !=0 )
+
+uninit_var.c:53: error: PURE_FUNCTION
+  Side-effect free function uninit_var_004.
+  51.   static const int UNINIT_VAR_004_TRUE = 1; /* true */
+  52.   static const int UNINIT_VAR_004_FALSE = 0; /*false */
+  53. > void uninit_var_004 ()
+  54.   {
+  55.   	float dvar,dvar1,ret;
+
+uninit_var.c:72: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `0` is always false at line 72, column 6.
+  70.   {
+  71.   	int ret;
+  72. > 	if (0)
+  73.   	ret = 1;
+  74.   	return ret;/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
+
+uninit_var.c:69: error: PURE_FUNCTION
+  Side-effect free function uninit_var_005_func_001.
+  67.    * Complexity: basic types	int	Function arguments	Loading
+  68.    */
+  69. > int uninit_var_005_func_001 (void)
+  70.   {
+  71.   	int ret;
+
+uninit_var.c:77: error: PURE_FUNCTION
+  Side-effect free function uninit_var_005.
+  75.   }
+  76.   
+  77. > void uninit_var_005 ()
+  78.   {
+  79.   	int a;
+
+uninit_var.c:87: error: PURE_FUNCTION
+  Side-effect free function uninit_var_006.
+  85.    * Complexity: long variable initialized in a ternary conditional operator
+  86.    */
+  87. > void uninit_var_006 ()
+  88.   {
+  89.       long a;
+
+uninit_var.c:104: error: PURE_FUNCTION
+  Side-effect free function uninit_var_007.
+  102.   } uninit_var_007_s_001;
+  103.   
+  104. > void uninit_var_007 ()
+  105.   {
+  106.   	uninit_var_007_s_001 s;
+
+uninit_var.c:130: error: INTEGER_OVERFLOW_L5
+  ([-oo, +oo] + 1):signed32.
+  128.       while(uninit_var_008_func_001(flag)>0)
+  129.       {
+  130. >     	data +=flag;/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
+  131.       }
+  132.   }
+
+uninit_var.c:128: error: INTEGER_OVERFLOW_L5
+  ([-oo, +oo] - 1):signed32 by call to `uninit_var_008_func_001`.
+  126.       int flag = 1;
+  127.       int data;
+  128. >     while(uninit_var_008_func_001(flag)>0)
+  129.       {
+  130.       	data +=flag;/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
+
+uninit_var.c:147: error: BUFFER_OVERRUN_L4
+  Offset: [0, +oo] Size: 25 by call to `uninit_var_009_func_001`.
+  145.   {
+  146.   	char buf[25] ;
+  147. > 	uninit_var_009_func_001(buf);
+  148.   }
+  149.   
+
+uninit_var.c:162: error: PURE_FUNCTION
+  Side-effect free function uninit_var_010.
+  160.   			buf[i][j] = ret[i][j];}/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
+  161.   
+  162. > void uninit_var_010 ()
+  163.   {
+  164.   	int buf[5][6];
+
+uninit_var.c:173: error: PURE_FUNCTION
+  Side-effect free function uninit_var_011_func_001.
+  171.    * initialized with return value of function
+  172.    */
+  173. > int uninit_var_011_func_001 (int arr1[],int a)
+  174.   {
+  175.   	int ret=0;
+
+uninit_var.c:185: error: INTEGER_OVERFLOW_L5
+  (5 + [1, +oo]):signed32 by call to `uninit_var_011_func_001`.
+  183.   	int arr[5];
+  184.   	int p ;
+  185. > 	p= uninit_var_011_func_001(arr,(sizeof(arr)/sizeof(int)));
+  186.   }
+  187.   
+
+uninit_var.c:181: error: PURE_FUNCTION
+  Side-effect free function uninit_var_011.
+  179.   }
+  180.   
+  181. > void uninit_var_011 ()
+  182.   {
+  183.   	int arr[5];
+
+uninit_var.c:198: error: PURE_FUNCTION
+  Side-effect free function uninit_var_012_func_001.
+  196.   } uninit_var_012_s_001;
+  197.   
+  198. > int uninit_var_012_func_001 (uninit_var_012_s_001 s1)
+  199.   {
+  200.   	switch ( (s1.a + s1.b +s1.uninit) )/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
+
+uninit_var.c:225: error: INTEGER_OVERFLOW_L5
+  ([0, +oo] + [0, +oo]):unsigned32 by call to `uninit_var_012_func_001`.
+  223.   	s.b = 1;
+  224.   	int ret;
+  225. > 	ret = uninit_var_012_func_001 (s);
+  226.   	if(ret >=0)
+  227.   		r = s;
+
+uninit_var.c:219: error: PURE_FUNCTION
+  Side-effect free function uninit_var_012.
+  217.   }
+  218.   
+  219. > void uninit_var_012 ()
+  220.   {
+  221.   	uninit_var_012_s_001 s,r;
+
+uninit_var.c:239: error: PURE_FUNCTION
+  Side-effect free function uninit_var_013_func_001.
+  237.   	         TWO } values;
+  238.   
+  239. > int uninit_var_013_func_001 (void )
+  240.   {
+  241.   	values val ;/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
+
+uninit_var.c:245: error: PURE_FUNCTION
+  Side-effect free function uninit_var_013.
+  243.   }
+  244.   
+  245. > void uninit_var_013 ()
+  246.   {
+  247.       int a;
+
+uninit_var.c:275: error: INTEGER_OVERFLOW_L5
+  ([-oo, +oo] + 1):signed32 by call to `uninit_var_014_func_001`.
+  273.   	s.a = 1;
+  274.   	s.b = 1;
+  275. > 	r = uninit_var_014_func_001(s);
+  276.   }
+  277.   
+
+uninit_var.c:270: error: PURE_FUNCTION
+  Side-effect free function uninit_var_014.
+  268.   }
+  269.   
+  270. > void uninit_var_014 ()
+  271.   {
+  272.   	uninit_var_014_s_001 s,r;
+
+uninit_var.c:291: error: PURE_FUNCTION
+  Side-effect free function uninit_var_015.
+  289.   }
+  290.   
+  291. > void uninit_var_015 ()
+  292.   {
+  293.       int a[3],ret;
+
+Summary of the reports
+
+           PURE_FUNCTION: 17
+     INTEGER_OVERFLOW_L5: 5
+  CONDITION_ALWAYS_FALSE: 3
+       BUFFER_OVERRUN_L4: 1

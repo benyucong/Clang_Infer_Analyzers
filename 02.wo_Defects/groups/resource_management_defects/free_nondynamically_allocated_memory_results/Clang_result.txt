@@ -1,0 +1,7 @@
+free_nondynamically_allocated_memory.c:59:9: warning: Value stored to 'ptr' during its initialization is never read [deadcode.DeadStores]
+        char** ptr=&ptr1;
+               ^~~ ~~~~~
+free_nondynamically_allocated_memory.c:81:18: warning: Dereference of null pointer [core.NullDereference]
+                *((*pbuf[i])+j)=5.0;
+                ~~~~~~~~~~~~~~~^~~~
+2 warnings generated.

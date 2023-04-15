@@ -1,0 +1,110 @@
+Found 13 issues
+
+dead_code.c:21: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `0` is always false at line 21, column 6.
+  19.   	int a = 0;
+  20.   	int ret;
+  21. > 	if (0)
+  22.   	{
+  23.   		a ++; /*Tool should detect this line as error*/ /*ERROR:Dead Code*/
+
+dead_code.c:38: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `flag` is always false at line 38, column 6.
+  36.   	int a = 0;
+  37.   	int ret;
+  38. > 	if (flag)
+  39.   	{
+  40.   		a ++; /*Tool should detect this line as error*/ /*ERROR:Dead Code*/
+
+dead_code.c:50: error: PURE_FUNCTION
+  Side-effect free function dead_code_003_func_001.
+  48.    * Complexity: the if statement	The return value of the function
+  49.    */
+  50. > int dead_code_003_func_001 ()
+  51.   {
+  52.   	return 0;
+
+dead_code.c:59: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `returned by dead_code_003_func_001()` is always false at line 59, column 6.
+  57.   	int a = 0;
+  58.   	int ret;
+  59. > 	if (dead_code_003_func_001())
+  60.   	{
+  61.   		a ++; /*Tool should detect this line as error*/ /*ERROR:Dead Code*/
+
+dead_code.c:97: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(flag>0)` is always false at line 97, column 6.
+  95.   	int a = 0;
+  96.   	int ret;
+  97. > 	if (flag > 0)
+  98.   	{
+  99.   		a ++; /*Tool should  detect this line as error*/ /* ERROR:Dead Code*/
+
+dead_code.c:114: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(flag==0)` is always false at line 114, column 6.
+  112.   	int a = 0;
+  113.   	int ret;
+  114. > 	if (flag == 0)
+  115.   	{
+  116.   		a ++; /*Tool should  detect this line as error*/ /* ERROR:Dead Code*/
+
+dead_code.c:131: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(i>1)` is always false at line 131, column 14.
+  129.   	int i;
+  130.   	int ret;
+  131. > 	for (i = 0; i>1; i ++)
+  132.   	{
+  133.   		a ++; /*Tool should detect this line as error*/ /*ERROR:Dead Code*/
+
+dead_code.c:148: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `0` is always false at line 148, column 9.
+  146.   	int a = 0;
+  147.   	int ret;
+  148. > 	while (0)
+  149.   	{
+  150.   		a ++; /*Tool should detect this line as error*/ /*ERROR:Dead Code*/
+
+dead_code.c:166: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `flag` is always false at line 166, column 9.
+  164.   	int a = 0;
+  165.   	int ret;
+  166. > 	while (flag)
+  167.   	{
+  168.   		a ++; /*Tool should detect this line as error*/ /*ERROR:Dead Code*/
+
+dead_code.c:179: error: PURE_FUNCTION
+  Side-effect free function dead_code_010_func_001.
+  177.   * Complexity: The return value of the function while statement
+  178.   */
+  179. > int dead_code_010_func_001 ()
+  180.   {
+  181.   	return 0;
+
+dead_code.c:188: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `returned by dead_code_010_func_001()` is always false at line 188, column 9.
+  186.   	int a = 0;
+  187.   	int ret;
+  188. > 	while (dead_code_010_func_001())
+  189.   	{
+  190.   		a ++; /*Tool should detect this line as error*/ /*ERROR:Dead Code*/
+
+dead_code.c:228: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(flag>0)` is always false at line 228, column 9.
+  226.   	int a = 0;
+  227.   	int ret;
+  228. > 	while (flag > 0) /*Tool should detect this line as error*/ /*ERROR:Dead Code*/
+  229.   	{
+  230.   		a ++;
+
+dead_code.c:246: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(flag==0)` is always false at line 246, column 9.
+  244.   	int a = 0;
+  245.   	int ret;
+  246. > 	while (flag == 0)
+  247.   	{
+  248.   		a ++; /*Tool should detect this line as error*/ /*ERROR:Dead Code*/
+
+Summary of the reports
+
+  CONDITION_ALWAYS_FALSE: 11
+           PURE_FUNCTION: 2

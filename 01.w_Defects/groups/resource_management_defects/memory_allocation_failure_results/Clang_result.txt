@@ -1,0 +1,34 @@
+memory_allocation_failure.c:81:6: warning: Dereference of null pointer [core.NullDereference]
+                        *(*(ptr+i)+j)=i;
+                          ^~~~~~~~
+memory_allocation_failure.c:268:1: warning: Potential memory leak [unix.Malloc]
+}
+^
+memory_allocation_failure.c:281:6: warning: Value stored to 'buf' is never read [deadcode.DeadStores]
+        buf = (char*) malloc(MAX_BUFFER * sizeof(char));/*Tool should detect this line as error*/ /*ERROR:Memory allocation failure */
+        ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+memory_allocation_failure.c:433:2: warning: Address of stack memory associated with local variable 'buf1' is still referred to by the stack variable 'ptr' upon returning to the caller.  This will be a dangling reference [core.StackAddressEscape]
+        printf("%d",ret);
+        ^~~~~~~~~~~~~~~~
+memory_allocation_failure.c:433:2: warning: Address of stack memory associated with local variable 'buf3' is still referred to by the stack variable 'ptr' upon returning to the caller.  This will be a dangling reference [core.StackAddressEscape]
+        printf("%d",ret);
+        ^~~~~~~~~~~~~~~~
+memory_allocation_failure.c:433:2: warning: Address of stack memory associated with local variable 'buf4' is still referred to by the stack variable 'ptr' upon returning to the caller.  This will be a dangling reference [core.StackAddressEscape]
+        printf("%d",ret);
+        ^~~~~~~~~~~~~~~~
+memory_allocation_failure.c:433:2: warning: Address of stack memory associated with local variable 'buf5' is still referred to by the stack variable 'ptr' upon returning to the caller.  This will be a dangling reference [core.StackAddressEscape]
+        printf("%d",ret);
+        ^~~~~~~~~~~~~~~~
+memory_allocation_failure.c:441:69: warning: Although the value stored to 'a' is used in the enclosing expression, the value is never actually read from 'a' [deadcode.DeadStores]
+    (flag == 10)? (memory_allocation_failure_012_func_002(ptr)) : ( a =20);
+                                                                    ^  ~~
+memory_allocation_failure.c:442:38: warning: Although the value stored to 'a' is used in the enclosing expression, the value is never actually read from 'a' [deadcode.DeadStores]
+    (flag == 10)? (ptr[1][1] = 200):(a=100);
+                                     ^ ~~~
+memory_allocation_failure.c:447:7: warning: Value stored to 'a' is never read [deadcode.DeadStores]
+                a = ptr[1][1];
+                ^   ~~~~~~~~~
+memory_allocation_failure.c:513:5: warning: 2nd function call argument is an uninitialized value [core.CallAndMessage]
+    printf("%d",a);
+    ^~~~~~~~~~~~~~
+11 warnings generated.

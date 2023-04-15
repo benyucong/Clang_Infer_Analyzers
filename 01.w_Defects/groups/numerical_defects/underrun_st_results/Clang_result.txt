@@ -1,0 +1,13 @@
+underrun_st.c:21:2: warning: Value stored to 'ret' is never read [deadcode.DeadStores]
+        ret = buf[-1];/*Tool should detect this line as error*/ /*ERROR:Data Underrun*/
+        ^     ~~~~~~~
+underrun_st.c:21:6: warning: Assigned value is garbage or undefined [core.uninitialized.Assign]
+        ret = buf[-1];/*Tool should detect this line as error*/ /*ERROR:Data Underrun*/
+            ^ ~~~~~~~
+underrun_st.c:55:2: warning: Value stored to 'ret' is never read [deadcode.DeadStores]
+        ret = *(p - 1);/*Tool should detect this line as error*/ /*ERROR:Data Underrun*/
+        ^     ~~~~~~~~
+underrun_st.c:55:6: warning: Assigned value is garbage or undefined [core.uninitialized.Assign]
+        ret = *(p - 1);/*Tool should detect this line as error*/ /*ERROR:Data Underrun*/
+            ^ ~~~~~~~~
+4 warnings generated.

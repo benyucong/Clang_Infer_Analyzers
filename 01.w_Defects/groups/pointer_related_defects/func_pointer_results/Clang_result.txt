@@ -1,0 +1,64 @@
+func_pointer.c:34:2: warning: Value stored to 'a' is never read [deadcode.DeadStores]
+        a =10;
+        ^  ~~
+func_pointer.c:42:2: warning: Value stored to 'ret' is never read [deadcode.DeadStores]
+        ret = func();/*Tool should detect this line as error*/ /*ERROR:Bad function pointer casting*/
+        ^     ~~~~~~
+func_pointer.c:81:3: warning: Value stored to 'ret' is never read [deadcode.DeadStores]
+                ret = func(1, 2);/*Tool should detect this line as error*/ /*ERROR:Bad function pointer casting*/
+                ^     ~~~~~~~~~~
+func_pointer.c:117:24: warning: Potential leak of memory pointed to by 'str' [unix.Malloc]
+    for(j = 0; j <= 1; j++)
+                       ^
+func_pointer.c:123:13: warning: Value stored to 'str' is never read [deadcode.DeadStores]
+            str = fptr(buf[j]);/*Tool should detect this line as error*/ /*ERROR:Bad function pointer casting*/
+            ^     ~~~~~~~~~~~~
+func_pointer.c:177:8: warning: Array access (from variable 'doubleptr') results in a null pointer dereference [core.NullDereference]
+                        doubleptr[i][j] += 1;
+                        ^~~~~~~~~~~~
+func_pointer.c:256:6: warning: Value stored to 'doubleptr' is never read [deadcode.DeadStores]
+            doubleptr = fptr();/*Tool should detect this line as error*/ /*ERROR:Bad function pointer casting*/
+            ^           ~~~~~~
+func_pointer.c:265:6: warning: Value stored to 'doubleptr' is never read [deadcode.DeadStores]
+            doubleptr = (char **)func_pointer_006_func_004();
+            ^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+func_pointer.c:285:2: warning: Value stored to 'a' is never read [deadcode.DeadStores]
+        a =fptr(buf);/*Tool should detect this line as error*/ /*ERROR:Bad function pointer casting*/
+        ^  ~~~~~~~~~
+func_pointer.c:330:6: warning: Value stored to 'flag' during its initialization is never read [deadcode.DeadStores]
+        int flag = rand();
+            ^~~~   ~~~~~~
+func_pointer.c:352:5: warning: Dereference of null pointer (loaded from variable 'p') [core.NullDereference]
+        *p = fptr();/*Tool should detect this line as error*/ /*ERROR:Bad function pointer casting*/
+         ~ ^
+func_pointer.c:353:2: warning: Value stored to 'ret' is never read [deadcode.DeadStores]
+        ret = p->b;
+        ^     ~~~~
+func_pointer.c:365:2: warning: Value stored to 'a' is never read [deadcode.DeadStores]
+        a= 10;
+        ^  ~~
+func_pointer.c:375:2: warning: Value stored to 'ret' is never read [deadcode.DeadStores]
+        ret = func1();/*Tool should detect this line as error*/ /*ERROR:Bad function pointer casting*/
+        ^     ~~~~~~~
+func_pointer.c:375:8: warning: Function taking 1 argument is called with fewer (0) [core.CallAndMessage]
+        ret = func1();/*Tool should detect this line as error*/ /*ERROR:Bad function pointer casting*/
+              ^~~~~~~
+func_pointer.c:411:24: warning: Potential memory leak [unix.Malloc]
+    for(j = 0; j <= 1; j++)
+                       ^
+func_pointer.c:498:5: warning: Value stored to 'flag' is never read [deadcode.DeadStores]
+    flag = func_gbl(1);
+    ^      ~~~~~~~~~~~
+func_pointer.c:538:6: warning: Value stored to 'f' is never read [deadcode.DeadStores]
+        f = func_gbl();/*Tool should detect this line as error*/ /*ERROR:Bad function pointer casting*/
+        ^   ~~~~~~~~~~
+func_pointer.c:548:5: warning: Value stored to 'flag' is never read [deadcode.DeadStores]
+    flag = fptr(1);
+    ^      ~~~~~~~
+func_pointer.c:592:3: warning: Value stored to 'st' is never read [deadcode.DeadStores]
+                st = fptr_gbl( st1);/*Tool should detect this line as error*/ /*ERROR:Bad function pointer casting*/
+                ^    ~~~~~~~~~~~~~~
+func_pointer.c:608:1: warning: Potential leak of memory pointed to by 'st1' [unix.Malloc]
+}
+^
+21 warnings generated.

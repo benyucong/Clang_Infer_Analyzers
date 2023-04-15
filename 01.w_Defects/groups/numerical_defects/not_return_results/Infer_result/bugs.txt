@@ -1,0 +1,37 @@
+Found 4 issues
+
+not_return.c:18: error: PURE_FUNCTION
+  Side-effect free function not_return_001_func_001.
+  16.    * Complexity: if it contains if statements
+  17.    */
+  18. > int not_return_001_func_001 (int flag)
+  19.   {
+  20.   	if (flag == 0)
+
+not_return.c:37: error: PURE_FUNCTION
+  Side-effect free function not_return_002_func_001.
+  35.    * Complexity: if it contains nested if statements
+  36.    */
+  37. > int not_return_002_func_001 (int flag1, int flag2)
+  38.   {
+  39.   	if (flag1 == 0)
+
+not_return.c:63: error: PURE_FUNCTION
+  Side-effect free function not_return_003_func_001.
+  61.    * Complexity: If it contains including switch
+  62.    */
+  63. > int not_return_003_func_001 (int flag)
+  64.   {
+  65.   	switch (flag)
+
+not_return.c:89: error: PURE_FUNCTION
+  Side-effect free function not_return_004_func_001.
+  87.    * Complexity: if it contains the goto
+  88.    */
+  89. > int not_return_004_func_001 (int flag)
+  90.   {
+  91.   	int ret = 0;
+
+Summary of the reports
+
+  PURE_FUNCTION: 4

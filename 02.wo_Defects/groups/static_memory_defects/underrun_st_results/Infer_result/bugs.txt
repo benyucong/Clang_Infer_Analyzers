@@ -1,0 +1,71 @@
+Found 8 issues
+
+underrun_st.c:66: error: PURE_FUNCTION
+  Side-effect free function underrun_st_005.
+  64.    * Complexity: 1 single pointer	int	Alias for Subtraction	Constant -1	Write
+  65.    */
+  66. > void underrun_st_005 ()
+  67.   {
+  68.   	int buf[5];
+
+underrun_st.c:78: error: PURE_FUNCTION
+  Side-effect free function underrun_st_006.
+  76.    * Complexity: 1 single pointer	int	Alias for Subtraction	1 Variable	Write
+  77.    */
+  78. > void underrun_st_006 ()
+  79.   {
+  80.   	int buf[5];
+
+underrun_st.c:114: error: BUFFER_OVERRUN_L5
+  Offset: [-oo, 4] Size: 5.
+  112.   	for (i = 0; i < 5; i ++)
+  113.   	{
+  114. > 		*p = 1; /*Tool should not detect this line as error*/ /*No ERROR:Data Underrun*/
+  115.   		p --;
+  116.   	}
+
+underrun_st.c:106: error: PURE_FUNCTION
+  Side-effect free function underrun_st_008.
+  104.    * Complexity: a decrement in a loop pointer value
+  105.    */
+  106. > void underrun_st_008 ()
+  107.   {
+  108.   	int buf[5];
+
+underrun_st.c:138: error: PURE_FUNCTION
+  Side-effect free function underrun_st_010.
+  136.    */
+  137.   int underrun_st_010_gbl_buf[5];
+  138. > void underrun_st_010 ()
+  139.   {
+  140.   	int *p;
+
+underrun_st.c:170: error: PURE_FUNCTION
+  Side-effect free function underrun_st_012.
+  168.    */
+  169.   int underrun_st_012_gbl_buf[5];
+  170. > void underrun_st_012 ()
+  171.   {
+  172.   	int *p;
+
+underrun_st.c:194: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(var==0)` is always false at line 194, column 6.
+  192.   	while(i > -1)
+  193.   	{
+  194. > 		if(var==0)
+  195.   		underrun_st_013_gbl_buf[i] = 1; /*Tool should not detect this line as error*/ /*No ERROR:Data Underrun*/
+  196.   	    i--;
+
+underrun_st.c:214: error: BUFFER_OVERRUN_L5
+  Offset: [-oo, +oo] Size: 5 by call to `underrun_st_002`.
+  212.   	if (vflag == 2 || vflag ==888)
+  213.   	{
+  214. > 		underrun_st_002();
+  215.   	}
+  216.   
+
+Summary of the reports
+
+          PURE_FUNCTION: 5
+      BUFFER_OVERRUN_L5: 2
+  CONDITION_ALWAYS_TRUE: 1

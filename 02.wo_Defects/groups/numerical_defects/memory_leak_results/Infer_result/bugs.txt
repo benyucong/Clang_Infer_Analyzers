@@ -1,0 +1,126 @@
+Found 15 issues
+
+memory_leak.c:23: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 23, column 9.
+  21.   	int i;
+  22.   	char *buf;
+  23. > 	for (i=0;;i++)
+  24.   	{
+  25.   		buf=(char*) calloc(5,sizeof(char)); /*Tool should not detect  this line as error*/ /*No ERROR:Memory Leakage */
+
+memory_leak.c:41: error: PURE_FUNCTION
+  Side-effect free function memory_leak_002.
+  39.    */
+  40.   
+  41. > void memory_leak_002 ()
+  42.   {
+  43.   	int **ptr = (int**) malloc(5*sizeof(int*));
+
+memory_leak.c:64: error: PURE_FUNCTION
+  Side-effect free function memory_leak_003_func_001.
+  62.    *  Memory allocated in a function and Memory used in another function
+  63.    */
+  64. > void memory_leak_003_func_001 (int len,char **stringPtr)
+  65.   {
+  66.   	char * p = malloc(sizeof(char) * (len+1));
+
+memory_leak.c:114: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag>0)` is always false at line 114, column 5.
+  112.   	int flag=10;
+  113.   
+  114. > 	if(flag > 0)
+  115.   	{
+  116.   		ptr= (float*) malloc(5*sizeof(float)); /*Tool should not detect  this line as error*/ /*No ERROR:Memory Leakage */
+
+memory_leak.c:109: error: PURE_FUNCTION
+  Side-effect free function memory_leak_005.
+  107.    *  When using pointer to float Memory is allocated and freed in conditional statement(if)
+  108.    */
+  109. > void memory_leak_005()
+  110.   {
+  111.   	float *ptr;
+
+memory_leak.c:129: error: PURE_FUNCTION
+  Side-effect free function memory_leak_006_func_001.
+  127.    *  When using pointer to double Memory is allocated and freed based on return value of function
+  128.    */
+  129. > int memory_leak_006_func_001(int flag)
+  130.   {
+  131.      int ret;
+
+memory_leak.c:139: error: PURE_FUNCTION
+  Side-effect free function memory_leak_006.
+  137.   }
+  138.   
+  139. > void memory_leak_006()
+  140.   {
+  141.   	double *dptr;
+
+memory_leak.c:211: error: PURE_FUNCTION
+  Side-effect free function memory_leak_008.
+  209.   *  When using 1 single pointer alias
+  210.   */
+  211. > void memory_leak_008 ()
+  212.   {
+  213.   	int *ptr=(int*) malloc(5 * sizeof(int)); /*Tool should not detect  this line as error*/ /*No ERROR:Memory Leakage */
+
+memory_leak.c:228: error: PURE_FUNCTION
+  Side-effect free function memory_leak_009.
+  226.   *  When using 1 single pointer alias  - pointing to different type
+  227.   */
+  228. > void memory_leak_009 ()
+  229.   {
+  230.   	float *ptr=(float*) malloc(5 * sizeof(float)); /*Tool should not detect  this line as error*/ /*No ERROR:Memory Leakage */
+
+memory_leak.c:310: error: PURE_FUNCTION
+  Side-effect free function memory_leak_0012.
+  308.   } memory_leak_0012_uni_001;
+  309.   
+  310. > void memory_leak_0012 ()
+  311.   {
+  312.   	memory_leak_0012_uni_001 *u = (memory_leak_0012_uni_001 * )malloc(5*sizeof( memory_leak_0012_uni_001 )); /*Tool should not detect  this line as error*/ /*No ERROR:Memory Leakage */
+
+memory_leak.c:347: error: PURE_FUNCTION
+  Side-effect free function memory_leak_0013.
+  345.   } memory_leak_0013_uni_001;
+  346.   
+  347. > void memory_leak_0013 ()
+  348.   {
+  349.   	memory_leak_0013_uni_001 *u = (memory_leak_0013_uni_001 * )malloc(5*sizeof( memory_leak_0013_uni_001 )); /*Tool should not detect  this line as error*/ /*No ERROR:Memory Leakage */
+
+memory_leak.c:395: error: PURE_FUNCTION
+  Side-effect free function memory_leak_0015_func_001.
+  393.    *  Memory allocated and returned from one function and Memory used in another function
+  394.    */
+  395. > char * memory_leak_0015_func_001 (int len)
+  396.   {
+  397.   	char *stringPtr = malloc(sizeof(char) * (len+1));
+
+memory_leak.c:440: error: PURE_FUNCTION
+  Side-effect free function memory_leak_0017_func_001.
+  438.   */
+  439.   long ** memory_leak_0017_gbl_doubleptr;
+  440. > int memory_leak_0017_func_001(int flag)
+  441.   {
+  442.      int ret ;
+
+memory_leak.c:507: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 507, column 9.
+  505.   	int i;
+  506.       {
+  507. > 		while(1)
+  508.   		{
+  509.   			memory_leak_0018dst = (char**) malloc(5*sizeof(char*));
+
+memory_leak.c:527: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 527, column 8.
+  525.       	strcpy (memory_leak_0018dst[i],"STRING");
+  526.       }
+  527. > 	while(1)
+  528.   	{
+  529.   		for(i=0;i<5;i++)
+
+Summary of the reports
+
+          PURE_FUNCTION: 11
+  CONDITION_ALWAYS_TRUE: 4

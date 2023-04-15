@@ -1,0 +1,292 @@
+Found 35 issues
+
+memory_allocation_failure.c:37: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 37, column 9.
+  35.   	int i;
+  36.   	long *buf;
+  37. > 	for (i=0;;i++)
+  38.   	{
+  39.   		buf=(long*) calloc(5,sizeof(long));
+
+memory_allocation_failure.c:54: error: PURE_FUNCTION
+  Side-effect free function memory_allocation_failure_002.
+  52.   * Complexity: when using pointers to the type INT
+  53.   */
+  54. > void memory_allocation_failure_002 ()
+  55.   {
+  56.   	long long int i=0;
+
+memory_allocation_failure.c:71: error: PURE_FUNCTION
+  Side-effect free function memory_allocation_failure_003.
+  69.   
+  70.   #define MAX 10
+  71. > void memory_allocation_failure_003 ()
+  72.   {
+  73.   	unsigned int **ptr = (unsigned int**) malloc(MAX*sizeof(unsigned int*));
+
+memory_allocation_failure.c:94: error: PURE_FUNCTION
+  Side-effect free function memory_allocation_failure_004_func_001.
+  92.   * Complexity: When using a pointer to unsigned int based on return value of function
+  93.   */
+  94. > int memory_allocation_failure_004_func_001(int flag)
+  95.   {
+  96.      int ret =0;
+
+memory_allocation_failure.c:109: error: BUFFER_OVERRUN_L3
+  Offset: 1 Size: [1, 10].
+  107.   	if(ptr !=NULL)
+  108.   	{
+  109. > 		*(ptr+1) = 10;
+  110.   		free(ptr);
+  111.   	}
+
+memory_allocation_failure.c:104: error: PURE_FUNCTION
+  Side-effect free function memory_allocation_failure_004.
+  102.   }
+  103.   
+  104. > void memory_allocation_failure_004 ()
+  105.   {
+  106.   	unsigned int *ptr = (unsigned int*) malloc(memory_allocation_failure_004_func_001(0)*sizeof(unsigned int)); /*Tool should not detect this line as error*/ /*No ERROR:Memory allocation failure */
+
+memory_allocation_failure.c:127: error: BUFFER_OVERRUN_L5
+  Offset: 1 Size: [0, +oo].
+  125.   			vptr = (int *)calloc(memory_allocation_failure_005_gbl*memory_allocation_failure_005_gbl, sizeof(int)); /*Tool should not detect this line as error*/ /*No ERROR:Memory allocation failure */
+  126.   			if(vptr != NULL)
+  127. > 			*((int*)vptr+1) = 10;
+  128.   			return 1;
+  129.   		}
+
+memory_allocation_failure.c:125: error: INTEGER_OVERFLOW_L5
+  (`#GB<memory_allocation_failure.c>$memory_allocation_failure_005_gbl` × `#GB<memory_allocation_failure.c>$memory_allocation_failure_005_gbl`):unsigned32.
+  123.   		case 1:
+  124.   		{
+  125. > 			vptr = (int *)calloc(memory_allocation_failure_005_gbl*memory_allocation_failure_005_gbl, sizeof(int)); /*Tool should not detect this line as error*/ /*No ERROR:Memory allocation failure */
+  126.   			if(vptr != NULL)
+  127.   			*((int*)vptr+1) = 10;
+
+memory_allocation_failure.c:165: error: PURE_FUNCTION
+  Side-effect free function memory_allocation_failure_006_func_001.
+  163.   #define MAX_10 10
+  164.   int **memory_allocation_failure_006_gbl_doubleptr;
+  165. > int memory_allocation_failure_006_func_001(int flag)
+  166.   {
+  167.      int ret;
+
+memory_allocation_failure.c:202: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(*memory_allocation_failure_006_gbl_doubleptr[i]!=null)` is always false at line 202, column 7.
+  200.   		for(i=0;i<10;i++)
+  201.   		{
+  202. > 			if(memory_allocation_failure_006_gbl_doubleptr[i]!=NULL)
+  203.   			{
+  204.        			free (memory_allocation_failure_006_gbl_doubleptr[i]);
+
+memory_allocation_failure.c:250: error: MEMORY_LEAK
+  memory dynamically allocated to `memory_allocation_failure_007_str_gbl` by call to `memory_allocation_failure_007_func_001()` at line 250, column 50 is not reachable after line 250, column 50.
+  248.           if(buf[j]!= NULL)
+  249.       	{
+  250. >         	memory_allocation_failure_007_str_gbl = memory_allocation_failure_007_func_001(buf[j]);
+  251.           }
+  252.       }
+
+memory_allocation_failure.c:264: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(i<(10*2))` is always false at line 264, column 11.
+  262.     char * buffer = 0;
+  263.     int i;
+  264. >   for(i=0;i<max_buffer;i++)
+  265.     {
+  266.   	   buffer = (char*) malloc(max_buffer * sizeof(char)); /*Tool should not detect this line as error*/ /*No ERROR:Memory allocation failure */
+
+memory_allocation_failure.c:277: error: MEMORY_LEAK
+  memory dynamically allocated by call to `memory_allocation_failure_008_func_001()` at line 277, column 2 is not reachable after line 277, column 2.
+  275.   {
+  276.   	char *str = "STRINGMEM";
+  277. > 	memory_allocation_failure_008_func_001(str);
+  278.   }
+  279.   
+
+memory_allocation_failure.c:291: error: INFERBO_ALLOC_IS_BIG
+  Length: 429496728.
+  289.       do
+  290.       {
+  291. >     	buf = (char*) malloc(MAX_BUFFER * sizeof(char)); /*Tool should not detect this line as error*/ /*No ERROR:Memory allocation failure */
+  292.       	i++;
+  293.       }while (i<MAX_VAL);
+
+memory_allocation_failure.c:291: error: MEMORY_LEAK
+  memory dynamically allocated by call to `malloc()` at line 291, column 20 is not reachable after line 291, column 6.
+  289.       do
+  290.       {
+  291. >     	buf = (char*) malloc(MAX_BUFFER * sizeof(char)); /*Tool should not detect this line as error*/ /*No ERROR:Memory allocation failure */
+  292.       	i++;
+  293.       }while (i<MAX_VAL);
+
+memory_allocation_failure.c:286: error: PURE_FUNCTION
+  Side-effect free function memory_allocation_failure_009_func_001.
+  284.   #define MAX_BUFFER (429496728UL)
+  285.   
+  286. > void memory_allocation_failure_009_func_001 (char * buf)
+  287.   {
+  288.       int i=0;
+
+memory_allocation_failure.c:330: error: MEMORY_LEAK
+  memory dynamically allocated to `memory_allocation_failure_010_arr_gbl` by call to `malloc()` at line 330, column 83 is not reachable after line 330, column 3.
+  328.   	    do
+  329.   	    {
+  330. > 		memory_allocation_failure_010_arr_gbl = (memory_allocation_failure_010_s_001 *) malloc (10*sizeof(memory_allocation_failure_010_s_001));
+  331.               i++;
+  332.   	    }while( i<=MAX_VAL);
+
+memory_allocation_failure.c:343: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(memory_allocation_failure_010_arr_gbl->csr&1)` is always false at line 343, column 12.
+  341.       {
+  342.       	memory_allocation_failure_010_arr_gbl->data = READY;
+  343. >         if(memory_allocation_failure_010_arr_gbl->csr & ERROR)
+  344.           {
+  345.           	memory_allocation_failure_010_arr_gbl->csr = RESET;
+
+memory_allocation_failure.c:353: error: INTEGER_OVERFLOW_L5
+  ([-oo, +oo] + 1):signed32.
+  351.   {
+  352.   	memory_allocation_failure_010_func_002(1);
+  353. > 	++memory_allocation_failure_010_arr_gbl->data;
+  354.   }
+  355.   
+
+memory_allocation_failure.c:381: error: PURE_FUNCTION
+  Side-effect free function memory_allocation_failure_011_func_001.
+  379.   } memory_allocation_failure_011_uni_001;
+  380.   
+  381. > int memory_allocation_failure_011_func_001(int flag)
+  382.   {
+  383.      int ret =0;
+
+memory_allocation_failure.c:418: error: PURE_FUNCTION
+  Side-effect free function memory_allocation_failure_012_func_001.
+  416.   */
+  417.   int *memory_allocation_failure_012_buf2_gbl;
+  418. > int memory_allocation_failure_012_func_001(int flag)
+  419.   {
+  420.      int ret =0;
+
+memory_allocation_failure.c:453: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==10)` is always false at line 453, column 8.
+  451.       (flag == 10)? (ptr[1][1] = 200):(a=100);
+  452.   
+  453. >     if(flag == 10){
+  454.       	if(memory_allocation_failure_012_buf2_gbl!=NULL)
+  455.       	{
+
+memory_allocation_failure.c:467: error: PURE_FUNCTION
+  Side-effect free function memory_allocation_failure_013_func_001.
+  465.   */
+  466.   static int staticflag=1;
+  467. > int memory_allocation_failure_013_func_001(int flag)
+  468.   {
+  469.      int ret =0;
+
+memory_allocation_failure.c:477: error: PURE_FUNCTION
+  Side-effect free function memory_allocation_failure_013.
+  475.   }
+  476.   
+  477. > void memory_allocation_failure_013 ()
+  478.   {
+  479.     // JDR: this function is buggy, commenting it out
+
+memory_allocation_failure.c:570: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(staticflag==10)` is always false at line 570, column 9.
+  568.   	int i,j;
+  569.   	static int staticflag=10;
+  570. >     if (staticflag == 10)
+  571.       {
+  572.       	  	ptr= (double*) malloc(10*sizeof(double));
+
+memory_allocation_failure.c:587: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(staticflag==10)` is always false at line 587, column 10.
+  585.       }
+  586.   
+  587. >     if  (staticflag == 10)
+  588.       {
+  589.       	(*(ptr+1) = 10.5);
+
+memory_allocation_failure.c:608: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(staticflag==10)` is always false at line 608, column 8.
+  606.       }
+  607.   
+  608. >     if(staticflag == 10)
+  609.       {
+  610.       	b = *(ptr+1);
+
+memory_allocation_failure.c:620: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(staticflag==10)` is always false at line 620, column 8.
+  618.       }
+  619.   
+  620. >     if(staticflag == 10)
+  621.       {
+  622.       	free(ptr);
+
+memory_allocation_failure.c:650: error: PURE_FUNCTION
+  Side-effect free function memory_allocation_failure_015_func_001.
+  648.   int * memory_allocation_failure_015_gbl_ptr;
+  649.   
+  650. > int memory_allocation_failure_015_func_001 ()
+  651.   {
+  652.   	memory_allocation_failure_015_s_001 s = {MAX_V,20};
+
+memory_allocation_failure.c:670: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==1)` is always false at line 670, column 9.
+  668.   	return ret;
+  669.   my_label:
+  670. >     if (flag == 1)
+  671.   	{
+  672.           memory_allocation_failure_015_func_002();
+
+memory_allocation_failure.c:694: error: PURE_FUNCTION
+  Side-effect free function memory_allocation_failure_016_func_001.
+  692.   
+  693.   #define MAX_VAL_4 10
+  694. > int memory_allocation_failure_016_func_001(int flag)
+  695.   {
+  696.      int ret =0;
+
+memory_allocation_failure.c:772: error: BUFFER_OVERRUN_L5
+  Offset: [-oo, +oo] (⇐ [0, 1] + [-oo, +oo]) Size: 2 by call to `memory_allocation_failure_007`.
+  770.   	if (vflag == 7 || vflag ==888)
+  771.   	{
+  772. > 		memory_allocation_failure_007 ();
+  773.   	}
+  774.   
+
+memory_allocation_failure.c:772: error: INTEGER_OVERFLOW_L5
+  ([-oo, +oo] - 1):unsigned32 by call to `memory_allocation_failure_007`.
+  770.   	if (vflag == 7 || vflag ==888)
+  771.   	{
+  772. > 		memory_allocation_failure_007 ();
+  773.   	}
+  774.   
+
+memory_allocation_failure.c:772: error: INTEGER_OVERFLOW_L5
+  ([0, +oo] + 1):signed32 by call to `memory_allocation_failure_007`.
+  770.   	if (vflag == 7 || vflag ==888)
+  771.   	{
+  772. > 		memory_allocation_failure_007 ();
+  773.   	}
+  774.   
+
+memory_allocation_failure.c:772: error: INTEGER_OVERFLOW_L5
+  ([0, +oo] + 1):unsigned32 by call to `memory_allocation_failure_007`.
+  770.   	if (vflag == 7 || vflag ==888)
+  771.   	{
+  772. > 		memory_allocation_failure_007 ();
+  773.   	}
+  774.   
+
+Summary of the reports
+
+           PURE_FUNCTION: 12
+   CONDITION_ALWAYS_TRUE: 8
+     INTEGER_OVERFLOW_L5: 5
+             MEMORY_LEAK: 4
+  CONDITION_ALWAYS_FALSE: 2
+       BUFFER_OVERRUN_L5: 2
+       BUFFER_OVERRUN_L3: 1
+    INFERBO_ALLOC_IS_BIG: 1

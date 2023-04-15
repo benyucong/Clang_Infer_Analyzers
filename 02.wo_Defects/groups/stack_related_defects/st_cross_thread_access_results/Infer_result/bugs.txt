@@ -1,0 +1,232 @@
+Found 28 issues
+
+st_cross_thread_access.c:27: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_st_cross_thread_access_001_glb_mutex.
+  25.    */
+  26.   
+  27. > pthread_mutex_t st_cross_thread_access_001_glb_mutex = PTHREAD_MUTEX_INITIALIZER;
+  28.   pthread_mutex_t st_cross_thread_access_001_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  29.   
+
+st_cross_thread_access.c:28: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_st_cross_thread_access_001_glb_mutex_1.
+  26.   
+  27.   pthread_mutex_t st_cross_thread_access_001_glb_mutex = PTHREAD_MUTEX_INITIALIZER;
+  28. > pthread_mutex_t st_cross_thread_access_001_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  29.   
+  30.   #if defined(CHECKER_POLYSPACE)
+
+st_cross_thread_access.c:108: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_st_cross_thread_access_002_glb_mutex.
+  106.    * Complexity: unLocking without locking in same function using two thread inside a if condition
+  107.    */
+  108. > pthread_mutex_t st_cross_thread_access_002_glb_mutex = PTHREAD_MUTEX_INITIALIZER;
+  109.   pthread_mutex_t st_cross_thread_access_002_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  110.   
+
+st_cross_thread_access.c:109: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_st_cross_thread_access_002_glb_mutex_1.
+  107.    */
+  108.   pthread_mutex_t st_cross_thread_access_002_glb_mutex = PTHREAD_MUTEX_INITIALIZER;
+  109. > pthread_mutex_t st_cross_thread_access_002_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  110.   
+  111.   #if defined(CHECKER_POLYSPACE)
+
+st_cross_thread_access.c:203: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_st_cross_thread_access_003_glb_mutex.
+  201.    * Complexity: Cross thread stack access over multiple functions , 2 threads,based on return value of function
+  202.    */
+  203. > pthread_mutex_t st_cross_thread_access_003_glb_mutex = PTHREAD_MUTEX_INITIALIZER;
+  204.   pthread_mutex_t st_cross_thread_access_003_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  205.   
+
+st_cross_thread_access.c:204: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_st_cross_thread_access_003_glb_mutex_1.
+  202.    */
+  203.   pthread_mutex_t st_cross_thread_access_003_glb_mutex = PTHREAD_MUTEX_INITIALIZER;
+  204. > pthread_mutex_t st_cross_thread_access_003_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  205.   
+  206.   #if defined(CHECKER_POLYSPACE)
+
+st_cross_thread_access.c:235: error: PURE_FUNCTION
+  Side-effect free function st_cross_thread_access_003_func_002.
+  233.   }
+  234.   
+  235. > int st_cross_thread_access_003_func_002 (int a )
+  236.   {
+  237.       int ret = 0;
+
+st_cross_thread_access.c:290: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_st_cross_thread_access_004_glb_mutex_1.
+  288.    * Complexity: Cross thread stack access over multiple functions using 2 threads inside while loop and if condition
+  289.    */
+  290. > pthread_mutex_t st_cross_thread_access_004_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  291.   pthread_mutex_t st_cross_thread_access_004_glb_mutex_2 = PTHREAD_MUTEX_INITIALIZER;
+  292.   char *buf1="String1";
+
+st_cross_thread_access.c:291: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_st_cross_thread_access_004_glb_mutex_2.
+  289.    */
+  290.   pthread_mutex_t st_cross_thread_access_004_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  291. > pthread_mutex_t st_cross_thread_access_004_glb_mutex_2 = PTHREAD_MUTEX_INITIALIZER;
+  292.   char *buf1="String1";
+  293.   char *buf2="String2";
+
+st_cross_thread_access.c:306: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(ip>=0)` is always false at line 306, column 10.
+  304.   	while (i>0)
+  305.   	{
+  306. > 		   if (ip >= 0)
+  307.   		   {
+  308.   			   pthread_mutex_lock( &st_cross_thread_access_004_glb_mutex_1 );
+
+st_cross_thread_access.c:304: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(i>0)` is always false at line 304, column 9.
+  302.   	char *buf11="String111";
+  303.   
+  304. > 	while (i>0)
+  305.   	{
+  306.   		   if (ip >= 0)
+
+st_cross_thread_access.c:306: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(ip>=0)` is always false at line 306, column 10.
+  304.   	while (i>0)
+  305.   	{
+  306. > 		   if (ip >= 0)
+  307.   		   {
+  308.   			   pthread_mutex_lock( &st_cross_thread_access_004_glb_mutex_1 );
+
+st_cross_thread_access.c:332: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(ip>=0)` is always false at line 332, column 10.
+  330.   	while (i>0)
+  331.   	{
+  332. > 		   if (ip >= 0)
+  333.   		   {
+  334.   			   pthread_mutex_lock( &st_cross_thread_access_004_glb_mutex_2 );
+
+st_cross_thread_access.c:330: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(i>0)` is always false at line 330, column 9.
+  328.       ip = (long)input;
+  329.       ip = ip *20;
+  330. > 	while (i>0)
+  331.   	{
+  332.   		   if (ip >= 0)
+
+st_cross_thread_access.c:332: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(ip>=0)` is always false at line 332, column 10.
+  330.   	while (i>0)
+  331.   	{
+  332. > 		   if (ip >= 0)
+  333.   		   {
+  334.   			   pthread_mutex_lock( &st_cross_thread_access_004_glb_mutex_2 );
+
+st_cross_thread_access.c:347: error: PURE_FUNCTION
+  Side-effect free function st_cross_thread_access_004.
+  345.   }
+  346.   
+  347. > void st_cross_thread_access_004 ()
+  348.   {
+  349.   #if ! defined(CHECKER_POLYSPACE)
+
+st_cross_thread_access.c:364: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_st_cross_thread_access_005_glb_mutex.
+  362.    * Complexity: Thread created in else condition that will never execute , no lock but there is a unlock
+  363.    */
+  364. > pthread_mutex_t st_cross_thread_access_005_glb_mutex = PTHREAD_MUTEX_INITIALIZER;
+  365.   pthread_mutex_t st_cross_thread_access_005_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  366.   int st_cross_thread_access_005_glb_data = 0;
+
+st_cross_thread_access.c:365: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_st_cross_thread_access_005_glb_mutex_1.
+  363.    */
+  364.   pthread_mutex_t st_cross_thread_access_005_glb_mutex = PTHREAD_MUTEX_INITIALIZER;
+  365. > pthread_mutex_t st_cross_thread_access_005_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  366.   int st_cross_thread_access_005_glb_data = 0;
+  367.   
+
+st_cross_thread_access.c:395: error: BUFFER_OVERRUN_L1
+  Offset: 4 (⇐ 2 + 2) Size: 4.
+  393.   
+  394.   	    unsigned long ip = (unsigned long)pthread_self();
+  395. >         printf("Task5! Cross thread stack access, threadID# %lu! gbl5 = %d arrval = %d \n",ip ,st_cross_thread_access_005_glb_data,*(p[2]+2));
+  396.   
+  397.   #endif /* defined(CHECKER_POLYSPACE) */
+
+st_cross_thread_access.c:451: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_st_cross_thread_access_006_glb_mutex_1.
+  449.    * Complexity: Cross thread stack access over multiple functions using 2 threads created in else condition
+  450.   */
+  451. > pthread_mutex_t st_cross_thread_access_006_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  452.   pthread_mutex_t st_cross_thread_access_006_glb_mutex_2 = PTHREAD_MUTEX_INITIALIZER;
+  453.   # define CREATE_THREAD 1
+
+st_cross_thread_access.c:452: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_st_cross_thread_access_006_glb_mutex_2.
+  450.   */
+  451.   pthread_mutex_t st_cross_thread_access_006_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  452. > pthread_mutex_t st_cross_thread_access_006_glb_mutex_2 = PTHREAD_MUTEX_INITIALIZER;
+  453.   # define CREATE_THREAD 1
+  454.   typedef struct {
+
+st_cross_thread_access.c:470: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(ip>=0)` is always false at line 470, column 7.
+  468.   	for (i=0;i<=4;i++)
+  469.   	{
+  470. > 		if (ip >= 0)
+  471.   		{
+  472.   			pthread_mutex_lock( &st_cross_thread_access_006_glb_mutex_1 );
+
+st_cross_thread_access.c:468: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(i<=4)` is always false at line 468, column 11.
+  466.   	ip = ip *10;
+  467.   	st_cross_thread_access_006_s_001 s ={1,2};
+  468. > 	for (i=0;i<=4;i++)
+  469.   	{
+  470.   		if (ip >= 0)
+
+st_cross_thread_access.c:470: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(ip>=0)` is always false at line 470, column 7.
+  468.   	for (i=0;i<=4;i++)
+  469.   	{
+  470. > 		if (ip >= 0)
+  471.   		{
+  472.   			pthread_mutex_lock( &st_cross_thread_access_006_glb_mutex_1 );
+
+st_cross_thread_access.c:494: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(ip>=0)` is always false at line 494, column 7.
+  492.   	for (i=0;i<=4;i++)
+  493.   	{
+  494. > 		if (ip >= 0)
+  495.   		{
+  496.   			pthread_mutex_lock( &st_cross_thread_access_006_glb_mutex_2 );
+
+st_cross_thread_access.c:492: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(i<=4)` is always false at line 492, column 11.
+  490.   	ip = (long)input;
+  491.   	ip = ip *20;
+  492. > 	for (i=0;i<=4;i++)
+  493.   	{
+  494.   		if (ip >= 0)
+
+st_cross_thread_access.c:494: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(ip>=0)` is always false at line 494, column 7.
+  492.   	for (i=0;i<=4;i++)
+  493.   	{
+  494. > 		if (ip >= 0)
+  495.   		{
+  496.   			pthread_mutex_lock( &st_cross_thread_access_006_glb_mutex_2 );
+
+st_cross_thread_access.c:516: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(thread_set==1)` is always false at line 516, column 10.
+  514.   	   intptr_t t1 = 10;
+  515.   	   intptr_t t2 = 20;
+  516. > 	   if ( thread_set == CREATE_THREAD)
+  517.   	   {
+  518.              ;
+
+Summary of the reports
+
+           PURE_FUNCTION: 14
+   CONDITION_ALWAYS_TRUE: 8
+  CONDITION_ALWAYS_FALSE: 5
+       BUFFER_OVERRUN_L1: 1

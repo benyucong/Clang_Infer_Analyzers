@@ -1,0 +1,55 @@
+wrong_arguments_func_pointer.c:52:2: warning: Value stored to 'a' is never read [deadcode.DeadStores]
+        a =fptr(arr[0]); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+        ^  ~~~~~~~~~~~~
+wrong_arguments_func_pointer.c:73:2: warning: Value stored to 'a' is never read [deadcode.DeadStores]
+        a =fptr(buf[0]); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+        ^  ~~~~~~~~~~~~
+wrong_arguments_func_pointer.c:93:2: warning: Value stored to 'ret' is never read [deadcode.DeadStores]
+        ret = func(&a); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+        ^     ~~~~~~~~
+wrong_arguments_func_pointer.c:113:2: warning: Value stored to 'ret' is never read [deadcode.DeadStores]
+        ret = func(buf); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+        ^     ~~~~~~~~~
+wrong_arguments_func_pointer.c:138:2: warning: Value stored to 'ret' is never read [deadcode.DeadStores]
+        ret = func(buf); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+        ^     ~~~~~~~~~
+wrong_arguments_func_pointer.c:157:2: warning: Value stored to 'ret' is never read [deadcode.DeadStores]
+        ret = func(1, 2); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+        ^     ~~~~~~~~~~
+wrong_arguments_func_pointer.c:177:2: warning: Value stored to 'ret' is never read [deadcode.DeadStores]
+        ret = func(10.005); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+        ^     ~~~~~~~~~~~~
+wrong_arguments_func_pointer.c:196:2: warning: Value stored to 'ret' is never read [deadcode.DeadStores]
+        ret = func_glb(a); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+        ^     ~~~~~~~~~~~
+wrong_arguments_func_pointer.c:219:14: warning: Potential leak of memory pointed to by 'str1' [unix.Malloc]
+  if (!str3) return;
+             ^~~~~~
+wrong_arguments_func_pointer.c:219:14: warning: Potential leak of memory pointed to by 'str2' [unix.Malloc]
+  if (!str3) return;
+             ^~~~~~
+wrong_arguments_func_pointer.c:223:3: warning: Value stored to 'ret' is never read [deadcode.DeadStores]
+  ret = func(str1,str2,str3); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+  ^     ~~~~~~~~~~~~~~~~~~~~
+wrong_arguments_func_pointer.c:283:6: warning: Value stored to 'temp' is never read [deadcode.DeadStores]
+        temp = st->arr[i];
+        ^      ~~~~~~~~~~
+wrong_arguments_func_pointer.c:419:7: warning: Value stored to 'a' is never read [deadcode.DeadStores]
+      a =fptr(arr,5); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+      ^  ~~~~~~~~~~~
+wrong_arguments_func_pointer.c:486:3: warning: Value stored to 'ret' is never read [deadcode.DeadStores]
+  ret = func(str1,str2,str3);
+  ^     ~~~~~~~~~~~~~~~~~~~~
+wrong_arguments_func_pointer.c:497:2: warning: Value stored to 'a' is never read [deadcode.DeadStores]
+        a += flag2;
+        ^    ~~~~~
+wrong_arguments_func_pointer.c:524:11: warning: Value stored to 'flag' is never read [deadcode.DeadStores]
+          flag = wrong_arguments_func_pointer_017_func_gbl(0,1.9); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+          ^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+wrong_arguments_func_pointer.c:535:5: warning: Value stored to 'flag' is never read [deadcode.DeadStores]
+    flag = fptr(1,4.5);
+    ^      ~~~~~~~~~~~
+wrong_arguments_func_pointer.c:595:1: warning: Potential leak of memory pointed to by 'st1' [unix.Malloc]
+}
+^
+18 warnings generated.

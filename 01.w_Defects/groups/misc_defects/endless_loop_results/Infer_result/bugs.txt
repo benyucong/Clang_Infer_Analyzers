@@ -1,0 +1,160 @@
+Found 19 issues
+
+endless_loop.c:22: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 22, column 11.
+  20.   	int a = 0;
+  21.   	int i;
+  22. > 	for (i = 0; ; i ++)
+  23.   	{
+  24.   		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+
+endless_loop.c:22: error: INTEGER_OVERFLOW_L5
+  ([0, +oo] + 1):signed32.
+  20.   	int a = 0;
+  21.   	int i;
+  22. > 	for (i = 0; ; i ++)
+  23.   	{
+  24.   		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+
+endless_loop.c:39: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(i<10)` is always false at line 39, column 14.
+  37.   	int a = 0;
+  38.   	int i;
+  39. > 	for (i = 0; i < 10; )
+  40.   	{
+  41.   		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+
+endless_loop.c:41: error: INTEGER_OVERFLOW_L5
+  ([0, +oo] + 1):signed32.
+  39.   	for (i = 0; i < 10; )
+  40.   	{
+  41. > 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+  42.   	}
+  43.   	ret = a;
+
+endless_loop.c:55: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 55, column 9.
+  53.   	int ret;
+  54.   	int a = 0;
+  55. > 	while (1)
+  56.   	{
+  57.   		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+
+endless_loop.c:57: error: INTEGER_OVERFLOW_L5
+  ([0, +oo] + 1):signed32.
+  55.   	while (1)
+  56.   	{
+  57. > 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+  58.   	}
+  59.   	ret = a;
+
+endless_loop.c:72: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!flag` is always false at line 72, column 9.
+  70.   	int a = 0;
+  71.   	int flag = 1;
+  72. > 	while (flag)
+  73.   	{
+  74.   		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+
+endless_loop.c:74: error: INTEGER_OVERFLOW_L5
+  ([0, +oo] + 1):signed32.
+  72.   	while (flag)
+  73.   	{
+  74. > 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+  75.   	}
+  76.   	ret = a;
+
+endless_loop.c:84: error: PURE_FUNCTION
+  Side-effect free function endless_loop_005_func_001.
+  82.    * Complexity: while statement	The return value of the function
+  83.    */
+  84. > int endless_loop_005_func_001 ()
+  85.   {
+  86.   	return 1;
+
+endless_loop.c:93: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!returned by endless_loop_005_func_001()` is always false at line 93, column 9.
+  91.   	int ret;
+  92.   	int a = 0;
+  93. > 	while (endless_loop_005_func_001())
+  94.   	{
+  95.   		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+
+endless_loop.c:95: error: INTEGER_OVERFLOW_L5
+  ([0, +oo] + 1):signed32.
+  93.   	while (endless_loop_005_func_001())
+  94.   	{
+  95. > 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+  96.   	}
+  97.   	ret = a;
+
+endless_loop.c:93: error: INVARIANT_CALL
+  The call to endless_loop_005_func_001 at line 93, column 9 is loop-invariant. It can be moved out of the loop at line 93, column 2.
+  91.   	int ret;
+  92.   	int a = 0;
+  93. > 	while (endless_loop_005_func_001())
+  94.   	{
+  95.   		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+
+endless_loop.c:111: error: INTEGER_OVERFLOW_L5
+  ([0, +oo] + 1):signed32.
+  109.   	while (flag)
+  110.   	{
+  111. > 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+  112.   	}
+  113.   	ret = a;
+
+endless_loop.c:131: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag>0)` is always false at line 131, column 9.
+  129.   	int a = 0;
+  130.   	int flag = 1;
+  131. > 	while (flag > 0)
+  132.   	{
+  133.   		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+
+endless_loop.c:133: error: INTEGER_OVERFLOW_L5
+  ([0, +oo] + 1):signed32.
+  131.   	while (flag > 0)
+  132.   	{
+  133. > 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+  134.   	}
+  135.   	ret = a;
+
+endless_loop.c:148: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==0)` is always false at line 148, column 9.
+  146.   	int a = 0;
+  147.   	int flag = 0;
+  148. > 	while (flag == 0)
+  149.   	{
+  150.   		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+
+endless_loop.c:150: error: INTEGER_OVERFLOW_L5
+  ([0, +oo] + 1):signed32.
+  148.   	while (flag == 0)
+  149.   	{
+  150. > 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+  151.   	}
+  152.   	ret = a;
+
+endless_loop.c:168: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 168, column 9.
+  166.   		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+  167.   	}
+  168. > 	while (1);
+  169.   	ret = a;
+  170.           sink = ret;
+
+endless_loop.c:166: error: INTEGER_OVERFLOW_L5
+  ([0, +oo] + 1):signed32.
+  164.   	do
+  165.   	{
+  166. > 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+  167.   	}
+  168.   	while (1);
+
+Summary of the reports
+
+    INTEGER_OVERFLOW_L5: 9
+  CONDITION_ALWAYS_TRUE: 8
+          PURE_FUNCTION: 1
+         INVARIANT_CALL: 1

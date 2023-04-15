@@ -1,0 +1,110 @@
+Found 13 issues
+
+dead_code.c:19: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 19, column 6.
+  17.   	int a = 0;
+  18.   	int ret;
+  19. > 	if (1)
+  20.   	{
+  21.   		a ++; /*Tool should not detect this line as error*/ /*No ERROR:Dead Code*/
+
+dead_code.c:36: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!flag` is always false at line 36, column 6.
+  34.   	int a = 0;
+  35.   	int ret;
+  36. > 	if (flag)
+  37.   	{
+  38.   		a ++; /*Tool should not detect this line as error*/ /*No ERROR:Dead Code*/
+
+dead_code.c:48: error: PURE_FUNCTION
+  Side-effect free function dead_code_003_func_001.
+  46.    * Complexity: the if statement	The return value of the function
+  47.    */
+  48. > int dead_code_003_func_001 ()
+  49.   {
+  50.   	return 1;
+
+dead_code.c:57: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!returned by dead_code_003_func_001()` is always false at line 57, column 6.
+  55.   	int a = 0;
+  56.   	int ret;
+  57. > 	if (dead_code_003_func_001())
+  58.   	{
+  59.   		a ++; /*Tool should not detect this line as error*/ /*No ERROR:Dead Code*/
+
+dead_code.c:95: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag>0)` is always false at line 95, column 6.
+  93.   	int a = 0;
+  94.   	int ret;
+  95. > 	if (flag > 0)
+  96.   	{
+  97.   		a ++; /*Tool should not detect this line as error*/ /*No ERROR:Dead Code*/
+
+dead_code.c:112: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==0)` is always false at line 112, column 6.
+  110.   	int a = 0;
+  111.   	int ret;
+  112. > 	if (flag == 0)
+  113.   	{
+  114.   		a ++; /*Tool should not detect this line as error*/ /*No ERROR:Dead Code*/
+
+dead_code.c:129: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(i<=1)` is always false at line 129, column 14.
+  127.   	int i;
+  128.   	int ret;
+  129. > 	for (i = 0; i<=1; i ++)
+  130.   	{
+  131.   		a ++; /*Tool should not detect this line as error*/ /*No ERROR:Dead Code*/
+
+dead_code.c:146: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 146, column 9.
+  144.   	int a = 0;
+  145.   	int ret;
+  146. > 	while (1)
+  147.   	{
+  148.   		a ++; /*Tool should not detect this line as error*/ /*No ERROR:Dead Code*/
+
+dead_code.c:164: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!flag` is always false at line 164, column 9.
+  162.   	int a = 0;
+  163.   	int ret;
+  164. > 	while (flag)
+  165.   	{
+  166.   		a ++; /*Tool should not detect this line as error*/ /*No ERROR:Dead Code*/
+
+dead_code.c:177: error: PURE_FUNCTION
+  Side-effect free function dead_code_010_func_001.
+  175.    * Complexity: while statement	The return value of the function
+  176.    */
+  177. > int dead_code_010_func_001 ()
+  178.   {
+  179.   	return 1;
+
+dead_code.c:186: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!returned by dead_code_010_func_001()` is always false at line 186, column 9.
+  184.   	int a = 0;
+  185.   	int ret;
+  186. > 	while (dead_code_010_func_001())
+  187.   	{
+  188.   		a ++; /*Tool should not detect this line as error*/ /*No ERROR:Dead Code*/
+
+dead_code.c:226: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag>0)` is always false at line 226, column 9.
+  224.   	int a = 0;
+  225.   	int ret;
+  226. > 	while (flag > 0) /*Tool should not detect this line as error*/ /*No ERROR:Dead Code*/
+  227.   	{
+  228.   		a ++;
+
+dead_code.c:244: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==0)` is always false at line 244, column 9.
+  242.   	int a = 0;
+  243.   	int ret;
+  244. > 	while (flag == 0)
+  245.   	{
+  246.   		a ++; /*Tool should not detect this line as error*/ /*No ERROR:Dead Code*/
+
+Summary of the reports
+
+  CONDITION_ALWAYS_TRUE: 11
+          PURE_FUNCTION: 2

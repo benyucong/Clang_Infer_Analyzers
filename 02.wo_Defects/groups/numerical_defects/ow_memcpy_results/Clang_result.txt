@@ -1,0 +1,4 @@
+ow_memcpy.c:41:6: warning: Assigned value is garbage or undefined [core.uninitialized.Assign]
+                *q = *p; /*Tool should not detect this line as error*/ /*No ERROR:copy of the overlapped area*/
+                   ^ ~~
+1 warning generated.

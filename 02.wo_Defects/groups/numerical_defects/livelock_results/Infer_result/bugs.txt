@@ -1,0 +1,21 @@
+Found 2 issues
+
+livelock.c:26: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 26, column 8.
+  24.   void *mythreadA(void *pram)
+  25.   {
+  26. > 	while(1)
+  27.   	{
+  28.   		pthread_mutex_lock(&livelock_001_glb_A);
+
+livelock.c:44: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 44, column 8.
+  42.   void *mythreadB(void *pram)
+  43.   {
+  44. > 	while(1)
+  45.   	{
+  46.   		pthread_mutex_lock(&livelock_001_glb_B);
+
+Summary of the reports
+
+  CONDITION_ALWAYS_TRUE: 2

@@ -1,0 +1,179 @@
+Found 21 issues
+
+func_pointer.c:53: error: PURE_FUNCTION
+  Side-effect free function func_pointer_002_func_001.
+  51.    * Complexity: different return type function :int and function pointer: void  (one char argument)
+  52.    */
+  53. > int func_pointer_002_func_001(char a)
+  54.   {
+  55.   	a++;
+
+func_pointer.c:74: error: PURE_FUNCTION
+  Side-effect free function func_pointer_003_func_001.
+  72.     * function pointer declared and used inside if statement
+  73.    */
+  74. > long func_pointer_003_func_001 (long a, int b)
+  75.   {
+  76.   	return (a + (long)b);
+
+func_pointer.c:82: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 82, column 5.
+  80.   {
+  81.    	long ret;
+  82. > 	if(1)
+  83.   	{
+  84.   		long (*func)(long , int);
+
+func_pointer.c:133: error: MEMORY_LEAK
+  memory dynamically allocated to `psink` by call to `func_pointer_004_func_001()` at line 132, column 19 is not reachable after line 133, column 13.
+  131.               fptr = func_pointer_004_func_001; 
+  132.               str = fptr(buf[j]);/*Tool should not detect this line as error*/ /*No ERROR:Bad function pointer casting*/
+  133. >             psink = str;
+  134.           }
+  135.       }
+
+func_pointer.c:143: error: PURE_FUNCTION
+  Side-effect free function func_pointer_005_func_001.
+  141.     * function pointer declared and used inside if statement based on return value of function
+  142.    */
+  143. > int func_pointer_005_func_001(int flag)
+  144.   {
+  145.      int ret;
+
+func_pointer.c:186: error: BUFFER_OVERRUN_U5
+  Offset: [-oo, +oo] (⇐ [-oo, +oo] + [0, 9]) Size: [0, +oo].
+  184.   	    	for(j=0;j<10;j++)
+  185.   		    {
+  186. > 	    		doubleptr[i][j] += 1;
+  187.   		    }
+  188.   		    free (doubleptr[i]);
+
+func_pointer.c:186: error: INTEGER_OVERFLOW_U5
+  ([-oo, +oo] + 1):signed64.
+  184.   	    	for(j=0;j<10;j++)
+  185.   		    {
+  186. > 	    		doubleptr[i][j] += 1;
+  187.   		    }
+  188.   		    free (doubleptr[i]);
+
+func_pointer.c:203: error: PURE_FUNCTION
+  Side-effect free function func_pointer_006_func_001.
+  201.   
+  202.   float ** func_pointer_006_doubleptr_gbl=NULL;
+  203. > int func_pointer_006_func_001(int flag)
+  204.   {
+  205.      int ret;
+
+func_pointer.c:272: error: BUFFER_OVERRUN_U5
+  Offset: [-oo, +oo] (⇐ [-oo, +oo] + [0, 9]) Size: [0, +oo].
+  270.   	    	for(j=0;j<10;j++)
+  271.   		    {
+  272. > 	    		func_pointer_006_doubleptr_gbl[i][j] += 1;
+  273.   		    }
+  274.   	    }
+
+func_pointer.c:284: error: PURE_FUNCTION
+  Side-effect free function func_pointer_007_func_001.
+  282.    * Complexity: different return type function :int and function pointer: char**  (one char array argument)
+  283.    */
+  284. > int func_pointer_007_func_001(char a[])
+  285.   {
+  286.       int i=0;
+
+func_pointer.c:315: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(1==1)` is always false at line 315, column 3.
+  313.   	switch(1)
+  314.   	{
+  315. > 		case 1:
+  316.   		{
+  317.   			void (*fptr)(float [][3] , int); 
+
+func_pointer.c:345: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==1)` is always false at line 345, column 3.
+  343.   	switch (flag)
+  344.   	{
+  345. > 		case 1:
+  346.   		{
+  347.   			u = (func_pointer_009_u_001 *)calloc(1,sizeof(func_pointer_009_u_001));
+
+func_pointer.c:432: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(10==10)` is always false at line 432, column 13.
+  430.       for(j = 0; j <= 1; j++)
+  431.       {
+  432. >         if (MAX ==10)
+  433.       	{
+  434.               char * str;
+
+func_pointer.c:442: error: MEMORY_LEAK
+  memory dynamically allocated to `psink` by call to `func_pointer_011_func_001()` at line 441, column 19 is not reachable after line 442, column 13.
+  440.               fptr2 = fptr1;
+  441.               str = fptr2(buf[j]);/*Tool should not detect this line as error*/ /*No ERROR:Bad function pointer casting*/
+  442. >             psink = str;
+  443.           }
+  444.       }
+
+func_pointer.c:468: error: BUFFER_OVERRUN_L2
+  Offset: [0, 6] (⇐ [0, 3] + [0, 3]) Size: 1.
+  466.   		   for ( j=0 ;j<4; j++)
+  467.   		   {
+  468. > 			   *(p[i]+j) += *(p[i]+j);
+  469.   		   }
+  470.   	   }
+
+func_pointer.c:490: error: PURE_FUNCTION
+  Side-effect free function func_pointer_013_func_001.
+  488.    */
+  489.   
+  490. > int func_pointer_013_func_001 ()
+  491.   {
+  492.   	int a;
+
+func_pointer.c:508: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==1)` is always false at line 508, column 9.
+  506.   	return ret;
+  507.   my_label:
+  508. >     if (flag == 1)
+  509.   	{
+  510.           int (*func_gbl)(void );
+
+func_pointer.c:535: error: PURE_FUNCTION
+  Side-effect free function func_pointer_014_func_001.
+  533.    * Global function pointer returns different type
+  534.    */
+  535. > int func_pointer_014_func_001 (void)
+  536.   {
+  537.   	int a;
+
+func_pointer.c:553: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==1)` is always false at line 553, column 9.
+  551.   
+  552.   my_label:
+  553. >     if (flag == 1)
+  554.   	{
+  555.           func_gbl = func_pointer_014_func_001; 
+
+func_pointer.c:562: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==1)` is always false at line 562, column 9.
+  560.   
+  561.   my_label2:
+  562. >     if (flag == 1)
+  563.    	{
+  564.             flag = func_gbl();/*Tool should not detect this line as error*/ /*No ERROR:Bad function pointer casting*/
+
+func_pointer.c:599: error: INTEGER_OVERFLOW_L5
+  ([-oo, +oo] + [`st1->arr[*]`, +oo]):signed32.
+  597.       {
+  598.       	st1->arr[i] += i;
+  599. >     	temp += st1->arr[i];
+  600.       }
+  601.   }
+
+Summary of the reports
+
+  CONDITION_ALWAYS_TRUE: 7
+          PURE_FUNCTION: 7
+            MEMORY_LEAK: 2
+      BUFFER_OVERRUN_U5: 2
+    INTEGER_OVERFLOW_U5: 1
+      BUFFER_OVERRUN_L2: 1
+    INTEGER_OVERFLOW_L5: 1

@@ -1,0 +1,205 @@
+[44575][environment] CWD = /home/e0925519/cs5218/cs5218_asg3/01.w_Defects/groups/numerical_defects
+[44575][environment] No .inferconfig file found
+[44575][environment] Project root = /home/e0925519/cs5218/cs5218_asg3/01.w_Defects/groups/numerical_defects
+[44575][environment] INFER_ARGS =   @/tmp/args.tmp.5c6af8  ++Contents of '/tmp/args.tmp.5c6af8':
+[44575][environment]                                         run --biabduction --bufferoverrun
+[44575][environment]                                         --linters --liveness --pulse --racerd
+[44575][environment]                                         --siof --starvation --loop-hoisting
+[44575][environment]                                         --uninit --enable-issue-type
+[44575][environment]                                         ARRAY_OUT_OF_BOUNDS_L1
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         ARRAY_OUT_OF_BOUNDS_L2
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         ARRAY_OUT_OF_BOUNDS_L3
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         AUTORELEASEPOOL_SIZE_UNREACHABLE_AT_EXIT
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         BIABDUCTION_ANALYSIS_STOPS
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         BIABDUCTION_MEMORY_LEAK
+[44575][environment]                                         --enable-issue-type BUFFER_OVERRUN_L4
+[44575][environment]                                         --enable-issue-type BUFFER_OVERRUN_L5
+[44575][environment]                                         --enable-issue-type BUFFER_OVERRUN_U5
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         CLASS_CAST_EXCEPTION
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         CONDITION_ALWAYS_FALSE
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         CONDITION_ALWAYS_TRUE
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         CONFIG_CHECKS_BETWEEN_MARKERS
+[44575][environment]                                         --enable-issue-type CONFIG_IMPACT
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         CONSTANT_ADDRESS_DEREFERENCE
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         DANGLING_POINTER_DEREFERENCE
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         DANGLING_POINTER_DEREFERENCE_MAYBE
+[44575][environment]                                         --enable-issue-type DIVIDE_BY_ZERO
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         ERADICATE_META_CLASS_CAN_BE_NULLSAFE
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         ERADICATE_META_CLASS_IS_NULLSAFE
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         ERADICATE_META_CLASS_NEEDS_IMPROVEMENT
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         EXECUTION_TIME_UNREACHABLE_AT_EXIT
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         EXPENSIVE_AUTORELEASEPOOL_SIZE
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         EXPENSIVE_EXECUTION_TIME
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         GLOBAL_VARIABLE_INITIALIZED_WITH_FUNCTION_OR_METHOD_CALL
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         INFINITE_AUTORELEASEPOOL_SIZE
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         INFINITE_EXECUTION_TIME
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         INTEGER_OVERFLOW_L5
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         INTEGER_OVERFLOW_U5
+[44575][environment]                                         --enable-issue-type INVARIANT_CALL
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         Leak_unknown_origin
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         NIL_MESSAGING_TO_NON_POD
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         PULSE_UNINITIALIZED_VALUE
+[44575][environment]                                         --enable-issue-type SKIP_FUNCTION
+[44575][environment]                                         --enable-issue-type
+[44575][environment]                                         UNTRUSTED_HEAP_ALLOCATION
+[44575][environment]                                         --disable-issue-type DEAD_STORE
+[44575][environment]                                         --disable-issue-type
+[44575][environment]                                         UNINITIALIZED_VALUE
+[44575][environment]                                         --disable-issue-type NULL_DEREFERENCE
+[44575][environment]                                         -o
+[44575][environment]                                         /home/e0925519/cs5218/cs5218_asg3/01.w_Defects/groups/numerical_defects/race_condition_results/Infer_result
+[44575][environment]                                       
+[44575][environment] command line arguments:   infer run --biabduction --bufferoverrun --linters
+[44575][environment]                           --liveness --pulse --racerd --siof --starvation
+[44575][environment]                           --loop-hoisting --uninit --enable-issue-type
+[44575][environment]                           ARRAY_OUT_OF_BOUNDS_L1 --enable-issue-type
+[44575][environment]                           ARRAY_OUT_OF_BOUNDS_L2 --enable-issue-type
+[44575][environment]                           ARRAY_OUT_OF_BOUNDS_L3 --enable-issue-type
+[44575][environment]                           AUTORELEASEPOOL_SIZE_UNREACHABLE_AT_EXIT
+[44575][environment]                           --enable-issue-type BIABDUCTION_ANALYSIS_STOPS
+[44575][environment]                           --enable-issue-type BIABDUCTION_MEMORY_LEAK
+[44575][environment]                           --enable-issue-type BUFFER_OVERRUN_L4
+[44575][environment]                           --enable-issue-type BUFFER_OVERRUN_L5
+[44575][environment]                           --enable-issue-type BUFFER_OVERRUN_U5
+[44575][environment]                           --enable-issue-type CLASS_CAST_EXCEPTION
+[44575][environment]                           --enable-issue-type CONDITION_ALWAYS_FALSE
+[44575][environment]                           --enable-issue-type CONDITION_ALWAYS_TRUE
+[44575][environment]                           --enable-issue-type CONFIG_CHECKS_BETWEEN_MARKERS
+[44575][environment]                           --enable-issue-type CONFIG_IMPACT
+[44575][environment]                           --enable-issue-type CONSTANT_ADDRESS_DEREFERENCE
+[44575][environment]                           --enable-issue-type DANGLING_POINTER_DEREFERENCE
+[44575][environment]                           --enable-issue-type
+[44575][environment]                           DANGLING_POINTER_DEREFERENCE_MAYBE
+[44575][environment]                           --enable-issue-type DIVIDE_BY_ZERO
+[44575][environment]                           --enable-issue-type
+[44575][environment]                           ERADICATE_META_CLASS_CAN_BE_NULLSAFE
+[44575][environment]                           --enable-issue-type
+[44575][environment]                           ERADICATE_META_CLASS_IS_NULLSAFE
+[44575][environment]                           --enable-issue-type
+[44575][environment]                           ERADICATE_META_CLASS_NEEDS_IMPROVEMENT
+[44575][environment]                           --enable-issue-type
+[44575][environment]                           EXECUTION_TIME_UNREACHABLE_AT_EXIT
+[44575][environment]                           --enable-issue-type EXPENSIVE_AUTORELEASEPOOL_SIZE
+[44575][environment]                           --enable-issue-type EXPENSIVE_EXECUTION_TIME
+[44575][environment]                           --enable-issue-type
+[44575][environment]                           GLOBAL_VARIABLE_INITIALIZED_WITH_FUNCTION_OR_METHOD_CALL
+[44575][environment]                           --enable-issue-type INFINITE_AUTORELEASEPOOL_SIZE
+[44575][environment]                           --enable-issue-type INFINITE_EXECUTION_TIME
+[44575][environment]                           --enable-issue-type INTEGER_OVERFLOW_L5
+[44575][environment]                           --enable-issue-type INTEGER_OVERFLOW_U5
+[44575][environment]                           --enable-issue-type INVARIANT_CALL
+[44575][environment]                           --enable-issue-type Leak_unknown_origin
+[44575][environment]                           --enable-issue-type NIL_MESSAGING_TO_NON_POD
+[44575][environment]                           --enable-issue-type PULSE_UNINITIALIZED_VALUE
+[44575][environment]                           --enable-issue-type SKIP_FUNCTION
+[44575][environment]                           --enable-issue-type UNTRUSTED_HEAP_ALLOCATION
+[44575][environment]                           --disable-issue-type DEAD_STORE
+[44575][environment]                           --disable-issue-type UNINITIALIZED_VALUE
+[44575][environment]                           --disable-issue-type NULL_DEREFERENCE -o
+[44575][environment]                           race_condition_results/Infer_result -- clang -c
+[44575][environment]                           race_condition.cActive checkers: biabduction (C/C++/ObjC, Java), buffer overrun analysis (C/C++/ObjC, Java), buffer overrun checker (C/C++/ObjC, Java), fragment retains view (Java), liveness (C/C++/ObjC), ownership (C/C++/ObjC), pulse (C/C++/ObjC), RacerD (C/C++/ObjC, Java), SIOF (C/C++/ObjC), uninitialized variables (C/C++/ObjC), cost analysis (C/C++/ObjC, Java), loop hoisting (C/C++/ObjC, Java), Starvation analysis (C/C++/ObjC, Java), purity (C/C++/ObjC, Java)
+[44575][environment] Infer log identifier is 
+Infer version v0.16.0
+[44575][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[44575][environment] 
+[44575][   progress] Capturing in make/cc mode...
+[44575][      debug] 
+[44575][      debug] *** Beginning capture of file /home/e0925519/cs5218/cs5218_asg3/01.w_Defects/groups/numerical_defects/race_condition.c ***
+[44575][      debug] Clang frontend action is translating and linting
+[44575][      debug] Loading the following linters files: /opt/infer-linux64-v0.16.0/lib/infer/infer/bin/../lib/linter_rules/linters.al
+[44575][      debug] Elapsed: 107ms.
+[44575][      debug] 
+[44575][   progress] Found 1 source file to analyze in /home/e0925519/cs5218/cs5218_asg3/01.w_Defects/groups/numerical_defects/race_condition_results/Infer_result
+[44575][environment] Parallel jobs: 4
+[44582][   progress] race_condition.c starting
+[44582][ intern err] 
+[44582][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[44582][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][      debug] 
+[44582][      debug] typ_get_recursive_flds: unexpected sizeof(t=) unknown struct type: class __infer_model_pthread_mutex_t
+[44582][ intern err] 
+[44582][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[44582][   progress] race_condition.c DONE

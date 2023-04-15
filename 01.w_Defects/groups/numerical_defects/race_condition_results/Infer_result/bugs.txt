@@ -1,0 +1,86 @@
+Found 10 issues
+
+race_condition.c:34: error: PURE_FUNCTION
+  Side-effect free function race_condition_001.
+  32.   }
+  33.   
+  34. > void race_condition_001()
+  35.   {
+  36.   	pthread_t pthread1,pthread2,pthread3,pthread4;
+
+race_condition.c:54: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 54, column 8.
+  52.   void* race_condition_002_1()
+  53.   {
+  54. > 	while(1)
+  55.   	{
+  56.   
+
+race_condition.c:71: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 71, column 8.
+  69.   void race_condition_002()
+  70.   {
+  71. > 	while(1)
+  72.   	{
+  73.   		pthread_t pthread1,pthread2;
+
+race_condition.c:69: error: PURE_FUNCTION
+  Side-effect free function race_condition_002.
+  67.   }
+  68.   
+  69. > void race_condition_002()
+  70.   {
+  71.   	while(1)
+
+race_condition.c:101: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 101, column 8.
+  99.   void race_condition_003()
+  100.   {
+  101. > 	while(1)
+  102.   	{
+  103.   		pthread_t pthread1,pthread2,pthread3;
+
+race_condition.c:99: error: PURE_FUNCTION
+  Side-effect free function race_condition_003.
+  97.   
+  98.   
+  99. > void race_condition_003()
+  100.   {
+  101.   	while(1)
+
+race_condition.c:197: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_race_condition_006_glb_mutex.
+  195.    * Complexity: Locking twice and unlocking only once in same function using two thread
+  196.    */
+  197. > pthread_mutex_t race_condition_006_glb_mutex = PTHREAD_MUTEX_INITIALIZER;
+  198.   
+  199.   #if defined(CHECKER_POLYSPACE)
+
+race_condition.c:255: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_race_condition_007_glb_mutex.
+  253.    * Complexity: Data Race Condition over multiple functions , 2 threads
+  254.    */
+  255. > pthread_mutex_t race_condition_007_glb_mutex = PTHREAD_MUTEX_INITIALIZER;
+  256.   
+  257.   #if defined(CHECKER_POLYSPACE)
+
+race_condition.c:322: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_race_condition_008_glb_mutex_1.
+  320.    * Complexity: Data Race Condition over multiple functions using 2 threads unlocked based on if condition
+  321.    */
+  322. > pthread_mutex_t race_condition_008_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  323.   pthread_mutex_t race_condition_008_glb_mutex_2 = PTHREAD_MUTEX_INITIALIZER;
+  324.   float race_condition_008_glb_data = 1000.0;
+
+race_condition.c:323: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_race_condition_008_glb_mutex_2.
+  321.    */
+  322.   pthread_mutex_t race_condition_008_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  323. > pthread_mutex_t race_condition_008_glb_mutex_2 = PTHREAD_MUTEX_INITIALIZER;
+  324.   float race_condition_008_glb_data = 1000.0;
+  325.   void *race_condition_008_tsk_001(void *input)
+
+Summary of the reports
+
+          PURE_FUNCTION: 7
+  CONDITION_ALWAYS_TRUE: 3

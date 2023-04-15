@@ -1,0 +1,222 @@
+Found 26 issues
+
+invalid_memory_access.c:39: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==10)` is always false at line 39, column 8.
+  37.       (flag == 10)? (*(ptr+1) = 10):(a=100);
+  38.   
+  39. >     if(flag == 10)
+  40.       {
+  41.       	free(ptr);
+
+invalid_memory_access.c:44: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==10)` is always false at line 44, column 8.
+  42.       }
+  43.        }
+  44. >     if(flag == 10)
+  45.       	a = *(ptr+1); /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+  46.   
+
+invalid_memory_access.c:28: error: PURE_FUNCTION
+  Side-effect free function invalid_memory_access_001.
+  26.   * Complexity : Memory is allocated and accessed after free -  when using pointer to int and conditional operator
+  27.   */
+  28. > void invalid_memory_access_001 ()
+  29.   {
+  30.   	int *ptr, a;
+
+invalid_memory_access.c:59: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(staticflag==10)` is always false at line 59, column 9.
+  57.   	double *ptr, *dptr = 0,a;
+  58.   	static int staticflag=100;
+  59. >     if (staticflag == 10)
+  60.       	  	(ptr= (double*) malloc(10*sizeof(double)));
+  61.       else
+
+invalid_memory_access.c:64: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(staticflag==10)` is always false at line 64, column 10.
+  62.       	  	(dptr = (double*) malloc(5*sizeof(double)));
+  63.   
+  64. >     if  (staticflag == 10 && ptr!=NULL)
+  65.       		(*(ptr+1) = 10.5);
+  66.       else
+
+invalid_memory_access.c:69: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(staticflag==10)` is always false at line 69, column 8.
+  67.       	    (*(dptr+1) = 5.5) ;
+  68.   
+  69. >     if(staticflag == 10 && ptr!=NULL)
+  70.   
+  71.       {
+
+invalid_memory_access.c:79: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(staticflag==10)` is always false at line 79, column 8.
+  77.       }
+  78.   
+  79. >     if(staticflag == 10)
+  80.       {
+  81.   	    ;
+
+invalid_memory_access.c:97: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(i>0)` is always false at line 97, column 8.
+  95.   	int i=1;
+  96.   	char *buf,*c;
+  97. > 	while(i>0)
+  98.   	{
+  99.   		buf = (char *) malloc (25 * sizeof(char));
+
+invalid_memory_access.c:147: error: DANGLING_POINTER_DEREFERENCE
+  uninitialized pointer `ptr` could be dangling and is dereferenced or freed at line 147, column 14.
+  145.   	if (count ==0)
+  146.   	{
+  147. >     	count = *ptr; /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+  148.   		return 1;
+  149.   	}
+
+invalid_memory_access.c:158: error: INTEGER_OVERFLOW_U5
+  (`count` × [-oo, +oo]):signed32.
+  156.       	    free(ptr);
+  157.       	}
+  158. >     	return (count * invalid_memory_access_005(count-1));
+  159.       }
+  160.   }
+
+invalid_memory_access.c:224: error: USE_AFTER_FREE
+  pointer `buf` last assigned on line 219 was freed by call to `free()` at line 223, column 2 and is dereferenced or freed at line 224, column 2.
+  222.   	{
+  223.   	free(buf);
+  224. > 	memcpy(buf,buf1,11); /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+  225.   	}
+  226.   }
+
+invalid_memory_access.c:253: error: PURE_FUNCTION
+  Side-effect free function invalid_memory_access_009.
+  251.   } invalid_memory_access_009_uni_001;
+  252.   
+  253. > void invalid_memory_access_009 ()
+  254.   {
+  255.   	invalid_memory_access_009_uni_001 *u = (invalid_memory_access_009_uni_001 * )malloc(5*sizeof( invalid_memory_access_009_uni_001 ));
+
+invalid_memory_access.c:278: error: PURE_FUNCTION
+  Side-effect free function invalid_memory_access_func_010.
+  276.   * Complexity Memory allocated in a function and Memory used in another function
+  277.   */
+  278. > void invalid_memory_access_func_010 (int len ,int **Ptr)
+  279.   {
+  280.   	int * p = malloc(sizeof(int) * len);
+
+invalid_memory_access.c:284: error: PURE_FUNCTION
+  Side-effect free function invalid_memory_access_010.
+  282.   }
+  283.   
+  284. > void invalid_memory_access_010 ()
+  285.   {
+  286.   	int ptr[5] = {4,6,9,10,0};
+
+invalid_memory_access.c:305: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 305, column 8.
+  303.   	int *ptr,i=0,j;
+  304.   	int index[4] = {3, 5, 4, 6};
+  305. > 	for(j=0;;j++)
+  306.   	{
+  307.   		ptr = (int *)malloc(sizeof(int) * 4);
+
+invalid_memory_access.c:320: error: BUFFER_OVERRUN_L2
+  Offset: [0, 4] Size: 4.
+  318.   	    break;
+  319.   	}
+  320. > 	 *(ptr+i) = i; /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+  321.   }
+  322.   
+
+invalid_memory_access.c:301: error: PURE_FUNCTION
+  Side-effect free function invalid_memory_access_011.
+  299.   * Complexity: 1-dimensional array
+  300.   */
+  301. > void invalid_memory_access_011 ()
+  302.   {
+  303.   	int *ptr,i=0,j;
+
+invalid_memory_access.c:371: error: USE_AFTER_FREE
+  pointer `s` last assigned on line 337 was freed by call to `free()` at line 367, column 4 and is dereferenced or freed at line 371, column 12.
+  369.   		}
+  370.   	}
+  371. > 	return (i+s->a);/*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+  372.   }
+  373.   
+
+invalid_memory_access.c:436: error: PURE_FUNCTION
+  Side-effect free function invalid_memory_access_013_func_003.
+  434.   }
+  435.   
+  436. > void invalid_memory_access_013_func_003 (int flag)
+  437.   {
+  438.   	invalid_memory_access_013_s_001 s;
+
+invalid_memory_access.c:464: error: PURE_FUNCTION
+  Side-effect free function invalid_memory_access_014.
+  462.   * Complexity: When using a pointer to int and  goto
+  463.   */
+  464. > int invalid_memory_access_014 (int flag)
+  465.   {
+  466.   	int ret = 0,i;
+
+invalid_memory_access.c:541: error: PURE_FUNCTION
+  Side-effect free function invalid_memory_access_016_func_001.
+  539.   * Complexity: global char double pointer  variable initialized in another function
+  540.    */
+  541. > int invalid_memory_access_016_func_001(int flag)
+  542.   {
+  543.      int ret;
+
+invalid_memory_access.c:597: error: PURE_FUNCTION
+  Side-effect free function invalid_memory_access_017_func_001.
+  595.   * Complexity: global char pointer  variable initialized in another function , freed in another function based in while loop
+  596.    */
+  597. > int invalid_memory_access_017_func_001(int flag)
+  598.   {
+  599.      int ret;
+
+invalid_memory_access.c:652: error: BUFFER_OVERRUN_L4
+  Offset: [0, +oo] Size: 10 by call to `invalid_memory_access_017_func_004`.
+  650.   	else
+  651.   	{
+  652. > 		invalid_memory_access_017_func_004();
+  653.   	}
+  654.   }
+
+invalid_memory_access.c:737: error: BUFFER_OVERRUN_L5
+  Offset: [-oo, +oo] (⇐ [0, 1] + [-oo, +oo]) Size: 2 by call to `invalid_memory_access_015`.
+  735.   	if (vflag == 15 || vflag ==888)
+  736.   	{
+  737. > 		invalid_memory_access_015();
+  738.   	}
+  739.   
+
+invalid_memory_access.c:737: error: INTEGER_OVERFLOW_L5
+  ([-oo, +oo] - 1):signed32 by call to `invalid_memory_access_015`.
+  735.   	if (vflag == 15 || vflag ==888)
+  736.   	{
+  737. > 		invalid_memory_access_015();
+  738.   	}
+  739.   
+
+invalid_memory_access.c:737: error: INTEGER_OVERFLOW_L5
+  ([0, +oo] + 1):signed32 by call to `invalid_memory_access_015`.
+  735.   	if (vflag == 15 || vflag ==888)
+  736.   	{
+  737. > 		invalid_memory_access_015();
+  738.   	}
+  739.   
+
+Summary of the reports
+
+                 PURE_FUNCTION: 9
+        CONDITION_ALWAYS_FALSE: 4
+         CONDITION_ALWAYS_TRUE: 4
+                USE_AFTER_FREE: 2
+           INTEGER_OVERFLOW_L5: 2
+           INTEGER_OVERFLOW_U5: 1
+             BUFFER_OVERRUN_L2: 1
+             BUFFER_OVERRUN_L4: 1
+  DANGLING_POINTER_DEREFERENCE: 1
+             BUFFER_OVERRUN_L5: 1

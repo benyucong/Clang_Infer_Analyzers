@@ -1,0 +1,196 @@
+Found 23 issues
+
+func_pointer.c:31: error: PURE_FUNCTION
+  Side-effect free function func_pointer_001_func_001.
+  29.    * Complexity: different return type function :void and function pointer: int (no arguments)
+  30.    */
+  31. > void func_pointer_001_func_001 ()
+  32.   {
+  33.   	int a ;
+
+func_pointer.c:49: error: PURE_FUNCTION
+  Side-effect free function func_pointer_002_func_001.
+  47.    * Complexity: different return type function :int and function pointer: void  (one char argument)
+  48.    */
+  49. > int func_pointer_002_func_001(char a)
+  50.   {
+  51.   	a++;
+
+func_pointer.c:69: error: PURE_FUNCTION
+  Side-effect free function func_pointer_003_func_001.
+  67.     * function pointer declared and used inside if statement
+  68.    */
+  69. > long func_pointer_003_func_001 (long a, int b)
+  70.   {
+  71.   	return (a + (long)b);
+
+func_pointer.c:77: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 77, column 5.
+  75.   {
+  76.   	float ret;
+  77. > 	if(1)
+  78.   	{
+  79.   		float (*func)(long , int);
+
+func_pointer.c:133: error: PURE_FUNCTION
+  Side-effect free function func_pointer_005_func_001.
+  131.     * function pointer declared and used inside if statement based on return value of function
+  132.    */
+  133. > int func_pointer_005_func_001(int flag)
+  134.   {
+  135.      int ret =0;
+
+func_pointer.c:143: error: PURE_FUNCTION
+  Side-effect free function func_pointer_005_func_002.
+  141.   }
+  142.   
+  143. > long **  func_pointer_005_func_002()
+  144.   {
+  145.   	int i,j;
+
+func_pointer.c:193: error: PURE_FUNCTION
+  Side-effect free function func_pointer_006_func_001.
+  191.    */
+  192.   float ** doubleptr=NULL;
+  193. > int func_pointer_006_func_001(int flag)
+  194.   {
+  195.      int ret =0;
+
+func_pointer.c:262: error: INTEGER_OVERFLOW_U5
+  ([-oo, +oo] + 1):signed8.
+  260.   	    	for(j=0;j<10;j++)
+  261.   		    {
+  262. > 	    		doubleptr[i][j] += 1;
+  263.   		    }
+  264.   	    }
+
+func_pointer.c:273: error: PURE_FUNCTION
+  Side-effect free function func_pointer_007_func_001.
+  271.    * Complexity: different return type function :int and function pointer: char**  (one char array argument)
+  272.    */
+  273. > int func_pointer_007_func_001(char a[])
+  274.   {
+  275.       int i=0;
+
+func_pointer.c:304: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(1==1)` is always false at line 304, column 3.
+  302.   	switch(1)
+  303.   	{
+  304. > 		case 1:
+  305.   		{
+  306.   			float ** (*fptr)(float [][3] , int);
+
+func_pointer.c:309: error: BUFFER_OVERRUN_U5
+  Offset: [-oo, +oo] Size: [0, +oo].
+  307.   			fptr = (float ** (*)(float [][3], int))func_pointer_008_func_001;
+  308.   			ptr = fptr(a,1);/*Tool should detect this line as error*/ /*ERROR:Bad function pointer casting*/
+  309. > 			printf("%f \n",**ptr);
+  310.   			break;
+  311.   		}
+
+func_pointer.c:335: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==1)` is always false at line 335, column 3.
+  333.   	switch (flag)
+  334.   	{
+  335. > 		case 1:
+  336.   		{
+  337.   			u = (func_pointer_009_u_001 *)calloc(1,sizeof(func_pointer_009_u_001));
+
+func_pointer.c:362: error: PURE_FUNCTION
+  Side-effect free function func_pointer_010_func_001.
+  360.    * Complexity: the function pointer - single alias (conditions are the same as No.1)
+  361.    */
+  362. > void func_pointer_010_func_001 ()
+  363.   {
+  364.   	int a;
+
+func_pointer.c:413: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(10==10)` is always false at line 413, column 13.
+  411.       for(j = 0; j <= 1; j++)
+  412.       {
+  413. >         if (MAX ==10)
+  414.       	{
+  415.               int (*fptr)(const char *);
+
+func_pointer.c:443: error: BUFFER_OVERRUN_L2
+  Offset: [0, 6] (⇐ [0, 3] + [0, 3]) Size: 1.
+  441.   		for ( j=0 ;j<4; j++)
+  442.   		{
+  443. > 			*(p[i]+j) += *(p[i]+j);
+  444.   		}
+  445.   	}
+
+func_pointer.c:463: error: PURE_FUNCTION
+  Side-effect free function func_pointer_013_func_001.
+  461.    */
+  462.   
+  463. > int func_pointer_013_func_001 ()
+  464.   {
+  465.   	int a;
+
+func_pointer.c:481: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==1)` is always false at line 481, column 9.
+  479.   	return ret;
+  480.   my_label:
+  481. >     if (flag == 1)
+  482.   	{
+  483.           void (*func_gbl)(int );
+
+func_pointer.c:508: error: PURE_FUNCTION
+  Side-effect free function func_pointer_014_func_001.
+  506.    */
+  507.   
+  508. > int func_pointer_014_func_001 (void)
+  509.   {
+  510.   	int a;
+
+func_pointer.c:526: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==1)` is always false at line 526, column 9.
+  524.   
+  525.   my_label:
+  526. >     if (flag == 1)
+  527.   	{
+  528.       	func_gbl = (float(*)( void))func_pointer_014_func_001;
+
+func_pointer.c:535: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==1)` is always false at line 535, column 9.
+  533.   
+  534.   my_label2:
+  535. >     if (flag == 1)
+  536.    	{
+  537.           float f;
+
+func_pointer.c:572: error: INTEGER_OVERFLOW_L5
+  ([-oo, +oo] + [`st1->arr[*]`, +oo]):signed32.
+  570.       {
+  571.       	st1->arr[i] += i;
+  572. >     	temp += st1->arr[i];
+  573.       }
+  574.   }
+
+func_pointer.c:603: error: BUFFER_OVERRUN_L5
+  Offset added: 52 Size: [0, +oo] by call to `func_pointer_015_func_001`.
+  601.       memset(st1, 0, sizeof(*st1));
+  602.   
+  603. > 	func_pointer_015_func_001(st1);
+  604.   
+  605.   	void (*fptr3)(func_pointer_015_s_001* st1);
+
+func_pointer.c:607: error: MEMORY_LEAK
+  memory dynamically allocated by call to `malloc()` at line 600, column 34 is not reachable after line 607, column 2.
+  605.   	void (*fptr3)(func_pointer_015_s_001* st1);
+  606.   	fptr3 = func_pointer_015_func_004;
+  607. > 	fptr3(st1);
+  608.   }
+  609.   
+
+Summary of the reports
+
+          PURE_FUNCTION: 10
+  CONDITION_ALWAYS_TRUE: 7
+            MEMORY_LEAK: 1
+    INTEGER_OVERFLOW_U5: 1
+      BUFFER_OVERRUN_U5: 1
+      BUFFER_OVERRUN_L5: 1
+    INTEGER_OVERFLOW_L5: 1
+      BUFFER_OVERRUN_L2: 1

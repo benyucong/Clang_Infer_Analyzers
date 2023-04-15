@@ -1,0 +1,21 @@
+Found 2 issues
+
+littlemem_st.c:50: error: PURE_FUNCTION
+  Side-effect free function littlemem_st_002.
+  48.   } littlemem_st_002_s_001;
+  49.   
+  50. > void littlemem_st_002 ()
+  51.   {
+  52.   	char buf[10];
+
+littlemem_st.c:68: error: PURE_FUNCTION
+  Side-effect free function littlemem_st_003.
+  66.   } littlemem_st_003_uni_001;
+  67.   
+  68. > void littlemem_st_003 ()
+  69.   {
+  70.   	char buf[2];
+
+Summary of the reports
+
+  PURE_FUNCTION: 2

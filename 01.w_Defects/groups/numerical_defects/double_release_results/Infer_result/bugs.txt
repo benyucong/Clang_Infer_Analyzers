@@ -1,0 +1,150 @@
+Found 18 issues
+
+double_release.c:24: error: PURE_FUNCTION
+  Side-effect free function double_release_001_glb_mutex_lock.
+  22.   pthread_mutex_t * double_release_001_glb_mutex = & double_release_001_glb_mutex_;
+  23.   /* # If defined (CHECKER_POLYSPACE) */
+  24. > void double_release_001_glb_mutex_lock () {}
+  25.   void double_release_001_glb_mutex_unlock () {}
+  26.   /* # Endif  # if defined (CHECKER_POLYSPACE) */
+
+double_release.c:25: error: PURE_FUNCTION
+  Side-effect free function double_release_001_glb_mutex_unlock.
+  23.   /* # If defined (CHECKER_POLYSPACE) */
+  24.   void double_release_001_glb_mutex_lock () {}
+  25. > void double_release_001_glb_mutex_unlock () {}
+  26.   /* # Endif  # if defined (CHECKER_POLYSPACE) */
+  27.   
+
+double_release.c:52: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 52, column 9.
+  50.   void double_release_001_tskentry_001 ()
+  51.   {
+  52. > 	while (1)
+  53.      {
+  54.   		if (rand ())
+
+double_release.c:70: error: PURE_FUNCTION
+  Side-effect free function double_release_002_glb_mutex_lock.
+  68.   pthread_mutex_t * double_release_002_glb_mutex = & double_release_002_glb_mutex_;
+  69.   /* # If defined (CHECKER_POLYSPACE) */
+  70. > void double_release_002_glb_mutex_lock () {}
+  71.   void double_release_002_glb_mutex_unlock () {}
+  72.   /* # Endif  # if defined (CHECKER_POLYSPACE) */
+
+double_release.c:71: error: PURE_FUNCTION
+  Side-effect free function double_release_002_glb_mutex_unlock.
+  69.   /* # If defined (CHECKER_POLYSPACE) */
+  70.   void double_release_002_glb_mutex_lock () {}
+  71. > void double_release_002_glb_mutex_unlock () {}
+  72.   /* # Endif  # if defined (CHECKER_POLYSPACE) */
+  73.   
+
+double_release.c:103: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 103, column 9.
+  101.   void double_release_002_tskentry_001 ()
+  102.   {
+  103. > 	while (1)
+  104.       {
+  105.   		if (rand ())
+
+double_release.c:118: error: PURE_FUNCTION
+  Side-effect free function double_release_003_glb_mutex_lock.
+  116.   pthread_mutex_t double_release_003_glb_mutex_;
+  117.   pthread_mutex_t * double_release_003_glb_mutex = & double_release_003_glb_mutex_;
+  118. > void double_release_003_glb_mutex_lock () {}
+  119.   void double_release_003_glb_mutex_unlock () {}
+  120.   
+
+double_release.c:119: error: PURE_FUNCTION
+  Side-effect free function double_release_003_glb_mutex_unlock.
+  117.   pthread_mutex_t * double_release_003_glb_mutex = & double_release_003_glb_mutex_;
+  118.   void double_release_003_glb_mutex_lock () {}
+  119. > void double_release_003_glb_mutex_unlock () {}
+  120.   
+  121.   int double_release_003_glb_data = 0;
+
+double_release.c:149: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 149, column 9.
+  147.   void double_release_003_tskentry_001 ()
+  148.   {
+  149. > 	while (1)
+  150.   	{
+  151.   		if (rand ())
+
+double_release.c:164: error: PURE_FUNCTION
+  Side-effect free function double_release_004_glb_mutex_lock.
+  162.   pthread_mutex_t double_release_004_glb_mutex_;
+  163.   pthread_mutex_t * double_release_004_glb_mutex = & double_release_004_glb_mutex_;
+  164. > void double_release_004_glb_mutex_lock () {}
+  165.   void double_release_004_glb_mutex_unlock () {}
+  166.   
+
+double_release.c:165: error: PURE_FUNCTION
+  Side-effect free function double_release_004_glb_mutex_unlock.
+  163.   pthread_mutex_t * double_release_004_glb_mutex = & double_release_004_glb_mutex_;
+  164.   void double_release_004_glb_mutex_lock () {}
+  165. > void double_release_004_glb_mutex_unlock () {}
+  166.   
+  167.   int double_release_004_glb_data = 0;
+
+double_release.c:194: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 194, column 9.
+  192.   void double_release_004_tskentry_001 ()
+  193.   {
+  194. > 	while (1)
+  195.   	{
+  196.   		if (rand ())
+
+double_release.c:213: error: PURE_FUNCTION
+  Side-effect free function double_release_005_glb_mutex_lock.
+  211.   pthread_mutex_t * double_release_005_glb_mutex = & double_release_005_glb_mutex_;
+  212.   /* # If defined (CHECKER_POLYSPACE) */
+  213. > void double_release_005_glb_mutex_lock () {}
+  214.   void double_release_005_glb_mutex_unlock () {}
+  215.   /* # Endif # if defined (CHECKER_POLYSPACE) */
+
+double_release.c:214: error: PURE_FUNCTION
+  Side-effect free function double_release_005_glb_mutex_unlock.
+  212.   /* # If defined (CHECKER_POLYSPACE) */
+  213.   void double_release_005_glb_mutex_lock () {}
+  214. > void double_release_005_glb_mutex_unlock () {}
+  215.   /* # Endif # if defined (CHECKER_POLYSPACE) */
+  216.   
+
+double_release.c:243: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 243, column 9.
+  241.   void double_release_005_tskentry_001 ()
+  242.   {
+  243. > 	while (1)
+  244.   	{
+  245.   		if (rand ())
+
+double_release.c:260: error: PURE_FUNCTION
+  Side-effect free function double_release_006_glb_mutex_lock.
+  258.   pthread_mutex_t * double_release_006_glb_mutex = & double_release_006_glb_mutex_;
+  259.   /* # If defined (CHECKER_POLYSPACE) */
+  260. > void double_release_006_glb_mutex_lock () {}
+  261.   void double_release_006_glb_mutex_unlock () {}
+  262.   /* # Endif # if defined (CHECKER_POLYSPACE) */
+
+double_release.c:261: error: PURE_FUNCTION
+  Side-effect free function double_release_006_glb_mutex_unlock.
+  259.   /* # If defined (CHECKER_POLYSPACE) */
+  260.   void double_release_006_glb_mutex_lock () {}
+  261. > void double_release_006_glb_mutex_unlock () {}
+  262.   /* # Endif # if defined (CHECKER_POLYSPACE) */
+  263.   
+
+double_release.c:290: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 290, column 9.
+  288.   void double_release_006_tskentry_001 ()
+  289.   {
+  290. > 	while (1)
+  291.   	{
+  292.   		if (rand ())
+
+Summary of the reports
+
+          PURE_FUNCTION: 12
+  CONDITION_ALWAYS_TRUE: 6

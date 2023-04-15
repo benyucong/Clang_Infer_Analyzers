@@ -1,0 +1,38 @@
+Found 4 issues
+
+data_overflow.c:122: error: PURE_FUNCTION
+  Side-effect free function data_overflow_009.
+  120.   } data_overflow_009_s_001;
+  121.   
+  122. > void data_overflow_009 ()
+  123.   {
+  124.   	data_overflow_009_s_001 s;
+
+data_overflow.c:138: error: PURE_FUNCTION
+  Side-effect free function data_overflow_010.
+  136.   } data_overflow_010_s_001;
+  137.   
+  138. > void data_overflow_010 ()
+  139.   {
+  140.   	data_overflow_010_s_001 s;
+
+data_overflow.c:237: error: PURE_FUNCTION
+  Side-effect free function data_overflow_018_func_001.
+  235.    * Complexity: int	Overflow with + 1	The return value of the function
+  236.    */
+  237. > int data_overflow_018_func_001 ()
+  238.   {
+  239.   	return 1;
+
+data_overflow.c:276: error: INTEGER_OVERFLOW_L2
+  (2147483646 + [1, 4]):signed32.
+  274.   	int dlist[4] = {4, 1, 3, 2};
+  275.   	int ret;
+  276. > 	ret = max + dlist[1];/*Tool should Not detect this line as error*/ /*No ERROR:Data Overflow*/
+  277.           sink = ret;
+  278.   }
+
+Summary of the reports
+
+        PURE_FUNCTION: 3
+  INTEGER_OVERFLOW_L2: 1

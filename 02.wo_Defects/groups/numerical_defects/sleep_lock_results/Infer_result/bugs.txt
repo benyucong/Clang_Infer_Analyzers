@@ -1,0 +1,29 @@
+Found 3 issues
+
+sleep_lock.c:26: error: PURE_FUNCTION
+  Side-effect free function sleep_lock_001_glb_mutex_lock.
+  24.   pthread_mutex_t *sleep_lock_001_glb_mutex = &sleep_lock_001_glb_mutex_;
+  25.   /* #if defined(CHECKER_POLYSPACE) */
+  26. > void sleep_lock_001_glb_mutex_lock () {}
+  27.   void sleep_lock_001_glb_mutex_unlock () {}
+  28.   /* #endif  #if defined(CHECKER_POLYSPACE) */
+
+sleep_lock.c:27: error: PURE_FUNCTION
+  Side-effect free function sleep_lock_001_glb_mutex_unlock.
+  25.   /* #if defined(CHECKER_POLYSPACE) */
+  26.   void sleep_lock_001_glb_mutex_lock () {}
+  27. > void sleep_lock_001_glb_mutex_unlock () {}
+  28.   /* #endif  #if defined(CHECKER_POLYSPACE) */
+  29.   
+
+sleep_lock.c:103: error: PURE_FUNCTION
+  Side-effect free function sleep_lock_003_func_001.
+  101.   int sleep_lock_003_glb_data = 0;
+  102.   
+  103. > void sleep_lock_003_func_001 ()
+  104.   {
+  105.   	/* Do nothing */
+
+Summary of the reports
+
+  PURE_FUNCTION: 3

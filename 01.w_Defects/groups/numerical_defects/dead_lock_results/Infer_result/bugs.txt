@@ -1,0 +1,45 @@
+Found 5 issues
+
+dead_lock.c:21: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_dead_lock_001_glb_mutexA.
+  19.    * Complexity: exclusive control of two resources task 1: A -> B, task 2: B -> A
+  20.    */
+  21. > pthread_mutex_t dead_lock_001_glb_mutexA = PTHREAD_MUTEX_INITIALIZER;
+  22.   pthread_mutex_t dead_lock_001_glb_mutexB = PTHREAD_MUTEX_INITIALIZER;
+  23.   #if defined(CHECKER_POLYSPACE)
+
+dead_lock.c:22: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_dead_lock_001_glb_mutexB.
+  20.    */
+  21.   pthread_mutex_t dead_lock_001_glb_mutexA = PTHREAD_MUTEX_INITIALIZER;
+  22. > pthread_mutex_t dead_lock_001_glb_mutexB = PTHREAD_MUTEX_INITIALIZER;
+  23.   #if defined(CHECKER_POLYSPACE)
+  24.   void dead_lock_001_glb_mutexA_lock () {}
+
+dead_lock.c:130: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_dead_lock_002_glb_mutexA.
+  128.    */
+  129.   
+  130. > pthread_mutex_t dead_lock_002_glb_mutexA = PTHREAD_MUTEX_INITIALIZER;
+  131.   pthread_mutex_t dead_lock_002_glb_mutexB = PTHREAD_MUTEX_INITIALIZER;
+  132.   pthread_mutex_t dead_lock_002_glb_mutexC = PTHREAD_MUTEX_INITIALIZER;
+
+dead_lock.c:131: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_dead_lock_002_glb_mutexB.
+  129.   
+  130.   pthread_mutex_t dead_lock_002_glb_mutexA = PTHREAD_MUTEX_INITIALIZER;
+  131. > pthread_mutex_t dead_lock_002_glb_mutexB = PTHREAD_MUTEX_INITIALIZER;
+  132.   pthread_mutex_t dead_lock_002_glb_mutexC = PTHREAD_MUTEX_INITIALIZER;
+  133.   #if defined(CHECKER_POLYSPACE)
+
+dead_lock.c:132: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_dead_lock_002_glb_mutexC.
+  130.   pthread_mutex_t dead_lock_002_glb_mutexA = PTHREAD_MUTEX_INITIALIZER;
+  131.   pthread_mutex_t dead_lock_002_glb_mutexB = PTHREAD_MUTEX_INITIALIZER;
+  132. > pthread_mutex_t dead_lock_002_glb_mutexC = PTHREAD_MUTEX_INITIALIZER;
+  133.   #if defined(CHECKER_POLYSPACE)
+  134.   void dead_lock_002_glb_mutexA_lock () {}
+
+Summary of the reports
+
+  PURE_FUNCTION: 5

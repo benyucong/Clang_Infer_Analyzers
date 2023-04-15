@@ -1,0 +1,129 @@
+Found 15 issues
+
+buffer_underrun_dynamic.c:288: error: PURE_FUNCTION
+  Side-effect free function dynamic_buffer_underrun_016_func_001.
+  286.    */
+  287.   
+  288. > int dynamic_buffer_underrun_016_func_001 ()
+  289.   {
+  290.   	return 0;
+
+buffer_underrun_dynamic.c:333: error: BUFFER_OVERRUN_L3
+  Offset: [-6, 0] Size: 5.
+  331.   	if(buf!=NULL)
+  332.   	{
+  333. > 	    *(buf-indexes[index]) = 1;/*Tool should Not detect this line as error*/ /*No ERROR:Buffer Underrun*/
+  334.   	    free(buf);
+  335.   	}
+
+buffer_underrun_dynamic.c:432: error: PURE_FUNCTION
+  Side-effect free function dynamic_buffer_underrun_024_func_001.
+  430.    * underrun when passing the base pointer to a function
+  431.    */
+  432. > void dynamic_buffer_underrun_024_func_001 (int *buf)
+  433.   {
+  434.   	*(buf-0) = 1;/*Tool should Not detect this line as error*/ /*No ERROR:Buffer Underrun*/
+
+buffer_underrun_dynamic.c:514: error: BUFFER_OVERRUN_L3
+  Offset: [-4, 0] Size: 3.
+  512.   		*(buf1+i)=i;
+  513.   	}
+  514. > 	*(buf2-*(buf1+0))=1;/*Tool should Not detect this line as error*/ /*No ERROR:Buffer Underrun*/
+  515.   	free(buf1);
+  516.   	free(buf2);
+
+buffer_underrun_dynamic.c:523: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 523, column 9.
+  521.   
+  522.   /*	int i=0;*/
+  523. > 	while (1)
+  524.   	{
+  525.   		char* buf= (char*) malloc(sizeof(char));
+
+buffer_underrun_dynamic.c:519: error: PURE_FUNCTION
+  Side-effect free function dynamic_buffer_underrun_029.
+  517.   }
+  518.   
+  519. > void dynamic_buffer_underrun_029()
+  520.   {
+  521.   
+
+buffer_underrun_dynamic.c:622: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  is always false at line 622, column 9.
+  620.   	    {
+  621.   		   c = message[len];
+  622. > 		   if(isspace(c))
+  623.   		   {
+  624.   			   message[len]='\n';/*Tool should Not detect this line as error*/ /*No ERROR:Buffer Underrun*/
+
+buffer_underrun_dynamic.c:619: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(len>0)` is always false at line 619, column 12.
+  617.       if(message !=NULL)
+  618.       {
+  619. > 	    while(len>0 )
+  620.   	    {
+  621.   		   c = message[len];
+
+buffer_underrun_dynamic.c:622: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  is always false at line 622, column 9.
+  620.   	    {
+  621.   		   c = message[len];
+  622. > 		   if(isspace(c))
+  623.   		   {
+  624.   			   message[len]='\n';/*Tool should Not detect this line as error*/ /*No ERROR:Buffer Underrun*/
+
+buffer_underrun_dynamic.c:622: error: BUFFER_OVERRUN_U5
+  Offset: [-oo, +oo] Size: [0, +oo].
+  620.   	    {
+  621.   		   c = message[len];
+  622. > 		   if(isspace(c))
+  623.   		   {
+  624.   			   message[len]='\n';/*Tool should Not detect this line as error*/ /*No ERROR:Buffer Underrun*/
+
+buffer_underrun_dynamic.c:671: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(loc1==0)` is always false at line 671, column 6.
+  669.   	doubleptr[i]=(char*) malloc(10*sizeof(char));
+  670.   	
+  671. > 	if (loc1==0)
+  672.   	loc1++;
+  673.   
+
+buffer_underrun_dynamic.c:676: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(loc2==0)` is always false at line 676, column 5.
+  674.   	doubleptr[loc1][loc2]='T';	
+  675.   	
+  676. > 	if(loc2==0)
+  677.   	loc2++;
+  678.   
+
+buffer_underrun_dynamic.c:663: error: PURE_FUNCTION
+  Side-effect free function dynamic_buffer_underrun_035.
+  661.   */
+  662.   
+  663. > void dynamic_buffer_underrun_035()
+  664.   {
+  665.   	int i,loc1=0,loc2=0;
+
+buffer_underrun_dynamic.c:710: error: PURE_FUNCTION
+  Side-effect free function dynamic_buffer_underrun_037.
+  708.   */
+  709.   
+  710. > void dynamic_buffer_underrun_037()
+  711.   {
+  712.   	int i;
+
+buffer_underrun_dynamic.c:741: error: PURE_FUNCTION
+  Side-effect free function dynamic_buffer_underrun_038.
+  739.   
+  740.   }dynamic_buffer_underrun_s_038;
+  741. > void dynamic_buffer_underrun_038()
+  742.   {
+  743.   	dynamic_buffer_underrun_s_038* new_s = malloc(10*sizeof(dynamic_buffer_underrun_s_038));
+
+Summary of the reports
+
+           PURE_FUNCTION: 6
+   CONDITION_ALWAYS_TRUE: 5
+       BUFFER_OVERRUN_L3: 2
+       BUFFER_OVERRUN_U5: 1
+  CONDITION_ALWAYS_FALSE: 1

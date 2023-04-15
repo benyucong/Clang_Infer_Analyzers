@@ -1,0 +1,87 @@
+Found 10 issues
+
+st_underrun.c:53: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(len<0)` is always false at line 53, column 11.
+  51.   	 for (;s.buf[len] != 'Z';len--)  /*Tool should not detect this line as error*/ /* No Stack Under RUN error */
+  52.   	 {
+  53. > 	    if ( len < 0 )
+  54.   			 break;
+  55.   	 }
+
+st_underrun.c:53: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(len<0)` is always false at line 53, column 11.
+  51.   	 for (;s.buf[len] != 'Z';len--)  /*Tool should not detect this line as error*/ /* No Stack Under RUN error */
+  52.   	 {
+  53. > 	    if ( len < 0 )
+  54.   			 break;
+  55.   	 }
+
+st_underrun.c:90: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(len<0)` is always false at line 90, column 9.
+  88.   		 s->buf[len] = 'A';
+  89.   		 len--;
+  90. > 		 if ( len < 0 )
+  91.   			 break;
+  92.   	 }while (s->buf[len] != 'Z'); /*Tool should not detect this line as error*/ /* No Stack Under RUN error */
+
+st_underrun.c:90: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(len<0)` is always false at line 90, column 9.
+  88.   		 s->buf[len] = 'A';
+  89.   		 len--;
+  90. > 		 if ( len < 0 )
+  91.   			 break;
+  92.   	 }while (s->buf[len] != 'Z'); /*Tool should not detect this line as error*/ /* No Stack Under RUN error */
+
+st_underrun.c:128: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(len<0)` is always false at line 128, column 9.
+  126.   		 s1.buf[len] = s->buf[len];
+  127.   		 len--;
+  128. > 		 if ( len < 0 )
+  129.   			 break;
+  130.   	 }while (s->buf[len] != 'Z'); /*Tool should not detect this line as error*/ /* No Stack Under RUN error */
+
+st_underrun.c:128: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(len<0)` is always false at line 128, column 9.
+  126.   		 s1.buf[len] = s->buf[len];
+  127.   		 len--;
+  128. > 		 if ( len < 0 )
+  129.   			 break;
+  130.   	 }while (s->buf[len] != 'Z'); /*Tool should not detect this line as error*/ /* No Stack Under RUN error */
+
+st_underrun.c:190: error: PURE_FUNCTION
+  Side-effect free function st_underrun_006_func_001.
+  188.   } st_underrun_006_s_001;
+  189.   
+  190. > void st_underrun_006_func_001 (st_underrun_006_s_001 s)
+  191.   {
+  192.     // JDR: commenting out -- this most certainly does access invalid RAM
+
+st_underrun.c:238: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(len<0)` is always false at line 238, column 9.
+  236.   	 {
+  237.           c = s->buf[len]; /*Tool should not detect this line as error*/ /* No Stack Under RUN error */
+  238. > 		 if ( len < 0 )
+  239.   			 break;
+  240.   	 }
+
+st_underrun.c:238: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(len<0)` is always false at line 238, column 9.
+  236.   	 {
+  237.           c = s->buf[len]; /*Tool should not detect this line as error*/ /* No Stack Under RUN error */
+  238. > 		 if ( len < 0 )
+  239.   			 break;
+  240.   	 }
+
+st_underrun.c:254: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(flag>1)` is always false at line 254, column 6.
+  252.   	st_underrun_007_s_001 s;
+  253.   	s.buf[0] = 1;
+  254. > 	if (flag >1 )
+  255.   	{
+  256.   		st_underrun_007_func_002(s);
+
+Summary of the reports
+
+  CONDITION_ALWAYS_FALSE: 5
+   CONDITION_ALWAYS_TRUE: 4
+           PURE_FUNCTION: 1

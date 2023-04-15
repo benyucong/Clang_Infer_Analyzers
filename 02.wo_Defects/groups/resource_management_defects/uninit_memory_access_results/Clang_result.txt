@@ -1,0 +1,10 @@
+uninit_memory_access.c:75:21: warning: Dereference of null pointer [core.NullDereference]
+     printf("%d \n",**ptr); /*Tool should not detect this line as error*/ /*No ERROR:Uninitialized Memory Access*/
+                    ^~~~~
+uninit_memory_access.c:99:2: warning: Value stored to 'k' is never read [deadcode.DeadStores]
+        k = arr1[1][2][3]; /*Tool should not detect this line as error*/ /*No ERROR:Uninitialized Memory Access*/
+        ^   ~~~~~~~~~~~~~
+uninit_memory_access.c:400:6: warning: Value stored to 'flag' during its initialization is never read [deadcode.DeadStores]
+        int flag = rand();
+            ^~~~   ~~~~~~
+3 warnings generated.

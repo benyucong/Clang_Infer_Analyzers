@@ -1,0 +1,29 @@
+Found 3 issues
+
+sign_conv.c:120: error: PURE_FUNCTION
+  Side-effect free function sign_conv_009.
+  118.   } sign_conv_009_s_001;
+  119.   
+  120. > void sign_conv_009 ()
+  121.   {
+  122.   	sign_conv_009_s_001 s;
+
+sign_conv.c:136: error: PURE_FUNCTION
+  Side-effect free function sign_conv_010.
+  134.   } sign_conv_010_s_001;
+  135.   
+  136. > void sign_conv_010 ()
+  137.   {
+  138.   	sign_conv_010_s_001 s;
+
+sign_conv.c:199: error: PURE_FUNCTION
+  Side-effect free function sign_conv_015_func_001.
+  197.    */
+  198.   unsigned int sign_conv_015_gbl_ret;
+  199. > int sign_conv_015_func_001 ()
+  200.   {
+  201.   	return 0x7fffffff;
+
+Summary of the reports
+
+  PURE_FUNCTION: 3

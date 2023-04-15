@@ -1,0 +1,47 @@
+Found 5 issues
+
+st_underrun.c:25: error: BUFFER_OVERRUN_L5
+  Offset: [-oo, 8] Size: 10.
+  23.   	 strcpy(buf, "my string");
+  24.   	 int len = strlen(buf) - 1;
+  25. > 	 while (buf[len] != 'Z')
+  26.   	 {
+  27.   		 len--; /*Tool should detect this line as error*/ /* Stack Under RUN error */
+
+st_underrun.c:27: error: INTEGER_OVERFLOW_L5
+  ([-oo, 8] - 1):signed32.
+  25.   	 while (buf[len] != 'Z')
+  26.   	 {
+  27. > 		 len--; /*Tool should detect this line as error*/ /* Stack Under RUN error */
+  28.   		 /* if (buf[len] == '\0' )
+  29.   			 break; */
+
+st_underrun.c:170: error: BUFFER_OVERRUN_L5
+  Offset: [-oo, 8] Size: 10 by call to `st_underrun_005_func_001`.
+  168.   	st_underrun_005_s_001 s;
+  169.   	strcpy(s.buf,"STRING !");
+  170. > 	st_underrun_005_func_001(s,8);
+  171.   	buf[0] = s.buf[1];
+  172.   }
+
+st_underrun.c:170: error: INTEGER_OVERFLOW_L5
+  ([-oo, 8] - 1):signed32 by call to `st_underrun_005_func_001`.
+  168.   	st_underrun_005_s_001 s;
+  169.   	strcpy(s.buf,"STRING !");
+  170. > 	st_underrun_005_func_001(s,8);
+  171.   	buf[0] = s.buf[1];
+  172.   }
+
+st_underrun.c:245: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(flag>1)` is always false at line 245, column 6.
+  243.   	st_underrun_007_s_001 s;
+  244.   	s.buf[0] = 1;
+  245. > 	if (flag >1 )
+  246.   	{
+  247.   		st_underrun_007_func_002(s);
+
+Summary of the reports
+
+     INTEGER_OVERFLOW_L5: 2
+       BUFFER_OVERRUN_L5: 2
+  CONDITION_ALWAYS_FALSE: 1

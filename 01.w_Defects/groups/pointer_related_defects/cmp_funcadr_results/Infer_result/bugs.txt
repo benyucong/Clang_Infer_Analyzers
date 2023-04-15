@@ -1,0 +1,21 @@
+Found 2 issues
+
+cmp_funcadr.c:18: error: PURE_FUNCTION
+  Side-effect free function cmp_funcadr_001_func_001.
+  16.   � */
+  17.   int cmp_funcadr_001_glb_a;
+  18. > int* cmp_funcadr_001_func_001 ()
+  19.   {
+  20.   	return &cmp_funcadr_001_glb_a;
+
+cmp_funcadr.c:40: error: PURE_FUNCTION
+  Side-effect free function cmp_funcadr_002_func_001.
+  38.   � */
+  39.   
+  40. > int cmp_funcadr_002_func_001 ()
+  41.   {
+  42.   	return 10;
+
+Summary of the reports
+
+  PURE_FUNCTION: 2

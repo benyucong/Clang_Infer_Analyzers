@@ -1,0 +1,135 @@
+Found 16 issues
+
+double_free.c:17: error: PURE_FUNCTION
+  Side-effect free function double_free_001.
+  15.   */
+  16.   
+  17. > void double_free_001()
+  18.   {
+  19.   	char* ptr= (char*) malloc(sizeof(char));
+
+double_free.c:37: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(i==10)` is always false at line 37, column 6.
+  35.   	{
+  36.   		ptr[i]='a';
+  37. > 		if(i==10)
+  38.   		free(ptr);
+  39.   	}
+
+double_free.c:29: error: PURE_FUNCTION
+  Side-effect free function double_free_002.
+  27.   */
+  28.   
+  29. > void double_free_002()
+  30.   {
+  31.   	char* ptr= (char*) malloc(10*sizeof(char));
+
+double_free.c:48: error: PURE_FUNCTION
+  Side-effect free function double_free_003.
+  46.   */
+  47.   
+  48. > void double_free_003()
+  49.   {
+  50.   	char* ptr= (char*) malloc(10*sizeof(char));
+
+double_free.c:67: error: PURE_FUNCTION
+  Side-effect free function double_free_004.
+  65.   */
+  66.   
+  67. > void double_free_004()
+  68.   {
+  69.   	char* ptr= (char*) malloc(10*sizeof(char));
+
+double_free.c:84: error: PURE_FUNCTION
+  Side-effect free function double_free_005.
+  82.   */
+  83.   
+  84. > void double_free_005()
+  85.   {
+  86.   	char* ptr= (char*) malloc(sizeof(char));
+
+double_free.c:100: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `0` is always false at line 100, column 5.
+  98.   {
+  99.   	char* ptr= (char*) malloc(sizeof(char));
+  100. > 	if(0)
+  101.   	free(ptr);
+  102.   
+
+double_free.c:97: error: PURE_FUNCTION
+  Side-effect free function double_free_006.
+  95.   */
+  96.   
+  97. > void double_free_006()
+  98.   {
+  99.   	char* ptr= (char*) malloc(sizeof(char));
+
+double_free.c:116: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(flag<0)` is always false at line 116, column 5.
+  114.   	int flag=0;
+  115.   	
+  116. > 	if(flag<0)
+  117.   	free(ptr);
+  118.   
+
+double_free.c:111: error: PURE_FUNCTION
+  Side-effect free function double_free_007.
+  109.   */
+  110.   
+  111. > void double_free_007()
+  112.   {
+  113.   	char* ptr= (char*) malloc(sizeof(char));
+
+double_free.c:150: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(flag==1)` is always false at line 150, column 8.
+  148.   	int flag=0;
+  149.   
+  150. > 	while(flag==1)
+  151.   	{
+  152.   		free(ptr);
+
+double_free.c:145: error: PURE_FUNCTION
+  Side-effect free function double_free_009.
+  143.   
+  144.   
+  145. > void double_free_009()
+  146.   {
+  147.   	char* ptr= (char*) malloc(sizeof(char));
+
+double_free.c:164: error: PURE_FUNCTION
+  Side-effect free function double_free_010.
+  162.   
+  163.   
+  164. > void double_free_010()
+  165.   {
+  166.   	char* ptr= (char*) malloc(sizeof(char));
+
+double_free.c:189: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==1)` is always false at line 189, column 6.
+  187.   	while(a<b)
+  188.   	{
+  189. > 		if(flag ==1)
+  190.   		free(ptr);  /*Tool should Not detect this line as error*/ /*No ERROR:Double free*/
+  191.   		a++;
+
+double_free.c:182: error: PURE_FUNCTION
+  Side-effect free function double_free_011.
+  180.   
+  181.   
+  182. > void double_free_011()
+  183.   {
+  184.   	char* ptr= (char*) malloc(sizeof(char));
+
+double_free.c:201: error: PURE_FUNCTION
+  Side-effect free function double_free_012.
+  199.   
+  200.   
+  201. > void double_free_012()
+  202.   {
+  203.   	char* ptr= (char*) malloc(sizeof(char));
+
+Summary of the reports
+
+           PURE_FUNCTION: 11
+  CONDITION_ALWAYS_FALSE: 4
+   CONDITION_ALWAYS_TRUE: 1

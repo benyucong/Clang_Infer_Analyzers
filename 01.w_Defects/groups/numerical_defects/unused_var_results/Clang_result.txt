@@ -1,0 +1,4 @@
+unused_var.c:23:2: warning: Value stored to 'unuse' is never read [deadcode.DeadStores]
+        unuse = a + b; /*Tool should detect this line as error*/ /*ERROR:Unused variable*/
+        ^       ~~~~~
+1 warning generated.

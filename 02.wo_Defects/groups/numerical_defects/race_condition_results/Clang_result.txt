@@ -1,0 +1,7 @@
+race_condition.c:381:4: warning: Value stored to 'ip' is never read [deadcode.DeadStores]
+   ip = ip *10;
+   ^    ~~~~~~
+race_condition.c:401:4: warning: Value stored to 'ip' is never read [deadcode.DeadStores]
+   ip = ip *20;
+   ^    ~~~~~~
+2 warnings generated.

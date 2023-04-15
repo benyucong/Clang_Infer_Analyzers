@@ -1,0 +1,38 @@
+Found 4 issues
+
+sign_conv.c:120: error: PURE_FUNCTION
+  Side-effect free function sign_conv_009.
+  118.   } sign_conv_009_s_001;
+  119.   
+  120. > void sign_conv_009 ()
+  121.   {
+  122.   	sign_conv_009_s_001 s;
+
+sign_conv.c:136: error: PURE_FUNCTION
+  Side-effect free function sign_conv_010.
+  134.   } sign_conv_010_s_001;
+  135.   
+  136. > void sign_conv_010 ()
+  137.   {
+  138.   	sign_conv_010_s_001 s;
+
+sign_conv.c:165: error: INTEGER_OVERFLOW_U5
+  ([-oo, +oo] - 1073741823):signed32.
+  163.   	/*            0 rand() 2147483647 RAND_MAX */
+  164.   	/* 1073741823  rand()  1073741823 1073741824             */
+  165. > 	a = rand() - 1073741823;
+  166.   
+  167.   	ret = a;/*Tool should detect this line as error*/ /*Integer sign lost because of unsigned cast */
+
+sign_conv.c:200: error: PURE_FUNCTION
+  Side-effect free function sign_conv_015_func_001.
+  198.    */
+  199.   unsigned int sign_conv_015_gbl_ret;
+  200. > int sign_conv_015_func_001 ()
+  201.   {
+  202.   	return -1;
+
+Summary of the reports
+
+        PURE_FUNCTION: 3
+  INTEGER_OVERFLOW_U5: 1

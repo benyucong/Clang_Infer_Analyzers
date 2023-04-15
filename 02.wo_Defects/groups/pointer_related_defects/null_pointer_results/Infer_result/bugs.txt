@@ -1,0 +1,166 @@
+Found 20 issues
+
+null_pointer.c:20: error: PURE_FUNCTION
+  Side-effect free function null_pointer_001.
+  18.    * Complexity: 1 single pointer	Constant	 expressions	Write
+  19.    */
+  20. > void null_pointer_001 ()
+  21.   {
+  22.   	int buf[5];
+
+null_pointer.c:44: error: PURE_FUNCTION
+  Side-effect free function null_pointer_003.
+  42.    * Complexity: double pointer	Constant	expressions	Write
+  43.    */
+  44. > void null_pointer_003 ()
+  45.   {
+  46.   	int buf[5];
+
+null_pointer.c:63: error: PURE_FUNCTION
+  Side-effect free function null_pointer_004.
+  61.   } null_pointer_004_s_001;
+  62.   
+  63. > void null_pointer_004 ()
+  64.   {
+  65.   	null_pointer_004_s_001 s;
+
+null_pointer.c:95: error: PURE_FUNCTION
+  Side-effect free function null_pointer_005.
+  93.   } null_pointer_005_uni_001;
+  94.   
+  95. > void null_pointer_005 ()
+  96.   {
+  97.   	null_pointer_005_uni_001 u;
+
+null_pointer.c:106: error: PURE_FUNCTION
+  Side-effect free function null_pointer_006.
+  104.    * Complexity: 1 single pointer	Value of random variable	 expressions	Write
+  105.    */
+  106. > void null_pointer_006 ()
+  107.   {
+  108.   	int a = 20;
+
+null_pointer.c:118: error: PURE_FUNCTION
+  Side-effect free function null_pointer_007.
+  116.    * Complexity: 1 single pointer	Linear equation	expressions	Write
+  117.    */
+  118. > void null_pointer_007 ()
+  119.   {
+  120.   	int *p;
+
+null_pointer.c:132: error: PURE_FUNCTION
+  Side-effect free function null_pointer_008_func_001.
+  130.   int null_pointer_008_glb_001[5];
+  131.   
+  132. > int* null_pointer_008_func_001 ()
+  133.   {
+  134.   	return null_pointer_008_glb_001;
+
+null_pointer.c:137: error: PURE_FUNCTION
+  Side-effect free function null_pointer_008.
+  135.   }
+  136.   
+  137. > void null_pointer_008 ()
+  138.   {
+  139.   	int *p;
+
+null_pointer.c:148: error: PURE_FUNCTION
+  Side-effect free function null_pointer_009_func_001.
+  146.    * Complexity: 1 single pointer	Function arguments	expressions	Write
+  147.    */
+  148. > void null_pointer_009_func_001 (int *p)
+  149.   {
+  150.   	*p = 1; /*Tool should not detect this line as error*/ /*NO ERROR:NULL pointer dereference*/
+
+null_pointer.c:153: error: PURE_FUNCTION
+  Side-effect free function null_pointer_009.
+  151.   }
+  152.   
+  153. > void null_pointer_009 ()
+  154.   {
+  155.   	int buf[5];
+
+null_pointer.c:163: error: PURE_FUNCTION
+  Side-effect free function null_pointer_010.
+  161.    * Complexity: 1 single pointer	Alias for 1 weight	 expressions	Write
+  162.    */
+  163. > void null_pointer_010 ()
+  164.   {
+  165.   	int buf[5];
+
+null_pointer.c:176: error: PURE_FUNCTION
+  Side-effect free function null_pointer_011.
+  174.    * Complexity: 1 single pointer	Also known as double Alias	expressions	Write
+  175.    */
+  176. > void null_pointer_011 ()
+  177.   {
+  178.   	int buf[5];
+
+null_pointer.c:191: error: PURE_FUNCTION
+  Side-effect free function null_pointer_012.
+  189.    * Complexity: 1 single pointer	Constant	Array form	Write
+  190.    */
+  191. > void null_pointer_012 ()
+  192.   {
+  193.   	int buf[5];
+
+null_pointer.c:204: error: PURE_FUNCTION
+  Side-effect free function null_pointer_013_func_001.
+  202.    */
+  203.   int buf[5];
+  204. > int *null_pointer_013_func_001 (void)
+  205.   {
+  206.   	return buf;
+
+null_pointer.c:209: error: PURE_FUNCTION
+  Side-effect free function null_pointer_013.
+  207.   }
+  208.   
+  209. > void null_pointer_013 ()
+  210.   {
+  211.   	int *p;
+
+null_pointer.c:224: error: PURE_FUNCTION
+  Side-effect free function null_pointer_014_func_001.
+  222.   */
+  223.   int null_pointer_014_gbl = 10;
+  224. > int *null_pointer_014_func_001 (void)
+  225.   {
+  226.   	return (&null_pointer_014_gbl);
+
+null_pointer.c:229: error: PURE_FUNCTION
+  Side-effect free function null_pointer_014.
+  227.   }
+  228.   
+  229. > void null_pointer_014 ()
+  230.   {
+  231.   	int *p;
+
+null_pointer.c:268: error: PURE_FUNCTION
+  Side-effect free function null_pointer_016_func_001.
+  266.   */
+  267.   long ** null_pointer_016_gbl_doubleptr;
+  268. > int null_pointer_016_func_001(int flag)
+  269.   {
+  270.      int ret ;
+
+null_pointer.c:335: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 335, column 9.
+  333.   	int i;
+  334.       {
+  335. > 		while(1)
+  336.   		{
+  337.   			null_pointer_017dst = (char**) malloc(5*sizeof(char*));
+
+null_pointer.c:355: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 355, column 8.
+  353.       	strcpy (null_pointer_017dst[i],"STRING"); /*Tool should not detect this line as error*/ /*NO ERROR:NULL pointer dereference*/
+  354.       }
+  355. > 	while(1)
+  356.   	{
+  357.   		for(i=0;i<5;i++)
+
+Summary of the reports
+
+          PURE_FUNCTION: 18
+  CONDITION_ALWAYS_TRUE: 2

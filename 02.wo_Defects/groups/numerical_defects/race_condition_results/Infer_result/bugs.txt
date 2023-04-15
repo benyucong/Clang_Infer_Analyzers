@@ -1,0 +1,103 @@
+Found 12 issues
+
+race_condition.c:38: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(race_glb_1>50)` is always false at line 38, column 6.
+  36.   
+  37.   		pthread_mutex_unlock(&glb_1_mutex);
+  38. > 		if(race_glb_1>50)
+  39.   		{
+  40.   			break;
+
+race_condition.c:28: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 28, column 8.
+  26.   void* race_condition_001_1()
+  27.   {
+  28. > 	while(1)
+  29.   	{
+  30.   		pthread_mutex_lock(&glb_1_mutex);
+
+race_condition.c:48: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 48, column 8.
+  46.   void* race_condition_001_2()
+  47.   {
+  48. > 	while(1)
+  49.   	{
+  50.   		pthread_mutex_lock(&glb_2_mutex);
+
+race_condition.c:89: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 89, column 8.
+  87.   void* race_condition_002_1()
+  88.   {
+  89. > 	while(1)
+  90.   	{
+  91.   		pthread_mutex_lock(&mutex_count);
+
+race_condition.c:107: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 107, column 8.
+  105.   void race_condition_002()
+  106.   {
+  107. > 	while(1)
+  108.   	{
+  109.   		pthread_t pthread1,pthread2;
+
+race_condition.c:129: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_count_mutex.
+  127.   
+  128.   /* Initialize a mutex */
+  129. >   pthread_mutex_t count_mutex =PTHREAD_MUTEX_INITIALIZER;
+  130.   
+  131.   /* Global variable which will be shared */
+
+race_condition.c:167: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_race_condition_004_glb_mutex.
+  165.    */
+  166.   
+  167. > pthread_mutex_t race_condition_004_glb_mutex = PTHREAD_MUTEX_INITIALIZER;
+  168.   
+  169.   #if defined(CHECKER_POLYSPACE)
+
+race_condition.c:204: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_race_condition_005_glb_mutex.
+  202.    * same variable.This leads to erroneous results if mutexes are not used.
+  203.   */
+  204. > pthread_mutex_t race_condition_005_glb_mutex = PTHREAD_MUTEX_INITIALIZER;
+  205.   int race_condition_005_glb_data = 0;
+  206.   
+
+race_condition.c:251: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_race_condition_006_glb_mutex.
+  249.    * Complexity: Locking twice and unlocking only once in same function using two thread
+  250.    */
+  251. > pthread_mutex_t race_condition_006_glb_mutex = PTHREAD_MUTEX_INITIALIZER;
+  252.   
+  253.   #if defined(CHECKER_POLYSPACE)
+
+race_condition.c:309: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_race_condition_007_glb_mutex.
+  307.    * Complexity: Data Race Condition over multiple functions , 2 threads
+  308.    */
+  309. > pthread_mutex_t race_condition_007_glb_mutex = PTHREAD_MUTEX_INITIALIZER;
+  310.   
+  311.   #if defined(CHECKER_POLYSPACE)
+
+race_condition.c:371: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_race_condition_008_glb_mutex_1.
+  369.    * Complexity: Data Race Condition over multiple functions using 2 threads unlocked based on if condition
+  370.    */
+  371. > pthread_mutex_t race_condition_008_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  372.   pthread_mutex_t race_condition_008_glb_mutex_2 = PTHREAD_MUTEX_INITIALIZER;
+  373.   float race_condition_008_glb_data = 1000.0;
+
+race_condition.c:372: error: PURE_FUNCTION
+  Side-effect free function __infer_globals_initializer_race_condition_008_glb_mutex_2.
+  370.    */
+  371.   pthread_mutex_t race_condition_008_glb_mutex_1 = PTHREAD_MUTEX_INITIALIZER;
+  372. > pthread_mutex_t race_condition_008_glb_mutex_2 = PTHREAD_MUTEX_INITIALIZER;
+  373.   float race_condition_008_glb_data = 1000.0;
+  374.   void *race_condition_008_tsk_001(void *input)
+
+Summary of the reports
+
+           PURE_FUNCTION: 7
+   CONDITION_ALWAYS_TRUE: 4
+  CONDITION_ALWAYS_FALSE: 1

@@ -1,0 +1,176 @@
+Found 21 issues
+
+null_pointer.c:20: error: PURE_FUNCTION
+  Side-effect free function null_pointer_001.
+  18.    * Complexity: Assign a Constant value to NULL single pointer
+  19.    */
+  20. > void null_pointer_001 ()
+  21.   {
+  22.   	int *p = NULL;
+
+null_pointer.c:42: error: PURE_FUNCTION
+  Side-effect free function null_pointer_003.
+  40.    * Complexity: Assign a Constant value to NULL single pointer
+  41.    */
+  42. > void null_pointer_003 ()
+  43.   {
+  44.   	int **pp;
+
+null_pointer.c:60: error: PURE_FUNCTION
+  Side-effect free function null_pointer_004.
+  58.   } null_pointer_004_s_001;
+  59.   
+  60. > void null_pointer_004 ()
+  61.   {
+  62.   	null_pointer_004_s_001 *p = NULL;
+
+null_pointer.c:91: error: PURE_FUNCTION
+  Side-effect free function null_pointer_005.
+  89.   } null_pointer_005_uni_001;
+  90.   
+  91. > void null_pointer_005 ()
+  92.   {
+  93.   	null_pointer_005_uni_001 *p = NULL;
+
+null_pointer.c:105: error: BUFFER_OVERRUN_U5
+  Offset: [-oo, +oo] Size: [0, +oo].
+  103.   	int *p;
+  104.   	p = (int *)(intptr_t)rand();
+  105. > 	*p = 1;/*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+  106.   }
+  107.   
+
+null_pointer.c:112: error: PURE_FUNCTION
+  Side-effect free function null_pointer_007.
+  110.    * Complexity: single pointer Linear equation expressions	Write
+  111.    */
+  112. > void null_pointer_007 ()
+  113.   {
+  114.   	int *p;
+
+null_pointer.c:124: error: PURE_FUNCTION
+  Side-effect free function null_pointer_008_func_001.
+  122.    * Complexity: single pointer The return value of the function	expressions	Write
+  123.    */
+  124. > int* null_pointer_008_func_001 ()
+  125.   {
+  126.   	return NULL;
+
+null_pointer.c:129: error: PURE_FUNCTION
+  Side-effect free function null_pointer_008.
+  127.   }
+  128.   
+  129. > void null_pointer_008 ()
+  130.   {
+  131.   	int *p;
+
+null_pointer.c:140: error: PURE_FUNCTION
+  Side-effect free function null_pointer_009_func_001.
+  138.    * Complexity: single pointer Function arguments	expressions	Write
+  139.    */
+  140. > void null_pointer_009_func_001 (int *p)
+  141.   {
+  142.   	*p = 1;/*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+
+null_pointer.c:145: error: PURE_FUNCTION
+  Side-effect free function null_pointer_009.
+  143.   }
+  144.   
+  145. > void null_pointer_009 ()
+  146.   {
+  147.   	null_pointer_009_func_001(NULL);
+
+null_pointer.c:154: error: PURE_FUNCTION
+  Side-effect free function null_pointer_010.
+  152.    * Complexity: single pointer  1 alias 	expressions	Write
+  153.    */
+  154. > void null_pointer_010 ()
+  155.   {
+  156.   	int *p = NULL;
+
+null_pointer.c:166: error: PURE_FUNCTION
+  Side-effect free function null_pointer_011.
+  164.    * Complexity: single pointer double alias	expressions	Write
+  165.    */
+  166. > void null_pointer_011 ()
+  167.   {
+  168.   	int *p = NULL;
+
+null_pointer.c:177: error: PURE_FUNCTION
+  Side-effect free function null_pointer_012.
+  175.   
+  176.   
+  177. > void null_pointer_012 ()
+  178.   {
+  179.   	int *p = NULL;
+
+null_pointer.c:183: error: PURE_FUNCTION
+  Side-effect free function null_pointer_013_func_001.
+  181.   }
+  182.   
+  183. > int *null_pointer_013_func_001 (void)
+  184.   {
+  185.   	return (NULL);
+
+null_pointer.c:192: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(p!=null)` is always false at line 192, column 6.
+  190.   	int *p;
+  191.   	p = null_pointer_013_func_001();
+  192. > 	if (p != NULL)
+  193.   	{
+  194.   		*p = 1;
+
+null_pointer.c:188: error: PURE_FUNCTION
+  Side-effect free function null_pointer_013.
+  186.   }
+  187.   
+  188. > void null_pointer_013 ()
+  189.   {
+  190.   	int *p;
+
+null_pointer.c:204: error: PURE_FUNCTION
+  Side-effect free function null_pointer_014_func_001.
+  202.   */
+  203.   
+  204. > int *null_pointer_014_func_001 (void)
+  205.   {
+  206.   	return (NULL);
+
+null_pointer.c:214: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(p!=null)` is always false at line 214, column 6.
+  212.   	p = null_pointer_014_func_001();
+  213.   	*p = 1; /*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+  214. > 	if (p != NULL)
+  215.   	{
+  216.   		*p = 2;
+
+null_pointer.c:209: error: PURE_FUNCTION
+  Side-effect free function null_pointer_014.
+  207.   }
+  208.   
+  209. > void null_pointer_014 ()
+  210.   {
+  211.   	int *p;
+
+null_pointer.c:248: error: PURE_FUNCTION
+  Side-effect free function null_pointer_016_func_001.
+  246.   */
+  247.   long ** null_pointer_016_gbl_doubleptr;
+  248. > int null_pointer_016_func_001(int flag)
+  249.   {
+  250.      int ret ;
+
+null_pointer.c:336: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 336, column 8.
+  334.       	strcpy (null_pointer_017dst[i],"STRING");/*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+  335.       }
+  336. > 	while(1)
+  337.   	{
+  338.   		for(i=0;i<5;i++)
+
+Summary of the reports
+
+           PURE_FUNCTION: 17
+  CONDITION_ALWAYS_FALSE: 2
+   CONDITION_ALWAYS_TRUE: 1
+       BUFFER_OVERRUN_U5: 1

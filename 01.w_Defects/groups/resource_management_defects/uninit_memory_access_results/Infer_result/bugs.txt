@@ -1,0 +1,132 @@
+Found 15 issues
+
+uninit_memory_access.c:53: error: DANGLING_POINTER_DEREFERENCE
+  uninitialized pointer `str2` could be dangling and is dereferenced or freed at line 53, column 3.
+  51.   	if (str1!=NULL)
+  52.   	{
+  53. > 		strcpy(str1, str2);
+  54.           printf("%s %s\n",str1,str2);/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
+  55.           free(str1);
+
+uninit_memory_access.c:84: error: BUFFER_OVERRUN_L1
+  Offset: 3 Size: 3.
+  82.   {
+  83.       int i,j,k;
+  84. > 	int arr[2][3][4] = { { {1, 2, 3, 4}, {12, 22, 32, 42}, {13, 23, 33, 43} },
+  85.                             { {21, 22, 23, 24}, {31, 32, 33, 34}, {41, 42, 43, 44} } };
+  86.   	int arr1[2][3][4];
+
+uninit_memory_access.c:81: error: PURE_FUNCTION
+  Side-effect free function uninit_memory_access_005.
+  79.    Complexity: Float 3D array partially initialized from another 3D array
+  80.   */
+  81. > void uninit_memory_access_005 ()
+  82.   {
+  83.       int i,j,k;
+
+uninit_memory_access.c:126: error: BUFFER_OVERRUN_L4
+  Offset: [0, +oo] Size: 25 by call to `uninit_memory_access_006_func_001`.
+  124.       char *str1 = (char *) calloc(25,sizeof(char));
+  125.       char *str2 ;
+  126. >     uninit_memory_access_006_func_001(str1, str2);
+  127.       printf("%s\n", str1);/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
+  128.   }
+
+uninit_memory_access.c:126: error: DANGLING_POINTER_DEREFERENCE
+  uninitialized pointer `str2` could be dangling and is dereferenced or freed at line 126, column 5.
+  124.       char *str1 = (char *) calloc(25,sizeof(char));
+  125.       char *str2 ;
+  126. >     uninit_memory_access_006_func_001(str1, str2);
+  127.       printf("%s\n", str1);/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
+  128.   }
+
+uninit_memory_access.c:145: error: BUFFER_OVERRUN_L3
+  Offset added: 1 Size: [0, +oo].
+  143.   {
+  144.       /*memset(st, 0, sizeof(*st));*/
+  145. >      memset(st->arr, 0, 1);
+  146.       st->a = 1;
+  147.   }
+
+uninit_memory_access.c:154: error: INTEGER_OVERFLOW_L5
+  ([-oo, +oo] + `st->arr[*]`):signed32.
+  152.       for (i = 0; i < MAX; i++)
+  153.       {
+  154. >         temp += st->arr[i];/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
+  155.       }
+  156.   }
+
+uninit_memory_access.c:148: error: PURE_FUNCTION
+  Side-effect free function uninit_memory_access_007_func_002.
+  146.       st->a = 1;
+  147.   }
+  148. > void uninit_memory_access_007_func_002(uninit_memory_access_007_s_001 *st)
+  149.   {
+  150.       int temp=0;
+
+uninit_memory_access.c:164: error: PURE_FUNCTION
+  Side-effect free function uninit_memory_access_007_func_004.
+  162.   }
+  163.   
+  164. > void uninit_memory_access_007_func_004(int num)
+  165.   {
+  166.       int temp;
+
+uninit_memory_access.c:189: error: PURE_FUNCTION
+  Side-effect free function uninit_memory_access_008_func_001.
+  187.   } uninit_memory_access_008_s_001;
+  188.   
+  189. > uninit_memory_access_008_s_001 * uninit_memory_access_008_func_001()
+  190.   {
+  191.   	uninit_memory_access_008_s_001 *ret = (uninit_memory_access_008_s_001 *) malloc (5*sizeof(uninit_memory_access_008_s_001));
+
+uninit_memory_access.c:195: error: PURE_FUNCTION
+  Side-effect free function uninit_memory_access_008.
+  193.   }
+  194.   
+  195. > void uninit_memory_access_008 ()
+  196.   {
+  197.   	uninit_memory_access_008_s_001 *s = NULL;
+
+uninit_memory_access.c:206: error: PURE_FUNCTION
+  Side-effect free function uninit_memory_access_009_func_001.
+  204.    *  When using array of double pointer to long -  Memory is  allocated based on return value of function ,initialized and accessed
+  205.    */
+  206. > int uninit_memory_access_009_func_001(int flag)
+  207.   {
+  208.      int ret;
+
+uninit_memory_access.c:284: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(uninit_memory_access_010_s_001_arr_gbl->csr&1)` is always false at line 284, column 12.
+  282.       {
+  283.       	uninit_memory_access_010_s_001_arr_gbl->data = READY;
+  284. >         if(uninit_memory_access_010_s_001_arr_gbl->csr & ERROR)
+  285.           {
+  286.           	uninit_memory_access_010_s_001_arr_gbl->csr = RESET;
+
+uninit_memory_access.c:297: error: INTEGER_OVERFLOW_L5
+  ([-oo, +oo] + 1):unsigned16.
+  295.       if(uninit_memory_access_010_s_001_arr_gbl!=NULL)
+  296.       {
+  297. >     	++uninit_memory_access_010_s_001_arr_gbl->data;/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
+  298.   	    free((void *)uninit_memory_access_010_s_001_arr_gbl);
+  299.       }
+
+uninit_memory_access.c:439: error: BUFFER_OVERRUN_L2
+  Offset: [0, 6] (⇐ [0, 3] + [0, 3]) Size: 1.
+  437.   		for ( j=0 ;j<4; j++)
+  438.   		{
+  439. > 			*(p[i]+j) += *(p[i]+j);/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
+  440.   		}
+  441.   	}
+
+Summary of the reports
+
+                 PURE_FUNCTION: 6
+  DANGLING_POINTER_DEREFERENCE: 2
+           INTEGER_OVERFLOW_L5: 2
+        CONDITION_ALWAYS_FALSE: 1
+             BUFFER_OVERRUN_L1: 1
+             BUFFER_OVERRUN_L2: 1
+             BUFFER_OVERRUN_L3: 1
+             BUFFER_OVERRUN_L4: 1

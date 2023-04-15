@@ -1,0 +1,217 @@
+Found 26 issues
+
+free_null_pointer.c:38: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(a>0)` is always false at line 38, column 9.
+  36.   {
+  37.        int a=20;
+  38. >      if(a>0)
+  39.        {
+  40.            free_null_pointer_002_gbl_ptr = (int*)calloc(10,sizeof(int));
+
+free_null_pointer.c:58: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 58, column 9.
+  56.   	int i;
+  57.   	long *buf=NULL;
+  58. > 	for (i=0;;i++)
+  59.   	{
+  60.   		if(i>=10)
+
+free_null_pointer.c:76: error: PURE_FUNCTION
+  Side-effect free function free_null_pointer_004.
+  74.   * Complexity: When using a double pointer to float , memory allocated in an do - while loop
+  75.   */
+  76. > void free_null_pointer_004 ()
+  77.   {
+  78.   	float **fptr = (float**) malloc(5*sizeof(float*));
+
+free_null_pointer.c:127: error: PURE_FUNCTION
+  Side-effect free function free_null_pointer_006_func_001.
+  125.   * Complexity: When using a pointer to structure ,memory allocated based on function return value
+  126.   */
+  127. > int free_null_pointer_006_func_001(int flag)
+  128.   {
+  129.      int ret;
+
+free_null_pointer.c:170: error: PURE_FUNCTION
+  Side-effect free function free_null_pointer_007_func_001.
+  168.   */
+  169.   long ** free_null_pointer_007_gbl_doubleptr;
+  170. > int free_null_pointer_007_func_001(int flag)
+  171.   {
+  172.      int ret ;
+
+free_null_pointer.c:233: error: PURE_FUNCTION
+  Side-effect free function free_null_pointer_008_func_001.
+  231.   static unsigned int min=min_buffer;
+  232.   static unsigned int max=max_buffer;
+  233. > void free_null_pointer_008_func_001 (int len,char **stringPtr)
+  234.   {
+  235.   	char * p = NULL;
+
+free_null_pointer.c:265: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 265, column 9.
+  263.   	int i;
+  264.       {
+  265. > 		while(1)
+  266.   		{
+  267.   			free_null_pointer_009dst = (char**) malloc(5*sizeof(char*));
+
+free_null_pointer.c:285: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 285, column 8.
+  283.       	strcpy (free_null_pointer_009dst[i],"STRING");
+  284.       }
+  285. > 	while(1)
+  286.   	{
+  287.   		for(i=0;i<5;i++)
+
+free_null_pointer.c:308: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 308, column 9.
+  306.   	int i;
+  307.       {
+  308. > 		while(SET_MEM)
+  309.   		{
+  310.   			free_null_pointer_010_gbl_dst = (char**) malloc(5*sizeof(char*));
+
+free_null_pointer.c:330: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!1` is always false at line 330, column 8.
+  328.   {
+  329.   	int i;
+  330. > 	while(SET_MEM)
+  331.   	{
+  332.   		for(i=0;i<5;i++)
+
+free_null_pointer.c:367: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==1)` is always false at line 367, column 3.
+  365.   	switch (flag)
+  366.   	{
+  367. > 		case 1:
+  368.   		{
+  369.   			u = (free_null_pointer_011_u_001 *)calloc(1,sizeof(free_null_pointer_011_u_001));
+
+free_null_pointer.c:395: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==1)` is always false at line 395, column 3.
+  393.   	switch (flag)
+  394.   	{
+  395. > 		case 1:
+  396.   		{
+  397.   			free(u);/* Tool should not detect this line as error */ /*No ERROR:Freeing a NULL pointer*/
+
+free_null_pointer.c:434: error: PURE_FUNCTION
+  Side-effect free function free_null_pointer_012_func_001.
+  432.   #define ZERO 0
+  433.   #define MAX 1
+  434. > int free_null_pointer_012_func_001(int flag)
+  435.   {
+  436.      int ret;
+
+free_null_pointer.c:448: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(1==1)` is always false at line 448, column 54.
+  446.   	int flag=10;
+  447.   
+  448. >     if (free_null_pointer_012_func_001(0) == ZERO && MAX ==1)
+  449.       {
+  450.       	(flag == 10)? (ptr= (double*) malloc(10*sizeof(double))) : ( ptr= NULL);
+
+free_null_pointer.c:454: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(1==1)` is always false at line 454, column 54.
+  452.       }
+  453.   
+  454. >     if (free_null_pointer_012_func_001(0) == ZERO && MAX ==1)
+  455.       {
+  456.       	if(flag == 10)
+
+free_null_pointer.c:460: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(1==1)` is always false at line 460, column 54.
+  458.       }
+  459.   
+  460. >     if (free_null_pointer_012_func_001(0) == ZERO && MAX ==1)
+  461.       {
+  462.       	if(flag == 10)
+
+free_null_pointer.c:456: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==10)` is always false at line 456, column 9.
+  454.       if (free_null_pointer_012_func_001(0) == ZERO && MAX ==1)
+  455.       {
+  456. >     	if(flag == 10)
+  457.       	a = *(ptr+1);
+  458.       }
+
+free_null_pointer.c:462: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(flag==10)` is always false at line 462, column 9.
+  460.       if (free_null_pointer_012_func_001(0) == ZERO && MAX ==1)
+  461.       {
+  462. >     	if(flag == 10)
+  463.           {
+  464.       		free(ptr);/* Tool should not detect this line as error */ /*No ERROR:Freeing a NULL pointer*/
+
+free_null_pointer.c:443: error: PURE_FUNCTION
+  Side-effect free function free_null_pointer_012.
+  441.      return ret;
+  442.   }
+  443. > void free_null_pointer_012 ()
+  444.   {
+  445.   	double *ptr =NULL, a;
+
+free_null_pointer.c:497: warning: CONDITION_ALWAYS_FALSE
+  Boolean condition  `(i<=1)` is always false at line 497, column 17.
+  495.           free(fptr);/* Tool should not detect this line as error */ /*No ERROR:Freeing a NULL pointer*/
+  496.           fptr = NULL;
+  497. > 	}while(i>=0 && i<=1);
+  498.   }
+  499.   
+
+free_null_pointer.c:484: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(i<=1)` is always false at line 484, column 14.
+  482.   	{
+  483.   		double * fptr = *fp1;
+  484. > 		if(i>=0 && i<=1)
+  485.   		{
+  486.   	       fptr = (double *)calloc(10, sizeof(double));
+
+free_null_pointer.c:484: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(i>=0)` is always false at line 484, column 6.
+  482.   	{
+  483.   		double * fptr = *fp1;
+  484. > 		if(i>=0 && i<=1)
+  485.   		{
+  486.   	       fptr = (double *)calloc(10, sizeof(double));
+
+free_null_pointer.c:491: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(i>=0)` is always false at line 491, column 9.
+  489.   	    *fp1 = fptr;
+  490.   	    i++;
+  491. > 	}while(i>=0 && i<=1);
+  492.   	do
+  493.   	{
+
+free_null_pointer.c:497: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(i>=0)` is always false at line 497, column 9.
+  495.           free(fptr);/* Tool should not detect this line as error */ /*No ERROR:Freeing a NULL pointer*/
+  496.           fptr = NULL;
+  497. > 	}while(i>=0 && i<=1);
+  498.   }
+  499.   
+
+free_null_pointer.c:489: error: MEMORY_LEAK
+  memory dynamically allocated to `*fp1` by call to `calloc()` at line 486, column 26 is not reachable after line 489, column 6.
+  487.   		}
+  488.   	    *(fptr+3) = 50.5;
+  489. > 	    *fp1 = fptr;
+  490.   	    i++;
+  491.   	}while(i>=0 && i<=1);
+
+free_null_pointer.c:618: error: BUFFER_OVERRUN_L4
+  Offset: [0, +oo] (⇐ [0, 4] + [0, +oo]) Size: 5 by call to `free_null_pointer_010`.
+  616.   	if (vflag == 10 || vflag ==888)
+  617.   	{
+  618. > 		free_null_pointer_010();
+  619.   	}
+  620.   
+
+Summary of the reports
+
+   CONDITION_ALWAYS_TRUE: 17
+           PURE_FUNCTION: 6
+             MEMORY_LEAK: 1
+  CONDITION_ALWAYS_FALSE: 1
+       BUFFER_OVERRUN_L4: 1

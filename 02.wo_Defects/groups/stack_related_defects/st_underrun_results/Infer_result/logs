@@ -1,0 +1,188 @@
+[55356][environment] CWD = /home/e0925519/cs5218/cs5218_asg3/02.wo_Defects/groups/stack_related_defects
+[55356][environment] No .inferconfig file found
+[55356][environment] Project root = /home/e0925519/cs5218/cs5218_asg3/02.wo_Defects/groups/stack_related_defects
+[55356][environment] INFER_ARGS =   @/tmp/args.tmp.011f56  ++Contents of '/tmp/args.tmp.011f56':
+[55356][environment]                                         run --biabduction --bufferoverrun
+[55356][environment]                                         --linters --liveness --pulse --racerd
+[55356][environment]                                         --siof --starvation --loop-hoisting
+[55356][environment]                                         --uninit --enable-issue-type
+[55356][environment]                                         ARRAY_OUT_OF_BOUNDS_L1
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         ARRAY_OUT_OF_BOUNDS_L2
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         ARRAY_OUT_OF_BOUNDS_L3
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         AUTORELEASEPOOL_SIZE_UNREACHABLE_AT_EXIT
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         BIABDUCTION_ANALYSIS_STOPS
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         BIABDUCTION_MEMORY_LEAK
+[55356][environment]                                         --enable-issue-type BUFFER_OVERRUN_L4
+[55356][environment]                                         --enable-issue-type BUFFER_OVERRUN_L5
+[55356][environment]                                         --enable-issue-type BUFFER_OVERRUN_U5
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         CLASS_CAST_EXCEPTION
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         CONDITION_ALWAYS_FALSE
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         CONDITION_ALWAYS_TRUE
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         CONFIG_CHECKS_BETWEEN_MARKERS
+[55356][environment]                                         --enable-issue-type CONFIG_IMPACT
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         CONSTANT_ADDRESS_DEREFERENCE
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         DANGLING_POINTER_DEREFERENCE
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         DANGLING_POINTER_DEREFERENCE_MAYBE
+[55356][environment]                                         --enable-issue-type DIVIDE_BY_ZERO
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         ERADICATE_META_CLASS_CAN_BE_NULLSAFE
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         ERADICATE_META_CLASS_IS_NULLSAFE
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         ERADICATE_META_CLASS_NEEDS_IMPROVEMENT
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         EXECUTION_TIME_UNREACHABLE_AT_EXIT
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         EXPENSIVE_AUTORELEASEPOOL_SIZE
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         EXPENSIVE_EXECUTION_TIME
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         GLOBAL_VARIABLE_INITIALIZED_WITH_FUNCTION_OR_METHOD_CALL
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         INFINITE_AUTORELEASEPOOL_SIZE
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         INFINITE_EXECUTION_TIME
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         INTEGER_OVERFLOW_L5
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         INTEGER_OVERFLOW_U5
+[55356][environment]                                         --enable-issue-type INVARIANT_CALL
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         Leak_unknown_origin
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         NIL_MESSAGING_TO_NON_POD
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         PULSE_UNINITIALIZED_VALUE
+[55356][environment]                                         --enable-issue-type SKIP_FUNCTION
+[55356][environment]                                         --enable-issue-type
+[55356][environment]                                         UNTRUSTED_HEAP_ALLOCATION
+[55356][environment]                                         --disable-issue-type DEAD_STORE
+[55356][environment]                                         --disable-issue-type
+[55356][environment]                                         UNINITIALIZED_VALUE
+[55356][environment]                                         --disable-issue-type NULL_DEREFERENCE
+[55356][environment]                                         -o
+[55356][environment]                                         /home/e0925519/cs5218/cs5218_asg3/02.wo_Defects/groups/stack_related_defects/st_underrun_results/Infer_result
+[55356][environment]                                       
+[55356][environment] command line arguments:   infer run --biabduction --bufferoverrun --linters
+[55356][environment]                           --liveness --pulse --racerd --siof --starvation
+[55356][environment]                           --loop-hoisting --uninit --enable-issue-type
+[55356][environment]                           ARRAY_OUT_OF_BOUNDS_L1 --enable-issue-type
+[55356][environment]                           ARRAY_OUT_OF_BOUNDS_L2 --enable-issue-type
+[55356][environment]                           ARRAY_OUT_OF_BOUNDS_L3 --enable-issue-type
+[55356][environment]                           AUTORELEASEPOOL_SIZE_UNREACHABLE_AT_EXIT
+[55356][environment]                           --enable-issue-type BIABDUCTION_ANALYSIS_STOPS
+[55356][environment]                           --enable-issue-type BIABDUCTION_MEMORY_LEAK
+[55356][environment]                           --enable-issue-type BUFFER_OVERRUN_L4
+[55356][environment]                           --enable-issue-type BUFFER_OVERRUN_L5
+[55356][environment]                           --enable-issue-type BUFFER_OVERRUN_U5
+[55356][environment]                           --enable-issue-type CLASS_CAST_EXCEPTION
+[55356][environment]                           --enable-issue-type CONDITION_ALWAYS_FALSE
+[55356][environment]                           --enable-issue-type CONDITION_ALWAYS_TRUE
+[55356][environment]                           --enable-issue-type CONFIG_CHECKS_BETWEEN_MARKERS
+[55356][environment]                           --enable-issue-type CONFIG_IMPACT
+[55356][environment]                           --enable-issue-type CONSTANT_ADDRESS_DEREFERENCE
+[55356][environment]                           --enable-issue-type DANGLING_POINTER_DEREFERENCE
+[55356][environment]                           --enable-issue-type
+[55356][environment]                           DANGLING_POINTER_DEREFERENCE_MAYBE
+[55356][environment]                           --enable-issue-type DIVIDE_BY_ZERO
+[55356][environment]                           --enable-issue-type
+[55356][environment]                           ERADICATE_META_CLASS_CAN_BE_NULLSAFE
+[55356][environment]                           --enable-issue-type
+[55356][environment]                           ERADICATE_META_CLASS_IS_NULLSAFE
+[55356][environment]                           --enable-issue-type
+[55356][environment]                           ERADICATE_META_CLASS_NEEDS_IMPROVEMENT
+[55356][environment]                           --enable-issue-type
+[55356][environment]                           EXECUTION_TIME_UNREACHABLE_AT_EXIT
+[55356][environment]                           --enable-issue-type EXPENSIVE_AUTORELEASEPOOL_SIZE
+[55356][environment]                           --enable-issue-type EXPENSIVE_EXECUTION_TIME
+[55356][environment]                           --enable-issue-type
+[55356][environment]                           GLOBAL_VARIABLE_INITIALIZED_WITH_FUNCTION_OR_METHOD_CALL
+[55356][environment]                           --enable-issue-type INFINITE_AUTORELEASEPOOL_SIZE
+[55356][environment]                           --enable-issue-type INFINITE_EXECUTION_TIME
+[55356][environment]                           --enable-issue-type INTEGER_OVERFLOW_L5
+[55356][environment]                           --enable-issue-type INTEGER_OVERFLOW_U5
+[55356][environment]                           --enable-issue-type INVARIANT_CALL
+[55356][environment]                           --enable-issue-type Leak_unknown_origin
+[55356][environment]                           --enable-issue-type NIL_MESSAGING_TO_NON_POD
+[55356][environment]                           --enable-issue-type PULSE_UNINITIALIZED_VALUE
+[55356][environment]                           --enable-issue-type SKIP_FUNCTION
+[55356][environment]                           --enable-issue-type UNTRUSTED_HEAP_ALLOCATION
+[55356][environment]                           --disable-issue-type DEAD_STORE
+[55356][environment]                           --disable-issue-type UNINITIALIZED_VALUE
+[55356][environment]                           --disable-issue-type NULL_DEREFERENCE -o
+[55356][environment]                           st_underrun_results/Infer_result -- clang -c
+[55356][environment]                           st_underrun.cActive checkers: biabduction (C/C++/ObjC, Java), buffer overrun analysis (C/C++/ObjC, Java), buffer overrun checker (C/C++/ObjC, Java), fragment retains view (Java), liveness (C/C++/ObjC), ownership (C/C++/ObjC), pulse (C/C++/ObjC), RacerD (C/C++/ObjC, Java), SIOF (C/C++/ObjC), uninitialized variables (C/C++/ObjC), cost analysis (C/C++/ObjC, Java), loop hoisting (C/C++/ObjC, Java), Starvation analysis (C/C++/ObjC, Java), purity (C/C++/ObjC, Java)
+[55356][environment] Infer log identifier is 
+Infer version v0.16.0
+[55356][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[55356][environment] 
+[55356][   progress] Capturing in make/cc mode...
+[55356][      debug] 
+[55356][      debug] *** Beginning capture of file /home/e0925519/cs5218/cs5218_asg3/02.wo_Defects/groups/stack_related_defects/st_underrun.c ***
+[55356][      debug] Clang frontend action is translating and linting
+[55356][      debug] Loading the following linters files: /opt/infer-linux64-v0.16.0/lib/infer/infer/bin/../lib/linter_rules/linters.al
+[55356][      debug] Elapsed: 99.911ms.
+[55356][      debug] 
+[55356][   progress] Found 1 source file to analyze in /home/e0925519/cs5218/cs5218_asg3/02.wo_Defects/groups/stack_related_defects/st_underrun_results/Infer_result
+[55356][environment] Parallel jobs: 4
+[55364][   progress] st_underrun.c starting
+[55364][ intern err] 
+[55364][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[55364][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[55364][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[55364][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[55364][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[55364][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[55364][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[55364][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[55364][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[55364][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[55364][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[55364][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[55364][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[55364][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[55364][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[55364][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[55364][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[55364][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[55364][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[55364][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[55364][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[55364][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[55364][ intern err] [COST ANALYSIS INTERNAL WARNING:] No 'env' found. This location is unreachable returning cost 0 
+
+[55364][   progress] st_underrun.c DONE

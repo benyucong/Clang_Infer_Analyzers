@@ -1,0 +1,55 @@
+Found 6 issues
+
+unused_var.c:17: error: PURE_FUNCTION
+  Side-effect free function unused_var_001.
+  15.    * Complexity: basic types	Internal variables
+  16.    */
+  17. > void unused_var_001 ()
+  18.   {
+  19.   	int a = 1;
+
+unused_var.c:36: error: PURE_FUNCTION
+  Side-effect free function unused_var_002.
+  34.   } unused_var_002_s_001;
+  35.   
+  36. > void unused_var_002 ()
+  37.   {
+  38.   	unused_var_002_s_001 s;
+
+unused_var.c:76: error: INTEGER_OVERFLOW_L5
+  ([-oo, +oo] + [-oo, +oo]):signed32.
+  74.   	u.s1.a = 1;
+  75.   	u.s1.b = 2;
+  76. > 	u.s3.a = u.s2.a + u.s2.b;
+  77.   	u.s3.unuse = u.s1.a;/*Tool should detect this line as error*/ /*ERROR:Unused variable*/
+  78.   }
+
+unused_var.c:69: error: PURE_FUNCTION
+  Side-effect free function unused_var_003.
+  67.   } unused_var_003_uni_001;
+  68.   
+  69. > void unused_var_003 ()
+  70.   {
+  71.   	unused_var_003_uni_001 u;
+
+unused_var.c:115: warning: CONDITION_ALWAYS_TRUE
+  Boolean condition  `!(a==1)` is always false at line 115, column 5.
+  113.   	static int b = 2;
+  114.   	static int unuse;
+  115. > 	if(a==1)
+  116.   	{	
+  117.   	    unuse = a + b;/*Tool should detect this line as error*/ /*ERROR:Unused variable*/
+
+unused_var.c:178: error: INTEGER_OVERFLOW_L5
+  ([-oo, +oo] + [-oo, +oo]):signed32 by call to `unused_var_004`.
+  176.   	if (vflag ==4 || vflag ==888)
+  177.   	{
+  178. > 		unused_var_004();
+  179.   	}
+  180.   
+
+Summary of the reports
+
+          PURE_FUNCTION: 3
+    INTEGER_OVERFLOW_L5: 2
+  CONDITION_ALWAYS_TRUE: 1
